@@ -226,7 +226,7 @@
             this.BothFilterLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.BothFilterLbl.Location = new System.Drawing.Point(259, 160);
             this.BothFilterLbl.Name = "BothFilterLbl";
-            this.BothFilterLbl.Size = new System.Drawing.Size(397, 19);
+            this.BothFilterLbl.Size = new System.Drawing.Size(496, 24);
             this.BothFilterLbl.TabIndex = 146;
             this.BothFilterLbl.Text = "يتم الآن البحث بإستخدام إسم المورد وتاريخ الشراء للإلغاء إضغط إلغاء";
             this.BothFilterLbl.Visible = false;
@@ -238,7 +238,7 @@
             this.FilterDateLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.FilterDateLbl.Location = new System.Drawing.Point(292, 160);
             this.FilterDateLbl.Name = "FilterDateLbl";
-            this.FilterDateLbl.Size = new System.Drawing.Size(327, 19);
+            this.FilterDateLbl.Size = new System.Drawing.Size(408, 24);
             this.FilterDateLbl.TabIndex = 145;
             this.FilterDateLbl.Text = "يتم الآن البحث بإستخدام تاريخ الشراء للإلغاء إضغط إلغاء";
             this.FilterDateLbl.Visible = false;
@@ -250,7 +250,7 @@
             this.FilterSupplierLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.FilterSupplierLbl.Location = new System.Drawing.Point(292, 159);
             this.FilterSupplierLbl.Name = "FilterSupplierLbl";
-            this.FilterSupplierLbl.Size = new System.Drawing.Size(320, 19);
+            this.FilterSupplierLbl.Size = new System.Drawing.Size(400, 24);
             this.FilterSupplierLbl.TabIndex = 144;
             this.FilterSupplierLbl.Text = "يتم الآن البحث بإستخدام إسم المورد للإلغاء إضغط إلغاء";
             this.FilterSupplierLbl.Visible = false;
@@ -322,7 +322,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label2.Location = new System.Drawing.Point(801, 73);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 19);
+            this.label2.Size = new System.Drawing.Size(96, 24);
             this.label2.TabIndex = 139;
             this.label2.Text = "اسم المورد :";
             // 
@@ -334,7 +334,7 @@
             this.SupplierCombo.IntegralHeight = false;
             this.SupplierCombo.Location = new System.Drawing.Point(620, 70);
             this.SupplierCombo.Name = "SupplierCombo";
-            this.SupplierCombo.Size = new System.Drawing.Size(175, 27);
+            this.SupplierCombo.Size = new System.Drawing.Size(175, 32);
             this.SupplierCombo.TabIndex = 138;
             // 
             // ToDatePicker
@@ -343,7 +343,7 @@
             this.ToDatePicker.Location = new System.Drawing.Point(373, 124);
             this.ToDatePicker.Name = "ToDatePicker";
             this.ToDatePicker.RightToLeftLayout = true;
-            this.ToDatePicker.Size = new System.Drawing.Size(175, 27);
+            this.ToDatePicker.Size = new System.Drawing.Size(175, 32);
             this.ToDatePicker.TabIndex = 137;
             // 
             // label1
@@ -353,7 +353,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(554, 130);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 19);
+            this.label1.Size = new System.Drawing.Size(38, 24);
             this.label1.TabIndex = 136;
             this.label1.Text = "إلى :";
             // 
@@ -364,7 +364,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label7.Location = new System.Drawing.Point(796, 128);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 19);
+            this.label7.Size = new System.Drawing.Size(101, 24);
             this.label7.TabIndex = 135;
             this.label7.Text = "في الفترة من :";
             // 
@@ -374,7 +374,7 @@
             this.FromDatePicker.Location = new System.Drawing.Point(620, 124);
             this.FromDatePicker.Name = "FromDatePicker";
             this.FromDatePicker.RightToLeftLayout = true;
-            this.FromDatePicker.Size = new System.Drawing.Size(175, 27);
+            this.FromDatePicker.Size = new System.Drawing.Size(175, 32);
             this.FromDatePicker.TabIndex = 133;
             // 
             // label10
@@ -384,7 +384,7 @@
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(456, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(149, 29);
+            this.label10.Size = new System.Drawing.Size(186, 37);
             this.label10.TabIndex = 124;
             this.label10.Text = "فواتير المشتريات";
             // 
@@ -392,11 +392,12 @@
             // 
             this.header_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
             this.header_panel.Controls.Add(this.label10);
-            this.header_panel.Location = new System.Drawing.Point(2, 4);
+            this.header_panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.header_panel.Location = new System.Drawing.Point(8, 8);
             this.header_panel.Margin = new System.Windows.Forms.Padding(4);
             this.header_panel.Name = "header_panel";
             this.header_panel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.header_panel.Size = new System.Drawing.Size(1359, 57);
+            this.header_panel.Size = new System.Drawing.Size(1073, 57);
             this.header_panel.TabIndex = 148;
             // 
             // GetAllBuyBillsForm

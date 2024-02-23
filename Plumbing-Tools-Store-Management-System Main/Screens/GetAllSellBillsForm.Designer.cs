@@ -264,11 +264,12 @@
             // 
             this.header_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
             this.header_panel.Controls.Add(this.label10);
-            this.header_panel.Location = new System.Drawing.Point(3, 4);
+            this.header_panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.header_panel.Location = new System.Drawing.Point(8, 8);
             this.header_panel.Margin = new System.Windows.Forms.Padding(4);
             this.header_panel.Name = "header_panel";
             this.header_panel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.header_panel.Size = new System.Drawing.Size(1359, 57);
+            this.header_panel.Size = new System.Drawing.Size(1073, 57);
             this.header_panel.TabIndex = 149;
             // 
             // GetAllSellBillsForm
