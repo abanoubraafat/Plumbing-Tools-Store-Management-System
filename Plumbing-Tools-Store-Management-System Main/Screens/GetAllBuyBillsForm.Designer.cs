@@ -70,7 +70,7 @@
             this.groupBox3.Controls.Add(this.EditBillBtn);
             this.groupBox3.Controls.Add(this.NewBillBtn);
             this.groupBox3.Controls.Add(this.dataGridView1);
-            this.groupBox3.Location = new System.Drawing.Point(65, 187);
+            this.groupBox3.Location = new System.Drawing.Point(65, 180);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(937, 478);
             this.groupBox3.TabIndex = 2;
@@ -85,12 +85,13 @@
             this.DeleteBillBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.DeleteBillBtn.ForeColor = System.Drawing.Color.Red;
             this.DeleteBillBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DeleteBillBtn.Location = new System.Drawing.Point(103, 432);
+            this.DeleteBillBtn.Location = new System.Drawing.Point(175, 414);
             this.DeleteBillBtn.Name = "DeleteBillBtn";
             this.DeleteBillBtn.Size = new System.Drawing.Size(123, 34);
             this.DeleteBillBtn.TabIndex = 130;
             this.DeleteBillBtn.Text = "حذف فاتورة";
             this.DeleteBillBtn.UseVisualStyleBackColor = true;
+            this.DeleteBillBtn.Click += new System.EventHandler(this.DeleteBillBtn_Click);
             // 
             // EditBillBtn
             // 
@@ -100,12 +101,13 @@
             this.EditBillBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.EditBillBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.EditBillBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EditBillBtn.Location = new System.Drawing.Point(367, 432);
+            this.EditBillBtn.Location = new System.Drawing.Point(377, 414);
             this.EditBillBtn.Name = "EditBillBtn";
             this.EditBillBtn.Size = new System.Drawing.Size(123, 34);
             this.EditBillBtn.TabIndex = 129;
             this.EditBillBtn.Text = "تعديل فاتورة";
             this.EditBillBtn.UseVisualStyleBackColor = true;
+            this.EditBillBtn.Click += new System.EventHandler(this.EditBillBtn_Click);
             // 
             // NewBillBtn
             // 
@@ -115,7 +117,7 @@
             this.NewBillBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.NewBillBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.NewBillBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.NewBillBtn.Location = new System.Drawing.Point(633, 432);
+            this.NewBillBtn.Location = new System.Drawing.Point(574, 414);
             this.NewBillBtn.Name = "NewBillBtn";
             this.NewBillBtn.Size = new System.Drawing.Size(123, 34);
             this.NewBillBtn.TabIndex = 127;
@@ -143,8 +145,9 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(740, 382);
+            this.dataGridView1.Size = new System.Drawing.Size(786, 349);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // Column1
             // 
@@ -262,9 +265,9 @@
             this.CancelFilterDateBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.CancelFilterDateBtn.ForeColor = System.Drawing.Color.Red;
             this.CancelFilterDateBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CancelFilterDateBtn.Location = new System.Drawing.Point(194, 125);
+            this.CancelFilterDateBtn.Location = new System.Drawing.Point(201, 124);
             this.CancelFilterDateBtn.Name = "CancelFilterDateBtn";
-            this.CancelFilterDateBtn.Size = new System.Drawing.Size(55, 31);
+            this.CancelFilterDateBtn.Size = new System.Drawing.Size(61, 27);
             this.CancelFilterDateBtn.TabIndex = 143;
             this.CancelFilterDateBtn.Text = "إلغاء";
             this.CancelFilterDateBtn.UseVisualStyleBackColor = true;
@@ -277,9 +280,9 @@
             this.CancelFilterSupplierBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.CancelFilterSupplierBtn.ForeColor = System.Drawing.Color.Red;
             this.CancelFilterSupplierBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CancelFilterSupplierBtn.Location = new System.Drawing.Point(428, 70);
+            this.CancelFilterSupplierBtn.Location = new System.Drawing.Point(442, 70);
             this.CancelFilterSupplierBtn.Name = "CancelFilterSupplierBtn";
-            this.CancelFilterSupplierBtn.Size = new System.Drawing.Size(55, 32);
+            this.CancelFilterSupplierBtn.Size = new System.Drawing.Size(63, 27);
             this.CancelFilterSupplierBtn.TabIndex = 142;
             this.CancelFilterSupplierBtn.Text = "إلغاء";
             this.CancelFilterSupplierBtn.UseVisualStyleBackColor = true;
@@ -292,9 +295,9 @@
             this.FilterDateBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.FilterDateBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
             this.FilterDateBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.FilterDateBtn.Location = new System.Drawing.Point(270, 124);
+            this.FilterDateBtn.Location = new System.Drawing.Point(279, 124);
             this.FilterDateBtn.Name = "FilterDateBtn";
-            this.FilterDateBtn.Size = new System.Drawing.Size(78, 33);
+            this.FilterDateBtn.Size = new System.Drawing.Size(69, 27);
             this.FilterDateBtn.TabIndex = 141;
             this.FilterDateBtn.Text = "إختيار";
             this.FilterDateBtn.UseVisualStyleBackColor = true;
@@ -307,9 +310,9 @@
             this.FilterSupplierBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.FilterSupplierBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
             this.FilterSupplierBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.FilterSupplierBtn.Location = new System.Drawing.Point(510, 70);
+            this.FilterSupplierBtn.Location = new System.Drawing.Point(519, 70);
             this.FilterSupplierBtn.Name = "FilterSupplierBtn";
-            this.FilterSupplierBtn.Size = new System.Drawing.Size(78, 32);
+            this.FilterSupplierBtn.Size = new System.Drawing.Size(69, 27);
             this.FilterSupplierBtn.TabIndex = 140;
             this.FilterSupplierBtn.Text = "إختيار";
             this.FilterSupplierBtn.UseVisualStyleBackColor = true;

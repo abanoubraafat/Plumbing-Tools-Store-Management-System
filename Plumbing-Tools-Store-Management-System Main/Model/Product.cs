@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Plumbing_Tools_Store_Management_System_Main.Model
 {
-    class Product
+    public class Product
     {
         public int ID { get; set; }
         //code must be unique

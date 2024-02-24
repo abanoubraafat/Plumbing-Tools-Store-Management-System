@@ -88,5 +88,25 @@ namespace AddProduct.Screens
         {
             this.Close();
         }
+
+        private void QuantityTxt_Leave(object sender, EventArgs e)
+        {
+            if (QuantityTxt.Value != 0)
+            {
+                QtyErrLabel.Visible = false;
+            }
+        }
+
+        private static bool ContainsNumber(string input)
+        {
+            return Regex.IsMatch(input, @"\d+");
+        }
+        private void BuyingPriceTxt_Leave(object sender, EventArgs e)
+        {
+            if (ContainsNumber(BuyingPriceTxt.Text))
+            {
+                
+            }
+        }
     }
 }

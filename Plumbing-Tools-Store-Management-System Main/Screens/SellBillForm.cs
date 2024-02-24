@@ -17,12 +17,18 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
         DataContext context = new DataContext();
         int ProductId = 0;
         int selectedRow;
-        public SellBillForm()
+        List<Product> productsList;
+        public SellBillForm(List<Product> productsList)
         {
             InitializeComponent();
             SearchProductCombo.DisplayMember = "Name";
             SearchProductCombo.ValueMember = "ID";
             SearchProductCombo.DataSource = context.Products.Select(p => p).ToList();
+            this.productsList = productsList;
+            foreach(Product product in productsList)
+            {
+                dataGridView1.Rows.Add(product.BarCode, product.Name, product.SellPrice, product.Quantity, product.Quantity * product.SellPrice);
+            }
         }
 
         private void DeleteBillBtn_Click(object sender, EventArgs e)
@@ -49,8 +55,6 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
         {
             if (dataGridView1.RowCount != 0)
             {
-
-
                 //saving logic without valdiations
                 SellBill sellBill = new SellBill();
                 sellBill.SellDate = BillDate.Value.Date;
@@ -59,7 +63,6 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
                     sellBill.Discount = discount;
                 if (double.TryParse(TotalTxt.Text, out double total))
                     sellBill.Total = total;
-                //BuyBillDetails billDetails = new BuyBillDetails() { BuyBill = buyBill};
                 addedBill = context.SellBills.Add(sellBill);
                 context.SaveChanges();
                 for (int i = 0; i < dataGridView1.Rows.Count; i++)

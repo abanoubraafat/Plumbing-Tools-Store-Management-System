@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Plumbing_Tools_Store_Management_System_Main.Model
 {
-    internal class DataContext : DbContext
+    public class DataContext : DbContext
     {
         public DataContext() : base("name=PlumbingToolsStoreConnection")
         { }
@@ -26,5 +26,6 @@ namespace Plumbing_Tools_Store_Management_System_Main.Model
         public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<BuyBillDetails> BuyBillDetails { get; set; }
         public DbSet<SellBillDetails> SellBillDetails { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

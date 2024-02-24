@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtCACost = new System.Windows.Forms.TextBox();
+            this.BillNoTxt = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
@@ -71,13 +71,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtCACost
+            // BillNoTxt
             // 
-            this.txtCACost.Location = new System.Drawing.Point(471, 34);
-            this.txtCACost.Name = "txtCACost";
-            this.txtCACost.ReadOnly = true;
-            this.txtCACost.Size = new System.Drawing.Size(175, 27);
-            this.txtCACost.TabIndex = 115;
+            this.BillNoTxt.Location = new System.Drawing.Point(471, 34);
+            this.BillNoTxt.Name = "BillNoTxt";
+            this.BillNoTxt.ReadOnly = true;
+            this.BillNoTxt.Size = new System.Drawing.Size(175, 27);
+            this.BillNoTxt.TabIndex = 115;
             // 
             // groupBox2
             // 
@@ -195,7 +195,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.BillDate);
-            this.groupBox1.Controls.Add(this.txtCACost);
+            this.groupBox1.Controls.Add(this.BillNoTxt);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Location = new System.Drawing.Point(68, 38);
             this.groupBox1.Name = "groupBox1";
@@ -493,7 +493,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtCACost;
+        private System.Windows.Forms.TextBox BillNoTxt;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button5;

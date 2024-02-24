@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.ToDatePicker = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.txtDate = new System.Windows.Forms.DateTimePicker();
+            this.FromDatePicker = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CancelFilterDateBtn = new System.Windows.Forms.Button();
+            this.FilterDateBtn = new System.Windows.Forms.Button();
+            this.DateFilterLbl = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.DeleteBillBtn = new System.Windows.Forms.Button();
             this.EditBillBtn = new System.Windows.Forms.Button();
-            this.NewBillBtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,23 +54,23 @@
             this.header_panel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // ToDatePicker
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(309, 81);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.RightToLeftLayout = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(175, 32);
-            this.dateTimePicker1.TabIndex = 137;
+            this.ToDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.ToDatePicker.Location = new System.Drawing.Point(336, 81);
+            this.ToDatePicker.Name = "ToDatePicker";
+            this.ToDatePicker.RightToLeftLayout = true;
+            this.ToDatePicker.Size = new System.Drawing.Size(175, 27);
+            this.ToDatePicker.TabIndex = 137;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(490, 87);
+            this.label1.Location = new System.Drawing.Point(517, 87);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 24);
+            this.label1.Size = new System.Drawing.Size(31, 19);
             this.label1.TabIndex = 136;
             this.label1.Text = "إلى :";
             // 
@@ -79,43 +79,31 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(715, 87);
+            this.label7.Location = new System.Drawing.Point(742, 87);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(101, 24);
+            this.label7.Size = new System.Drawing.Size(81, 19);
             this.label7.TabIndex = 135;
             this.label7.Text = "في الفترة من :";
             // 
-            // button5
+            // FromDatePicker
             // 
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(217, 81);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(64, 32);
-            this.button5.TabIndex = 134;
-            this.button5.Text = "بحث";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // txtDate
-            // 
-            this.txtDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtDate.Location = new System.Drawing.Point(534, 81);
-            this.txtDate.Name = "txtDate";
-            this.txtDate.RightToLeftLayout = true;
-            this.txtDate.Size = new System.Drawing.Size(175, 32);
-            this.txtDate.TabIndex = 133;
+            this.FromDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FromDatePicker.Location = new System.Drawing.Point(561, 81);
+            this.FromDatePicker.Name = "FromDatePicker";
+            this.FromDatePicker.RightToLeftLayout = true;
+            this.FromDatePicker.Size = new System.Drawing.Size(175, 27);
+            this.FromDatePicker.TabIndex = 133;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.CancelFilterDateBtn);
+            this.panel1.Controls.Add(this.FilterDateBtn);
+            this.panel1.Controls.Add(this.DateFilterLbl);
+            this.panel1.Controls.Add(this.ToDatePicker);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.txtDate);
+            this.panel1.Controls.Add(this.FromDatePicker);
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -124,13 +112,52 @@
             this.panel1.Size = new System.Drawing.Size(1073, 665);
             this.panel1.TabIndex = 2;
             // 
+            // CancelFilterDateBtn
+            // 
+            this.CancelFilterDateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CancelFilterDateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelFilterDateBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.CancelFilterDateBtn.ForeColor = System.Drawing.Color.Red;
+            this.CancelFilterDateBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CancelFilterDateBtn.Location = new System.Drawing.Point(171, 81);
+            this.CancelFilterDateBtn.Name = "CancelFilterDateBtn";
+            this.CancelFilterDateBtn.Size = new System.Drawing.Size(61, 27);
+            this.CancelFilterDateBtn.TabIndex = 150;
+            this.CancelFilterDateBtn.Text = "إلغاء";
+            this.CancelFilterDateBtn.UseVisualStyleBackColor = true;
+            // 
+            // FilterDateBtn
+            // 
+            this.FilterDateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.FilterDateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FilterDateBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.FilterDateBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
+            this.FilterDateBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.FilterDateBtn.Location = new System.Drawing.Point(249, 81);
+            this.FilterDateBtn.Name = "FilterDateBtn";
+            this.FilterDateBtn.Size = new System.Drawing.Size(69, 27);
+            this.FilterDateBtn.TabIndex = 149;
+            this.FilterDateBtn.Text = "إختيار";
+            this.FilterDateBtn.UseVisualStyleBackColor = true;
+            // 
+            // DateFilterLbl
+            // 
+            this.DateFilterLbl.AutoSize = true;
+            this.DateFilterLbl.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateFilterLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.DateFilterLbl.Location = new System.Drawing.Point(365, 120);
+            this.DateFilterLbl.Name = "DateFilterLbl";
+            this.DateFilterLbl.Size = new System.Drawing.Size(327, 19);
+            this.DateFilterLbl.TabIndex = 148;
+            this.DateFilterLbl.Text = "يتم الآن البحث بإستخدام تاريخ الشراء للإلغاء إضغط إلغاء";
+            this.DateFilterLbl.Visible = false;
+            // 
             // groupBox3
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox3.Controls.Add(this.DeleteBillBtn);
             this.groupBox3.Controls.Add(this.EditBillBtn);
-            this.groupBox3.Controls.Add(this.NewBillBtn);
             this.groupBox3.Controls.Add(this.dataGridView1);
             this.groupBox3.Location = new System.Drawing.Point(49, 138);
             this.groupBox3.Name = "groupBox3";
@@ -147,12 +174,13 @@
             this.DeleteBillBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.DeleteBillBtn.ForeColor = System.Drawing.Color.Red;
             this.DeleteBillBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DeleteBillBtn.Location = new System.Drawing.Point(78, 487);
+            this.DeleteBillBtn.Location = new System.Drawing.Point(331, 472);
             this.DeleteBillBtn.Name = "DeleteBillBtn";
             this.DeleteBillBtn.Size = new System.Drawing.Size(123, 34);
             this.DeleteBillBtn.TabIndex = 130;
             this.DeleteBillBtn.Text = "حذف فاتورة";
             this.DeleteBillBtn.UseVisualStyleBackColor = true;
+            this.DeleteBillBtn.Click += new System.EventHandler(this.DeleteBillBtn_Click);
             // 
             // EditBillBtn
             // 
@@ -162,28 +190,13 @@
             this.EditBillBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.EditBillBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.EditBillBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EditBillBtn.Location = new System.Drawing.Point(396, 487);
+            this.EditBillBtn.Location = new System.Drawing.Point(517, 472);
             this.EditBillBtn.Name = "EditBillBtn";
             this.EditBillBtn.Size = new System.Drawing.Size(123, 34);
             this.EditBillBtn.TabIndex = 129;
             this.EditBillBtn.Text = "تعديل فاتورة";
             this.EditBillBtn.UseVisualStyleBackColor = true;
-            // 
-            // NewBillBtn
-            // 
-            this.NewBillBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.NewBillBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.NewBillBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NewBillBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.NewBillBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.NewBillBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.NewBillBtn.Location = new System.Drawing.Point(696, 487);
-            this.NewBillBtn.Name = "NewBillBtn";
-            this.NewBillBtn.Size = new System.Drawing.Size(123, 34);
-            this.NewBillBtn.TabIndex = 127;
-            this.NewBillBtn.Text = "فاتورة جديدة";
-            this.NewBillBtn.UseVisualStyleBackColor = true;
-            this.NewBillBtn.Click += new System.EventHandler(this.NewBillBtn_Click);
+            this.EditBillBtn.Click += new System.EventHandler(this.EditBillBtn_Click);
             // 
             // dataGridView1
             // 
@@ -195,59 +208,60 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.Column2,
             this.Column3,
             this.Column4,
             this.Column5,
             this.Column6,
             this.Column7});
-            this.dataGridView1.Location = new System.Drawing.Point(57, 68);
+            this.dataGridView1.Location = new System.Drawing.Point(57, 43);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(810, 413);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // Column1
             // 
             this.Column1.HeaderText = "رقم الفاتورة";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "إسم العميل";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
+            this.Column1.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "تاريخ الفاتورة";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "الخصم";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "إجمالي المدفوع";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "المنتجات";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // Column7
             // 
             this.Column7.HeaderText = "ملاحظات الفاتورة";
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
             // 
             // label10
             // 
@@ -256,7 +270,7 @@
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(477, 4);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(172, 37);
+            this.label10.Size = new System.Drawing.Size(139, 29);
             this.label10.TabIndex = 124;
             this.label10.Text = "فواتير المبيعات";
             // 
@@ -299,25 +313,25 @@
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker ToDatePicker;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.DateTimePicker txtDate;
+        private System.Windows.Forms.DateTimePicker FromDatePicker;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button DeleteBillBtn;
         private System.Windows.Forms.Button EditBillBtn;
-        private System.Windows.Forms.Button NewBillBtn;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel header_panel;
+        private System.Windows.Forms.Label DateFilterLbl;
+        private System.Windows.Forms.Button CancelFilterDateBtn;
+        private System.Windows.Forms.Button FilterDateBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel header_panel;
     }
 }
