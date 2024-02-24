@@ -111,13 +111,13 @@
     <Compile Include="Screens\GetAllBuyBillsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\GetAllBuyBillsForm.Designer.cs">
+    <Compile Include="Screens\GetAllBuyBillsForm.designer.cs">
       <DependentUpon>GetAllBuyBillsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\GetAllSellBillsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\GetAllSellBillsForm.Designer.cs">
+    <Compile Include="Screens\GetAllSellBillsForm.designer.cs">
       <DependentUpon>GetAllSellBillsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Home.cs">
@@ -162,14 +162,14 @@
     <Compile Include="Screens\suppliersList.designer.cs">
       <DependentUpon>suppliersList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Screens\Supplier_Recording.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Screens\Supplier_Recording.designer.cs">
       <DependentUpon>Supplier_Recording.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Migrations\202402240400192_RegisterNewUser.resx">
       <DependentUpon>202402240400192_RegisterNewUser.cs</DependentUpon>
     </EmbeddedResource>

@@ -43,8 +43,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -209,20 +209,6 @@
             this.panel3.Size = new System.Drawing.Size(1071, 574);
             this.panel3.TabIndex = 134;
             // 
-<<<<<<< HEAD
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(410, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(126, 26);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "تسجيل الموردين";
-            // 
-=======
->>>>>>> 66d8e18e83391142a8478dcfb4305f824f70337e
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
@@ -234,17 +220,6 @@
             this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.panel1.Size = new System.Drawing.Size(1071, 60);
             this.panel1.TabIndex = 2;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(461, 16);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(155, 29);
-            this.label10.TabIndex = 152;
-            this.label10.Text = "إضافة مورد جديد";
             // 
             // button7
             // 
@@ -261,6 +236,17 @@
             this.button7.Text = "X";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(461, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(155, 29);
+            this.label10.TabIndex = 152;
+            this.label10.Text = "إضافة مورد جديد";
             // 
             // Supplier_Recording
             // 

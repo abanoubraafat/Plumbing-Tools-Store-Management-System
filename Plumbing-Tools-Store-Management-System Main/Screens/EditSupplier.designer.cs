@@ -32,9 +32,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
-            
-            this.label10 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,6 +46,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.SupID_txt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -63,33 +61,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1071, 60);
             this.panel1.TabIndex = 151;
-            // 
-            // button7
-            // 
-            this.button7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.Red;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(3, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(60, 42);
-            this.button7.TabIndex = 164;
-            this.button7.Text = "X";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(467, 16);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(162, 29);
-            this.label10.TabIndex = 165;
-            this.label10.Text = "تعديل بيانات مورد";
             // 
             // button7
             // 
@@ -183,7 +154,6 @@
             this.SupName_txt.Size = new System.Drawing.Size(190, 34);
             this.SupName_txt.TabIndex = 159;
             this.SupName_txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SupName_txt_KeyPress);
-
             // 
             // SupPhone_txt
             // 
@@ -195,7 +165,6 @@
             this.SupPhone_txt.TabIndex = 158;
             this.SupPhone_txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SupPhone_txt_KeyPress);
             this.SupPhone_txt.Leave += new System.EventHandler(this.SupPhone_txt_Leave);
-
             // 
             // SupAddress_txt
             // 
@@ -267,6 +236,17 @@
             this.label1.Size = new System.Drawing.Size(101, 29);
             this.label1.TabIndex = 151;
             this.label1.Text = "كود المورد:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(461, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(194, 29);
+            this.label10.TabIndex = 165;
+            this.label10.Text = "تعديل بيانات الموردين";
             // 
             // EditSupplier
             // 

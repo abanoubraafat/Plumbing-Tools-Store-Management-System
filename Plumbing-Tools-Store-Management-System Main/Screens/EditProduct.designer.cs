@@ -49,6 +49,7 @@ namespace AddProduct.Screens
             this.BuyLabel = new System.Windows.Forms.Label();
             this.SellingPriceNum = new System.Windows.Forms.NumericUpDown();
             this.BuyingPriceNum = new System.Windows.Forms.NumericUpDown();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QuantityTxt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,6 +60,7 @@ namespace AddProduct.Screens
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
+            this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.button7);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -275,6 +277,17 @@ namespace AddProduct.Screens
             this.BuyingPriceNum.TabIndex = 38;
             this.BuyingPriceNum.Leave += new System.EventHandler(this.BuyingPriceNum_Leave);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(461, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(159, 29);
+            this.label10.TabIndex = 134;
+            this.label10.Text = "إضافة منتج جديد";
+            // 
             // EditProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -307,6 +320,7 @@ namespace AddProduct.Screens
             this.RightToLeftLayout = true;
             this.Text = "تعديل المنتج";
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QuantityTxt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SellingPriceNum)).EndInit();
@@ -337,5 +351,6 @@ namespace AddProduct.Screens
         private System.Windows.Forms.Label BuyLabel;
         private System.Windows.Forms.NumericUpDown SellingPriceNum;
         private System.Windows.Forms.NumericUpDown BuyingPriceNum;
+        private System.Windows.Forms.Label label10;
     }
 }

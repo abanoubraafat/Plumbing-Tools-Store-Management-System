@@ -194,43 +194,8 @@ C:\Users\Abdo Mokhles\Source\Repos\Plumbing-Tools-Store-Management-System\Plumbi
 C:\Users\Abdo Mokhles\Source\Repos\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing-Tools-Store-Management-System Main.pdb
 C:\Users\Abdo Mokhles\Source\Repos\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Migrations.RegisterNewUser.resources
 C:\Users\Abdo Mokhles\Source\Repos\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.Register.resources
-<<<<<<< Updated upstream
 D:\.net\14.c# advanced\project\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Migrations.RegisterNewUser.resources
 D:\.net\14.c# advanced\project\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.Register.resources
-<<<<<<< HEAD
-=======
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\bin\Debug\Plumbing-Tools-Store-Management-System Main.exe.config
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\bin\Debug\Plumbing-Tools-Store-Management-System Main.exe
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\bin\Debug\Plumbing-Tools-Store-Management-System Main.pdb
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\bin\Debug\EntityFramework.dll
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\bin\Debug\EntityFramework.xml
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing-Tools-Store-Management-System Main.csproj.AssemblyReference.cache
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Migrations.RegisterNewUser.resources
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Properties.Resources.resources
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\AddProduct.Form1.resources
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.BuyBillForm.resources
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.EditBuyBillForm.resources
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\AddProduct.Screens.EditProduct.resources
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.EditSellBillForm.resources
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.EditSupplier.resources
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.GetAllBuyBillsForm.resources
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.GetAllSellBillsForm.resources
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\AddProduct.Screens.Home.resources
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\WindowsFormsApp1.HomeList.resources
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\AddProduct.Screens.Login.resources
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\project.ProductList.resources
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.Register.resources
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.SellBillForm.resources
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\project.suppliersList.resources
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.Supplier_Recording.resources
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing-Tools-Store-Management-System Main.csproj.GenerateResource.cache
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing-Tools-Store-Management-System Main.csproj.CoreCompileInputs.cache
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing-Tools-Store-Management-System Main.csproj.CopyComplete
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing-Tools-Store-Management-System Main.exe
-C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing-Tools-Store-Management-System Main.pdb
->>>>>>> Stashed changes
 D:\ITI\Windows Project GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Migrations.RegisterNewUser.resources
 D:\ITI\Windows Project GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.Register.resources
 D:\Intensive Camp\C#\Project\Online Repo\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\bin\Debug\Plumbing-Tools-Store-Management-System Main.exe.config
@@ -264,4 +229,34 @@ D:\Intensive Camp\C#\Project\Online Repo\Plumbing-Tools-Store-Management-System\
 D:\Intensive Camp\C#\Project\Online Repo\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing-Tools-Store-Management-System Main.csproj.CopyComplete
 D:\Intensive Camp\C#\Project\Online Repo\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing-Tools-Store-Management-System Main.exe
 D:\Intensive Camp\C#\Project\Online Repo\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing-Tools-Store-Management-System Main.pdb
->>>>>>> 66d8e18e83391142a8478dcfb4305f824f70337e
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\bin\Debug\Plumbing-Tools-Store-Management-System Main.exe.config
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\bin\Debug\Plumbing-Tools-Store-Management-System Main.exe
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\bin\Debug\Plumbing-Tools-Store-Management-System Main.pdb
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\bin\Debug\EntityFramework.dll
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\bin\Debug\EntityFramework.SqlServer.dll
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\bin\Debug\EntityFramework.xml
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\bin\Debug\EntityFramework.SqlServer.xml
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing-Tools-Store-Management-System Main.csproj.AssemblyReference.cache
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Migrations.RegisterNewUser.resources
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Properties.Resources.resources
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\obj\Debug\AddProduct.Form1.resources
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.BuyBillForm.resources
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.EditBuyBillForm.resources
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\obj\Debug\AddProduct.Screens.EditProduct.resources
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.EditSellBillForm.resources
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.EditSupplier.resources
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.GetAllBuyBillsForm.resources
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.GetAllSellBillsForm.resources
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\obj\Debug\AddProduct.Screens.Home.resources
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\obj\Debug\WindowsFormsApp1.HomeList.resources
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\obj\Debug\AddProduct.Screens.Login.resources
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\obj\Debug\project.ProductList.resources
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.Register.resources
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.SellBillForm.resources
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\obj\Debug\project.suppliersList.resources
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.Supplier_Recording.resources
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing-Tools-Store-Management-System Main.csproj.GenerateResource.cache
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing-Tools-Store-Management-System Main.csproj.CoreCompileInputs.cache
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing-Tools-Store-Management-System Main.csproj.CopyComplete
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing-Tools-Store-Management-System Main.exe
+D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing-Tools-Store-Management-System Main.pdb

@@ -29,8 +29,8 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
             {
                 dataGridView1.Rows.Add(product.BarCode, product.Name, product.SellPrice, product.Quantity, product.Quantity * product.SellPrice);
             }
-            TotalDiscountTxt.Text = "0";
             TotalTxt.Text = "0";
+            TotalDiscountTxt.Text = "0";
         }
 
         private void DeleteBillBtn_Click(object sender, EventArgs e)
@@ -99,7 +99,8 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
             SearchProductCombo.DisplayMember = "Name";
             SearchProductCombo.ValueMember = "ID";
             SearchProductCombo.DataSource = context.Products.Select(p => p).ToList();
-
+            TotalTxt.Text = "0";
+            TotalDiscountTxt.Text = "0";
         }
 
         private void NewBillBtn_Click(object sender, EventArgs e)
@@ -241,7 +242,6 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
 
         }
 
-<<<<<<< HEAD
         private void Print_btn_Click(object sender, EventArgs e)
         {
             (printPreviewDialog1).WindowState = FormWindowState.Maximized;
@@ -323,7 +323,7 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
             e.Graphics.DrawLine(Pens.Black, margin, preHeights + rowsHeight + colHeight, e.PageBounds.Width - margin, preHeights + rowsHeight + colHeight);
 
         }
-=======
+
         private void TotalDiscountTxt_TextChanged(object sender, EventArgs e)
         {
             bool isNum = double.TryParse(TotalDiscountTxt.Text, out double totalDiscount);
@@ -356,6 +356,5 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
 
             }
         }
->>>>>>> d61ea8b2cf644a58a965b1a59379ac21ae52615c
     }
 }

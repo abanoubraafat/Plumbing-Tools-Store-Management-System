@@ -54,6 +54,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.Print_btn = new System.Windows.Forms.Button();
             this.DeleteProductFromBillBtn = new System.Windows.Forms.Button();
             this.DeleteBillBtn = new System.Windows.Forms.Button();
             this.SaveBillBtn = new System.Windows.Forms.Button();
@@ -65,7 +66,6 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.Print_btn = new System.Windows.Forms.Button();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -355,6 +355,22 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "تفاصيل البضاعة :";
             // 
+            // Print_btn
+            // 
+            this.Print_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Print_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Print_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Print_btn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.Print_btn.ForeColor = System.Drawing.Color.Brown;
+            this.Print_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Print_btn.Location = new System.Drawing.Point(23, 229);
+            this.Print_btn.Name = "Print_btn";
+            this.Print_btn.Size = new System.Drawing.Size(123, 34);
+            this.Print_btn.TabIndex = 134;
+            this.Print_btn.Text = "طباعة الفاتورة";
+            this.Print_btn.UseVisualStyleBackColor = true;
+            this.Print_btn.Click += new System.EventHandler(this.Print_btn_Click);
+            // 
             // DeleteProductFromBillBtn
             // 
             this.DeleteProductFromBillBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -433,7 +449,6 @@
             this.Column7});
             this.dataGridView1.Location = new System.Drawing.Point(23, 26);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(716, 197);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
@@ -472,22 +487,6 @@
             // printDocument1
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
-            // 
-            // Print_btn
-            // 
-            this.Print_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Print_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Print_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Print_btn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.Print_btn.ForeColor = System.Drawing.Color.Brown;
-            this.Print_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Print_btn.Location = new System.Drawing.Point(23, 229);
-            this.Print_btn.Name = "Print_btn";
-            this.Print_btn.Size = new System.Drawing.Size(123, 34);
-            this.Print_btn.TabIndex = 134;
-            this.Print_btn.Text = "طباعة الفاتورة";
-            this.Print_btn.UseVisualStyleBackColor = true;
-            this.Print_btn.Click += new System.EventHandler(this.Print_btn_Click);
             // 
             // printPreviewDialog1
             // 

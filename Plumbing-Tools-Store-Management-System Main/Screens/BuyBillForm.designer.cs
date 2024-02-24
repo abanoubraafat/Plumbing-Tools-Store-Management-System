@@ -39,6 +39,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.Print_btn = new System.Windows.Forms.Button();
             this.DeleteProductFromBillBtn = new System.Windows.Forms.Button();
             this.DeleteBillBtn = new System.Windows.Forms.Button();
             this.SaveBillBtn = new System.Windows.Forms.Button();
@@ -59,7 +60,7 @@
             this.SearchProductCombo = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.BillNotesTxt = new System.Windows.Forms.TextBox();
-            this.AddNewSupplierBtn = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SupplierCombo = new System.Windows.Forms.ComboBox();
@@ -69,7 +70,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.Print_btn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -195,6 +195,22 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "تفاصيل البضاعة :";
+            // 
+            // Print_btn
+            // 
+            this.Print_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Print_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Print_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Print_btn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.Print_btn.ForeColor = System.Drawing.Color.Brown;
+            this.Print_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Print_btn.Location = new System.Drawing.Point(6, 220);
+            this.Print_btn.Name = "Print_btn";
+            this.Print_btn.Size = new System.Drawing.Size(140, 34);
+            this.Print_btn.TabIndex = 134;
+            this.Print_btn.Text = "طباعة الفاتورة";
+            this.Print_btn.UseVisualStyleBackColor = true;
+            this.Print_btn.Click += new System.EventHandler(this.Print_btn_Click);
             // 
             // DeleteProductFromBillBtn
             // 
@@ -416,7 +432,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.BillNotesTxt);
-            this.groupBox1.Controls.Add(this.AddNewSupplierBtn);
+            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.SupplierCombo);
@@ -438,21 +454,20 @@
             this.BillNotesTxt.Size = new System.Drawing.Size(318, 27);
             this.BillNotesTxt.TabIndex = 121;
             // 
-            // AddNewSupplierBtn
+            // button2
             // 
-            this.AddNewSupplierBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AddNewSupplierBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AddNewSupplierBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddNewSupplierBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.AddNewSupplierBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.AddNewSupplierBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddNewSupplierBtn.Location = new System.Drawing.Point(7, 32);
-            this.AddNewSupplierBtn.Name = "AddNewSupplierBtn";
-            this.AddNewSupplierBtn.Size = new System.Drawing.Size(127, 32);
-            this.AddNewSupplierBtn.TabIndex = 127;
-            this.AddNewSupplierBtn.Text = "إضافة مورد جديد";
-            this.AddNewSupplierBtn.UseVisualStyleBackColor = true;
-            this.AddNewSupplierBtn.Click += new System.EventHandler(this.AddNewSupplierBtn_Click);
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(7, 32);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(127, 32);
+            this.button2.TabIndex = 127;
+            this.button2.Text = "إضافة مورد جديد";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -541,22 +556,6 @@
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
-            // Print_btn
-            // 
-            this.Print_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Print_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Print_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Print_btn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.Print_btn.ForeColor = System.Drawing.Color.Brown;
-            this.Print_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Print_btn.Location = new System.Drawing.Point(6, 220);
-            this.Print_btn.Name = "Print_btn";
-            this.Print_btn.Size = new System.Drawing.Size(140, 34);
-            this.Print_btn.TabIndex = 134;
-            this.Print_btn.Text = "طباعة الفاتورة";
-            this.Print_btn.UseVisualStyleBackColor = true;
-            this.Print_btn.Click += new System.EventHandler(this.Print_btn_Click);
-            // 
             // BuyBillForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -615,7 +614,7 @@
         private System.Windows.Forms.ComboBox SearchProductCombo;
         private System.Windows.Forms.Button AddNewProductBtn;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button AddNewSupplierBtn;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox TotalTxt;
         private System.Windows.Forms.Button AddByCodeBtn;
         private System.Windows.Forms.Button AddByNameBtn;
