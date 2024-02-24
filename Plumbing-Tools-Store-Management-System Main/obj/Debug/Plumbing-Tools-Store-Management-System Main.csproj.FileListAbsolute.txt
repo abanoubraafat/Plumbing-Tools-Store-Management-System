@@ -231,7 +231,6 @@ C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Pl
 C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing-Tools-Store-Management-System Main.exe
 C:\Users\mahmou mahdy\Documents\GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing-Tools-Store-Management-System Main.pdb
 >>>>>>> Stashed changes
-=======
 D:\ITI\Windows Project GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Migrations.RegisterNewUser.resources
 D:\ITI\Windows Project GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.Register.resources
 D:\Intensive Camp\C#\Project\Online Repo\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\bin\Debug\Plumbing-Tools-Store-Management-System Main.exe.config
