@@ -66,7 +66,7 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
                 {
                     context.SaveChanges();
                     MessageBox.Show("تم تعديل البيانات بنجاح", "تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
+                    this.Close(); 
                 }
                 catch (Exception ex)
                 {
@@ -82,6 +82,34 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
         private void button7_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void SupName_txt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("الرجاء إدخال حروف فقط", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void SupPhone_txt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("الرجاء إدخال أرقام فقط", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void SupPhone_txt_Leave(object sender, EventArgs e)
+        {
+
+            if (SupPhone_txt.Text.Length != 11)
+            {
+                MessageBox.Show("يجب ادخال رقم تليفون 11 رقم", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                SupPhone_txt.Focus();
+            }
         }
     }
 }

@@ -61,6 +61,14 @@ namespace project
 
         private void updatesupplier_Btn_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+            //var result = MessageBox.Show("هل أنت واثق أنك تريد تعديل هذا المورد ؟", "تحذير !", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            //if (result == DialogResult.OK)
+            //{
+               EditSupplier editSupplier = new EditSupplier(idofsupplierselected);
+               editSupplier.ShowDialog();
+            //}
+=======
             var result = MessageBox.Show("هل أنت واثق أنك تريد تعديل هذا المورد ؟", "تحذير !", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             if (result == DialogResult.OK)
             {
@@ -69,18 +77,23 @@ namespace project
                 reloadpage();
                 printdata();
             }
+>>>>>>> 66d8e18e83391142a8478dcfb4305f824f70337e
         }
 
         private void addsupplier_Btn_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("هل أنت واثق أنك تريد اضافة مورد جديد؟", "حقا !", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            if (result == DialogResult.OK)
-            {
+            //var result = MessageBox.Show("هل أنت واثق أنك تريد اضافة مورد جديد؟", "حقا !", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            //if (result == DialogResult.OK)
+            //{
                 Supplier_Recording supplier_Recording = new Supplier_Recording();
                 supplier_Recording.ShowDialog();
+<<<<<<< HEAD
+            //}
+=======
                 reloadpage();
                 printdata();
             }
+>>>>>>> 66d8e18e83391142a8478dcfb4305f824f70337e
         }
 
         private void reloadsupplier_btn_Click(object sender, EventArgs e)
@@ -91,9 +104,52 @@ namespace project
 
         private void suppliersearch_Btn_Click(object sender, EventArgs e)
         {
+// Updated upstream
             var text = searchsupplier_Rxt.Text;
             reloadpage();
             printdata(text);
+
+            #region
+            //string searchTerm = searchsupplier_Rxt.Text.Trim().ToLower();
+
+            //if (!string.IsNullOrEmpty(searchTerm))
+            //{
+            //    bool found = false;
+            //    foreach (DataGridViewRow row in suppliers_dataGridView.Rows)
+            //    {
+            //        if (row.Cells["SupplierName"].Value != null)
+            //        {
+            //            string supplierName = row.Cells["SupplierName"].Value.ToString().ToLower();
+            //            if (supplierName.Contains(searchTerm))
+            //            {
+
+            //                row.Visible = true;
+            //                found = true;
+            //            }
+            //            else
+            //            {
+            //                row.Visible = false;
+            //            }
+            //        }
+            //    }
+
+
+            //    if (!found)
+            //    {
+            //        MessageBox.Show("لا يوجد موردين يطابقون البحث.", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    }
+            //}
+            //else
+            //{
+            //    foreach (DataGridViewRow row in suppliers_dataGridView.Rows)
+            //    {
+            //        row.Visible = true;
+            //    }
+            //}
+
+            #endregion
+
+
         }
         private void reloadpage()
         {
@@ -101,6 +157,9 @@ namespace project
             this.WindowState = FormWindowState.Maximized;
             this.InitializeComponent();
             this.WindowState = FormWindowState.Normal;
+
+            
+// Stashed changes
         }
     }
 }

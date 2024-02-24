@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBillForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
@@ -66,6 +67,9 @@
             this.BillDate = new System.Windows.Forms.DateTimePicker();
             this.BillNoTxt = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.Print_btn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -179,6 +183,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.Print_btn);
             this.groupBox3.Controls.Add(this.DeleteProductFromBillBtn);
             this.groupBox3.Controls.Add(this.DeleteBillBtn);
             this.groupBox3.Controls.Add(this.SaveBillBtn);
@@ -199,7 +204,7 @@
             this.DeleteProductFromBillBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.DeleteProductFromBillBtn.ForeColor = System.Drawing.Color.Red;
             this.DeleteProductFromBillBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DeleteProductFromBillBtn.Location = new System.Drawing.Point(82, 218);
+            this.DeleteProductFromBillBtn.Location = new System.Drawing.Point(165, 220);
             this.DeleteProductFromBillBtn.Name = "DeleteProductFromBillBtn";
             this.DeleteProductFromBillBtn.Size = new System.Drawing.Size(159, 34);
             this.DeleteProductFromBillBtn.TabIndex = 132;
@@ -215,9 +220,9 @@
             this.DeleteBillBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.DeleteBillBtn.ForeColor = System.Drawing.Color.Red;
             this.DeleteBillBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DeleteBillBtn.Location = new System.Drawing.Point(266, 220);
+            this.DeleteBillBtn.Location = new System.Drawing.Point(343, 220);
             this.DeleteBillBtn.Name = "DeleteBillBtn";
-            this.DeleteBillBtn.Size = new System.Drawing.Size(123, 34);
+            this.DeleteBillBtn.Size = new System.Drawing.Size(128, 34);
             this.DeleteBillBtn.TabIndex = 130;
             this.DeleteBillBtn.Text = "حذف الفاتورة";
             this.DeleteBillBtn.UseVisualStyleBackColor = true;
@@ -231,7 +236,7 @@
             this.SaveBillBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.SaveBillBtn.ForeColor = System.Drawing.Color.SeaGreen;
             this.SaveBillBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SaveBillBtn.Location = new System.Drawing.Point(422, 220);
+            this.SaveBillBtn.Location = new System.Drawing.Point(484, 218);
             this.SaveBillBtn.Name = "SaveBillBtn";
             this.SaveBillBtn.Size = new System.Drawing.Size(123, 34);
             this.SaveBillBtn.TabIndex = 128;
@@ -247,7 +252,7 @@
             this.NewBillBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.NewBillBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.NewBillBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.NewBillBtn.Location = new System.Drawing.Point(582, 220);
+            this.NewBillBtn.Location = new System.Drawing.Point(623, 220);
             this.NewBillBtn.Name = "NewBillBtn";
             this.NewBillBtn.Size = new System.Drawing.Size(123, 34);
             this.NewBillBtn.TabIndex = 127;
@@ -521,6 +526,37 @@
             this.label7.TabIndex = 114;
             this.label7.Text = "رقم الفاتورة :";
             // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // Print_btn
+            // 
+            this.Print_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Print_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Print_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Print_btn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.Print_btn.ForeColor = System.Drawing.Color.Brown;
+            this.Print_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Print_btn.Location = new System.Drawing.Point(6, 220);
+            this.Print_btn.Name = "Print_btn";
+            this.Print_btn.Size = new System.Drawing.Size(140, 34);
+            this.Print_btn.TabIndex = 134;
+            this.Print_btn.Text = "طباعة الفاتورة";
+            this.Print_btn.UseVisualStyleBackColor = true;
+            this.Print_btn.Click += new System.EventHandler(this.Print_btn_Click);
+            // 
             // BuyBillForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -589,5 +625,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Qty;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.Button Print_btn;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

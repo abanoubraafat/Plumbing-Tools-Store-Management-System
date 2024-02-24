@@ -31,8 +31,13 @@
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+<<<<<<< HEAD
+            this.button7 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+=======
             this.label10 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
+>>>>>>> 66d8e18e83391142a8478dcfb4305f824f70337e
             this.panel4 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -62,6 +67,34 @@
             this.panel1.Size = new System.Drawing.Size(1071, 60);
             this.panel1.TabIndex = 151;
             // 
+<<<<<<< HEAD
+            // button7
+            // 
+            this.button7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.Red;
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(3, 3);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(60, 42);
+            this.button7.TabIndex = 164;
+            this.button7.Text = "X";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(411, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(165, 26);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "تعديل بيانات الموردين";
+=======
             // label10
             // 
             this.label10.AutoSize = true;
@@ -88,6 +121,7 @@
             this.button7.Text = "X";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
+>>>>>>> 66d8e18e83391142a8478dcfb4305f824f70337e
             // 
             // panel4
             // 
@@ -164,6 +198,10 @@
             this.SupName_txt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.SupName_txt.Size = new System.Drawing.Size(190, 34);
             this.SupName_txt.TabIndex = 159;
+<<<<<<< HEAD
+            this.SupName_txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SupName_txt_KeyPress);
+=======
+>>>>>>> 66d8e18e83391142a8478dcfb4305f824f70337e
             // 
             // SupPhone_txt
             // 
@@ -173,6 +211,11 @@
             this.SupPhone_txt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.SupPhone_txt.Size = new System.Drawing.Size(190, 34);
             this.SupPhone_txt.TabIndex = 158;
+<<<<<<< HEAD
+            this.SupPhone_txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SupPhone_txt_KeyPress);
+            this.SupPhone_txt.Leave += new System.EventHandler(this.SupPhone_txt_Leave);
+=======
+>>>>>>> 66d8e18e83391142a8478dcfb4305f824f70337e
             // 
             // SupAddress_txt
             // 

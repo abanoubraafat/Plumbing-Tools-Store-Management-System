@@ -337,5 +337,89 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
             Supplier_Recording form = new Supplier_Recording();
             form.ShowDialog();
         }
+
+        private void Print_btn_Click(object sender, EventArgs e)
+        {
+            (printPreviewDialog1).WindowState = FormWindowState.Maximized;
+            if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.Print();
+            }
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            float margin = 40;
+            Font f = new Font("Arial", 18, FontStyle.Bold);
+            string strDate = "التاريخ: " + BillDate.Text;
+            string strName = SupplierCombo.Text + " : اسم المورد";
+
+            SizeF fontSizeNO = e.Graphics.MeasureString("#NO " + BillNoTxt.Text, f);
+            SizeF fontSizeDate = e.Graphics.MeasureString(strDate, f);
+            SizeF fontSizeName = e.Graphics.MeasureString(strName, f);
+
+            e.Graphics.DrawString("#NO " + BillNoTxt.Text, f, Brushes.Red, (e.PageBounds.Width - fontSizeNO.Width) / 2, margin);
+            e.Graphics.DrawString(strDate, f, Brushes.Black, e.PageBounds.Width - fontSizeDate.Width - margin, margin + fontSizeNO.Height);
+            e.Graphics.DrawString(strName, f, Brushes.Black, e.PageBounds.Width - fontSizeName.Width - margin, margin + fontSizeNO.Height + fontSizeDate.Height);
+
+
+            float preHeights = margin + fontSizeNO.Height + fontSizeDate.Height + 70;
+
+            e.Graphics.DrawRectangle(Pens.Black, margin, preHeights, e.PageBounds.Width - margin * 2, e.PageBounds.Height - margin - preHeights);
+
+            float height = 20;
+
+            float colHeight = 60;
+
+            float col1Width = 270;
+            float col2Width = 110 + col1Width;
+            float col3Width = 110 + col2Width;
+            float col4Width = 125 + col3Width;
+            float col5Width = 110 + col4Width;
+
+            e.Graphics.DrawLine(Pens.Black, margin, preHeights + colHeight, e.PageBounds.Width - margin, preHeights + colHeight);
+
+            e.Graphics.DrawString("اسم الصنف", f, Brushes.Black, e.PageBounds.Width - col1Width, preHeights + height);
+            e.Graphics.DrawLine(Pens.Black, e.PageBounds.Width - margin * 2 - col1Width, preHeights, e.PageBounds.Width - margin * 2 - col1Width, e.PageBounds.Height - margin);
+
+            e.Graphics.DrawString(" رقم الصنف", f, Brushes.Black, e.PageBounds.Width - margin * 2 - col2Width, preHeights + height);
+            e.Graphics.DrawLine(Pens.Black, e.PageBounds.Width - margin * 2 - col2Width, preHeights, e.PageBounds.Width - margin * 2 - col2Width, e.PageBounds.Height - margin);
+
+            e.Graphics.DrawString("الكمية", f, Brushes.Black, e.PageBounds.Width - margin - col3Width, preHeights + height);
+            e.Graphics.DrawLine(Pens.Black, e.PageBounds.Width - margin * 2 - col3Width, preHeights, e.PageBounds.Width - margin * 2 - col3Width, e.PageBounds.Height - margin);
+
+            e.Graphics.DrawString("السعر", f, Brushes.Black, e.PageBounds.Width - margin - col4Width, preHeights + height);
+            e.Graphics.DrawLine(Pens.Black, e.PageBounds.Width - margin * 2 - col4Width, preHeights, e.PageBounds.Width - margin * 2 - col4Width, e.PageBounds.Height - margin);
+
+            e.Graphics.DrawString("الاجمالي", f, Brushes.Black, e.PageBounds.Width - 55 - col5Width, preHeights + height);
+            //e.Graphics.DrawLine(Pens.Black, e.PageBounds.Width - margin * 2 - col5Width, preHeights, e.PageBounds.Width - margin * 2 - col5Width, e.PageBounds.Height - margin);
+
+
+            float rowsHeight = 60;
+
+            for (int x = 0; x < dataGridView1.Rows.Count; x++)
+            {
+
+                e.Graphics.DrawString(dataGridView1.Rows[x].Cells[0].Value.ToString(), f, Brushes.Black, e.PageBounds.Width - margin * 2 - col1Width, preHeights + rowsHeight + height);
+                e.Graphics.DrawString(dataGridView1.Rows[x].Cells[1].Value.ToString(), f, Brushes.Black, e.PageBounds.Width - margin * 2 - col2Width, preHeights + rowsHeight + height);
+                e.Graphics.DrawString(dataGridView1.Rows[x].Cells[2].Value.ToString(), f, Brushes.Black, e.PageBounds.Width - margin * 2 - col3Width, preHeights + rowsHeight + height);
+                e.Graphics.DrawString(dataGridView1.Rows[x].Cells[3].Value.ToString(), f, Brushes.Black, e.PageBounds.Width - margin * 2 - col4Width, preHeights + rowsHeight + height);
+                e.Graphics.DrawString(dataGridView1.Rows[x].Cells[5].Value.ToString(), f, Brushes.Black, e.PageBounds.Width - margin * 2 - col5Width, preHeights + rowsHeight + height);
+                e.Graphics.DrawLine(Pens.Black, margin, preHeights + rowsHeight + colHeight, e.PageBounds.Width - margin, preHeights + rowsHeight + colHeight);
+
+                rowsHeight += 60;
+            }
+
+            e.Graphics.DrawString("الخصم", f, Brushes.Red, e.PageBounds.Width - margin - col4Width, preHeights + rowsHeight + height);
+            e.Graphics.DrawString(TotalTxt.Text, f, Brushes.Blue, e.PageBounds.Width - margin * 2 - col5Width, preHeights + rowsHeight + height);
+            e.Graphics.DrawLine(Pens.Black, margin, preHeights + rowsHeight + colHeight, e.PageBounds.Width - margin, preHeights + rowsHeight + colHeight);
+
+            e.Graphics.DrawString("الاجمالي الكلي", f, Brushes.Red, e.PageBounds.Width - margin * 2 - col4Width, preHeights + rowsHeight * 2 + height);
+            e.Graphics.DrawString(TotalTxt.Text, f, Brushes.Blue, e.PageBounds.Width - margin * 2 - col5Width, preHeights + rowsHeight + height);
+            e.Graphics.DrawLine(Pens.Black, margin, preHeights + rowsHeight + colHeight, e.PageBounds.Width - margin, preHeights + rowsHeight + colHeight);
+
+
+
+        }
     }
 }

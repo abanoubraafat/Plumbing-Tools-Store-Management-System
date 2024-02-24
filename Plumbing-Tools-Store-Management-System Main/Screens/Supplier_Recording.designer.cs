@@ -65,6 +65,7 @@
             this.SupID_txt.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SupID_txt.Location = new System.Drawing.Point(679, 99);
             this.SupID_txt.Name = "SupID_txt";
+            this.SupID_txt.ReadOnly = true;
             this.SupID_txt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.SupID_txt.Size = new System.Drawing.Size(190, 34);
             this.SupID_txt.TabIndex = 131;
@@ -127,6 +128,7 @@
             this.SupPhone_txt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.SupPhone_txt.Size = new System.Drawing.Size(190, 34);
             this.SupPhone_txt.TabIndex = 142;
+            this.SupPhone_txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SupPhone_txt_KeyPress);
             this.SupPhone_txt.Leave += new System.EventHandler(this.SupPhone_txt_Leave);
             // 
             // SupName_txt
@@ -137,6 +139,7 @@
             this.SupName_txt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.SupName_txt.Size = new System.Drawing.Size(190, 34);
             this.SupName_txt.TabIndex = 143;
+            this.SupName_txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SupName_txt_KeyPress);
             // 
             // Save_btn
             // 
@@ -206,6 +209,20 @@
             this.panel3.Size = new System.Drawing.Size(1071, 574);
             this.panel3.TabIndex = 134;
             // 
+<<<<<<< HEAD
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(410, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(126, 26);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "تسجيل الموردين";
+            // 
+=======
+>>>>>>> 66d8e18e83391142a8478dcfb4305f824f70337e
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
