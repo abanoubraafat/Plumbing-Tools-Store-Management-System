@@ -31,22 +31,22 @@
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.SupID_txt = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.Notes_txt = new System.Windows.Forms.TextBox();
-            this.SupAddress_txt = new System.Windows.Forms.TextBox();
-            this.SupPhone_txt = new System.Windows.Forms.TextBox();
-            this.SupName_txt = new System.Windows.Forms.TextBox();
-            this.Save_btn = new System.Windows.Forms.Button();
-            this.Company_txt = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Company_txt = new System.Windows.Forms.TextBox();
+            this.Save_btn = new System.Windows.Forms.Button();
+            this.SupName_txt = new System.Windows.Forms.TextBox();
+            this.SupPhone_txt = new System.Windows.Forms.TextBox();
+            this.SupAddress_txt = new System.Windows.Forms.TextBox();
+            this.Notes_txt = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.SupID_txt = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -62,6 +62,22 @@
             this.panel1.Size = new System.Drawing.Size(1071, 60);
             this.panel1.TabIndex = 151;
             // 
+            // button7
+            // 
+            this.button7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.Red;
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(3, 3);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(60, 42);
+            this.button7.TabIndex = 164;
+            this.button7.Text = "X";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -69,7 +85,7 @@
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(411, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(213, 33);
+            this.label8.Size = new System.Drawing.Size(165, 26);
             this.label8.TabIndex = 0;
             this.label8.Text = "تعديل بيانات الموردين";
             // 
@@ -94,94 +110,35 @@
             this.panel4.Size = new System.Drawing.Size(1071, 574);
             this.panel4.TabIndex = 152;
             // 
-            // label1
+            // label6
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(875, 102);
-            this.label1.Name = "label1";
-            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(129, 37);
-            this.label1.TabIndex = 151;
-            this.label1.Text = "كود المورد:";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(440, 275);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(75, 29);
+            this.label6.TabIndex = 163;
+            this.label6.Text = "العنوان:";
             // 
-            // SupID_txt
+            // label3
             // 
-            this.SupID_txt.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SupID_txt.Location = new System.Drawing.Point(679, 102);
-            this.SupID_txt.Name = "SupID_txt";
-            this.SupID_txt.ReadOnly = true;
-            this.SupID_txt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.SupID_txt.Size = new System.Drawing.Size(190, 40);
-            this.SupID_txt.TabIndex = 152;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(884, 275);
+            this.label3.Name = "label3";
+            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label3.Size = new System.Drawing.Size(107, 29);
+            this.label3.TabIndex = 162;
+            this.label3.Text = "الملاحظات:";
             // 
-            // label4
+            // Company_txt
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(440, 183);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 37);
-            this.label4.TabIndex = 153;
-            this.label4.Text = "اسم الشركة:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(440, 99);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(146, 37);
-            this.label5.TabIndex = 154;
-            this.label5.Text = "رقم التليفون:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(875, 183);
-            this.label7.Name = "label7";
-            this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label7.Size = new System.Drawing.Size(131, 37);
-            this.label7.TabIndex = 155;
-            this.label7.Text = "اسم المورد:";
-            // 
-            // Notes_txt
-            // 
-            this.Notes_txt.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Notes_txt.Location = new System.Drawing.Point(679, 275);
-            this.Notes_txt.Multiline = true;
-            this.Notes_txt.Name = "Notes_txt";
-            this.Notes_txt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Notes_txt.Size = new System.Drawing.Size(190, 86);
-            this.Notes_txt.TabIndex = 156;
-            // 
-            // SupAddress_txt
-            // 
-            this.SupAddress_txt.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SupAddress_txt.Location = new System.Drawing.Point(244, 272);
-            this.SupAddress_txt.Name = "SupAddress_txt";
-            this.SupAddress_txt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.SupAddress_txt.Size = new System.Drawing.Size(190, 40);
-            this.SupAddress_txt.TabIndex = 157;
-            // 
-            // SupPhone_txt
-            // 
-            this.SupPhone_txt.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SupPhone_txt.Location = new System.Drawing.Point(244, 99);
-            this.SupPhone_txt.Name = "SupPhone_txt";
-            this.SupPhone_txt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.SupPhone_txt.Size = new System.Drawing.Size(190, 40);
-            this.SupPhone_txt.TabIndex = 158;
-            // 
-            // SupName_txt
-            // 
-            this.SupName_txt.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SupName_txt.Location = new System.Drawing.Point(679, 186);
-            this.SupName_txt.Name = "SupName_txt";
-            this.SupName_txt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.SupName_txt.Size = new System.Drawing.Size(190, 40);
-            this.SupName_txt.TabIndex = 159;
+            this.Company_txt.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Company_txt.Location = new System.Drawing.Point(244, 186);
+            this.Company_txt.Name = "Company_txt";
+            this.Company_txt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Company_txt.Size = new System.Drawing.Size(190, 34);
+            this.Company_txt.TabIndex = 161;
             // 
             // Save_btn
             // 
@@ -199,55 +156,101 @@
             this.Save_btn.UseVisualStyleBackColor = true;
             this.Save_btn.Click += new System.EventHandler(this.Save_btn_Click);
             // 
-            // Company_txt
+            // SupName_txt
             // 
-            this.Company_txt.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Company_txt.Location = new System.Drawing.Point(244, 186);
-            this.Company_txt.Name = "Company_txt";
-            this.Company_txt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Company_txt.Size = new System.Drawing.Size(190, 40);
-            this.Company_txt.TabIndex = 161;
+            this.SupName_txt.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SupName_txt.Location = new System.Drawing.Point(679, 186);
+            this.SupName_txt.Name = "SupName_txt";
+            this.SupName_txt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.SupName_txt.Size = new System.Drawing.Size(190, 34);
+            this.SupName_txt.TabIndex = 159;
+            this.SupName_txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SupName_txt_KeyPress);
             // 
-            // label3
+            // SupPhone_txt
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(884, 275);
-            this.label3.Name = "label3";
-            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label3.Size = new System.Drawing.Size(135, 37);
-            this.label3.TabIndex = 162;
-            this.label3.Text = "الملاحظات:";
+            this.SupPhone_txt.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SupPhone_txt.Location = new System.Drawing.Point(244, 99);
+            this.SupPhone_txt.Name = "SupPhone_txt";
+            this.SupPhone_txt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.SupPhone_txt.Size = new System.Drawing.Size(190, 34);
+            this.SupPhone_txt.TabIndex = 158;
+            this.SupPhone_txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SupPhone_txt_KeyPress);
+            this.SupPhone_txt.Leave += new System.EventHandler(this.SupPhone_txt_Leave);
             // 
-            // label6
+            // SupAddress_txt
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(440, 275);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(95, 37);
-            this.label6.TabIndex = 163;
-            this.label6.Text = "العنوان:";
+            this.SupAddress_txt.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SupAddress_txt.Location = new System.Drawing.Point(244, 272);
+            this.SupAddress_txt.Name = "SupAddress_txt";
+            this.SupAddress_txt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.SupAddress_txt.Size = new System.Drawing.Size(190, 34);
+            this.SupAddress_txt.TabIndex = 157;
             // 
-            // button7
+            // Notes_txt
             // 
-            this.button7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.Red;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(3, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(60, 42);
-            this.button7.TabIndex = 164;
-            this.button7.Text = "X";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.Notes_txt.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Notes_txt.Location = new System.Drawing.Point(679, 275);
+            this.Notes_txt.Multiline = true;
+            this.Notes_txt.Name = "Notes_txt";
+            this.Notes_txt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Notes_txt.Size = new System.Drawing.Size(190, 86);
+            this.Notes_txt.TabIndex = 156;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(875, 183);
+            this.label7.Name = "label7";
+            this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label7.Size = new System.Drawing.Size(103, 29);
+            this.label7.TabIndex = 155;
+            this.label7.Text = "اسم المورد:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(440, 99);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(115, 29);
+            this.label5.TabIndex = 154;
+            this.label5.Text = "رقم التليفون:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(440, 183);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(105, 29);
+            this.label4.TabIndex = 153;
+            this.label4.Text = "اسم الشركة:";
+            // 
+            // SupID_txt
+            // 
+            this.SupID_txt.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SupID_txt.Location = new System.Drawing.Point(679, 102);
+            this.SupID_txt.Name = "SupID_txt";
+            this.SupID_txt.ReadOnly = true;
+            this.SupID_txt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.SupID_txt.Size = new System.Drawing.Size(190, 34);
+            this.SupID_txt.TabIndex = 152;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(875, 102);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label1.Size = new System.Drawing.Size(101, 29);
+            this.label1.TabIndex = 151;
+            this.label1.Text = "كود المورد:";
             // 
             // EditSupplier
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1071, 634);

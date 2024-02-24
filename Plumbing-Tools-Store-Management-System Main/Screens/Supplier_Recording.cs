@@ -66,38 +66,47 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
 
             if (!AllFieldsAreFilled())
             {
-                MessageBox.Show("Please fill in all fields.", "Incomplete Data", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("برجاء ملئ جميع البيانات", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-         
-            using (var context = new DataContext())
+            if (SupPhone_txt.Text.Length != 11)
             {
-                Supplier newSupplier = new Supplier
-                {
-                    Name = SupName_txt.Text,
-                    Address = SupAddress_txt.Text,
-                    Phone = SupPhone_txt.Text,
-                    CompanyName = Company_txt.Text,
-                    Notes = Notes_txt.Text,
+                MessageBox.Show("يجب ادخال رقم تليفون 11 رقم", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                };
+            }
 
-                // If the supplier already exists, show a message to the user
-                if (SupplierExists(SupName_txt.Text, SupAddress_txt.Text, SupPhone_txt.Text, Company_txt.Text))
+            else
+            {
+                using (var context = new DataContext())
                 {
-                    MessageBox.Show("Supplier already exists.", "Duplicate Supplier", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return; // Exit the method
+                    Supplier newSupplier = new Supplier
+                    {
+                        Name = SupName_txt.Text,
+                        Address = SupAddress_txt.Text,
+                        Phone = SupPhone_txt.Text,
+                        CompanyName = Company_txt.Text,
+                        Notes = Notes_txt.Text,
+
+                    };
+
+                    // If the supplier already exists, show a message to the user
+                    if (SupplierExists(SupName_txt.Text, SupAddress_txt.Text, SupPhone_txt.Text, Company_txt.Text))
+                    {
+                        MessageBox.Show("هذا المورد بالفعل موجود", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return; // Exit the method
+                    }
+
+                    // Adding data in data base
+                    context.Suppliers.Add(newSupplier);
+                    context.SaveChanges();
+
+                    // Show Message Confirm
+                    MessageBox.Show("تم اضافة المورد بنجاح", "تاكيد", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    ClearFormFields();
                 }
 
-                // Adding data in data base
-                context.Suppliers.Add(newSupplier);
-                context.SaveChanges();
-
-                // Show Message Confirm
-                MessageBox.Show("Data saved successfully.", "Save Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                ClearFormFields();
             }
 
 
@@ -108,16 +117,34 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
         // Validate phone number length
         private void SupPhone_txt_Leave(object sender, EventArgs e)
         {
-            if (SupPhone_txt.Text.Length != 11)
-            {
-                MessageBox.Show("Phone number must be 11 characters long.", "Invalid Phone Number", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                SupPhone_txt.Focus(); 
-            }
+            //if (SupPhone_txt.Text.Length != 11)
+            //{
+            //    MessageBox.Show("يجب ادخال رقم تليفون 11 رقم", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            //}
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void SupPhone_txt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("الرجاء إدخال أرقام فقط", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void SupName_txt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("الرجاء إدخال حروف فقط", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

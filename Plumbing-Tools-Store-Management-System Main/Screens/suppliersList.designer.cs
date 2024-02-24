@@ -31,12 +31,6 @@ namespace project
         {
             this.label1 = new System.Windows.Forms.Label();
             this.suppliers_dataGridView = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deletesupplier_Btn = new System.Windows.Forms.Button();
             this.updatesupplier_Btn = new System.Windows.Forms.Button();
             this.addsupplier_Btn = new System.Windows.Forms.Button();
@@ -45,6 +39,12 @@ namespace project
             this.searchsupplier_Rxt = new System.Windows.Forms.TextBox();
             this.suppliersearch_Btn = new System.Windows.Forms.Button();
             this.header_panel = new System.Windows.Forms.Panel();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SupplierName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.suppliers_dataGridView)).BeginInit();
             this.header_panel.SuspendLayout();
             this.SuspendLayout();
@@ -56,7 +56,7 @@ namespace project
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(474, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 35);
+            this.label1.Size = new System.Drawing.Size(118, 27);
             this.label1.TabIndex = 142;
             this.label1.Text = "جميع الموردين";
             // 
@@ -70,7 +70,7 @@ namespace project
             this.suppliers_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.suppliers_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.Column2,
+            this.SupplierName,
             this.Column3,
             this.Column4,
             this.Column5,
@@ -83,49 +83,6 @@ namespace project
             this.suppliers_dataGridView.Size = new System.Drawing.Size(890, 425);
             this.suppliers_dataGridView.TabIndex = 141;
             this.suppliers_dataGridView.SelectionChanged += new System.EventHandler(this.suppliers_dataGridView_SelectionChanged);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "id";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "إسم المورد";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "رقم التليفون";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "اسم الشركة";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "الملاحظات";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "العنوان";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
             // 
             // deletesupplier_Btn
             // 
@@ -195,7 +152,7 @@ namespace project
             this.search_Lbl.ForeColor = System.Drawing.Color.Black;
             this.search_Lbl.Location = new System.Drawing.Point(859, 107);
             this.search_Lbl.Name = "search_Lbl";
-            this.search_Lbl.Size = new System.Drawing.Size(103, 24);
+            this.search_Lbl.Size = new System.Drawing.Size(84, 19);
             this.search_Lbl.TabIndex = 135;
             this.search_Lbl.Text = ": بحث بالاسم";
             // 
@@ -203,7 +160,7 @@ namespace project
             // 
             this.searchsupplier_Rxt.Location = new System.Drawing.Point(590, 104);
             this.searchsupplier_Rxt.Name = "searchsupplier_Rxt";
-            this.searchsupplier_Rxt.Size = new System.Drawing.Size(263, 32);
+            this.searchsupplier_Rxt.Size = new System.Drawing.Size(263, 27);
             this.searchsupplier_Rxt.TabIndex = 144;
             // 
             // suppliersearch_Btn
@@ -233,6 +190,49 @@ namespace project
             this.header_panel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.header_panel.Size = new System.Drawing.Size(1089, 60);
             this.header_panel.TabIndex = 148;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "id";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // SupplierName
+            // 
+            this.SupplierName.HeaderText = "إسم المورد";
+            this.SupplierName.MinimumWidth = 6;
+            this.SupplierName.Name = "SupplierName";
+            this.SupplierName.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "رقم التليفون";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "اسم الشركة";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "الملاحظات";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "العنوان";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // suppliersList
             // 
@@ -272,12 +272,12 @@ namespace project
         private System.Windows.Forms.Label search_Lbl;
         private System.Windows.Forms.TextBox searchsupplier_Rxt;
         private System.Windows.Forms.Button suppliersearch_Btn;
+        private System.Windows.Forms.Panel header_panel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SupplierName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.Panel header_panel;
     }
 }
