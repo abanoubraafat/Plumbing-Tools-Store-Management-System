@@ -21,9 +21,17 @@ namespace project
             InitializeComponent();
             printdata();
         }
-        public void printdata()
+        private void printdata()
         {
             var query1 = dataContext.Products.Select(e => new { e.ID, e.BarCode, e.Name, e.SellPrice, e.Quantity });
+            foreach (var item in query1)
+            {
+                product_dataGridView.Rows.Add(item.ID, item.BarCode, item.Name, item.SellPrice, item.Quantity);
+            }
+        }
+        private void printdata(string name)
+        {
+            var query1 = dataContext.Products.Where(d => d.Name.Contains(name)).Select(e => new { e.ID, e.BarCode, e.Name, e.SellPrice, e.Quantity });
             foreach (var item in query1)
             {
                 product_dataGridView.Rows.Add(item.ID, item.BarCode, item.Name, item.SellPrice, item.Quantity);
@@ -72,9 +80,22 @@ namespace project
 
         private void reloadproduct_btn_Click(object sender, EventArgs e)
         {
-            this.Controls.Clear();
-            this.InitializeComponent();
+            reloadpage();
             printdata();
+        }
+
+        private void productsearch_Btn_Click(object sender, EventArgs e)
+        {
+            var text = searchproduct_Rxt.Text;
+            reloadpage();
+            printdata(text);
+        }
+        private void reloadpage()
+        {
+            this.Controls.Clear();
+            this.WindowState = FormWindowState.Maximized;
+            this.InitializeComponent();
+            this.WindowState = FormWindowState.Normal;
         }
     }
 }

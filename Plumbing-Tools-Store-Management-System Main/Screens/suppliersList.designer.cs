@@ -220,6 +220,7 @@ namespace project
             this.suppliersearch_Btn.TabIndex = 147;
             this.suppliersearch_Btn.Text = "بحث";
             this.suppliersearch_Btn.UseVisualStyleBackColor = true;
+            this.suppliersearch_Btn.Click += new System.EventHandler(this.suppliersearch_Btn_Click);
             // 
             // header_panel
             // 

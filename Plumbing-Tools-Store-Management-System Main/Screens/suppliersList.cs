@@ -23,7 +23,7 @@ namespace project
             InitializeComponent();
             printdata();
         }
-        public void printdata()
+        private void printdata()
         {
             var query1 = dataContext.Suppliers.Select(e => new { e.ID, e.Name, e.Phone,e.CompanyName,e.Notes, e.Address });
             foreach (var item in query1)
@@ -31,7 +31,14 @@ namespace project
                 suppliers_dataGridView.Rows.Add(item.ID, item.Name, item.Phone, item.CompanyName, item.Notes,item.Address);
             }
         }
-
+        private void printdata(string name)
+        {
+            var query1 = dataContext.Suppliers.Where(d => d.Name.Contains(name)).Select(e => new { e.ID, e.Name, e.Phone, e.CompanyName, e.Notes, e.Address });
+            foreach (var item in query1)
+            {
+                suppliers_dataGridView.Rows.Add(item.ID, item.Name, item.Phone, item.CompanyName, item.Notes, item.Address);
+            }
+        }
         private void suppliers_dataGridView_SelectionChanged(object sender, EventArgs e)
         {
             idofsupplierselected = int.Parse(suppliers_dataGridView.CurrentRow.Cells[0].Value.ToString());
@@ -74,9 +81,22 @@ namespace project
 
         private void reloadsupplier_btn_Click(object sender, EventArgs e)
         {
-            this.Controls.Clear();
-            this.InitializeComponent();
+            reloadpage();
             printdata();
+        }
+
+        private void suppliersearch_Btn_Click(object sender, EventArgs e)
+        {
+            var text = searchsupplier_Rxt.Text;
+            reloadpage();
+            printdata(text);
+        }
+        private void reloadpage()
+        {
+            this.Controls.Clear();
+            this.WindowState = FormWindowState.Maximized;
+            this.InitializeComponent();
+            this.WindowState = FormWindowState.Normal;
         }
     }
 }

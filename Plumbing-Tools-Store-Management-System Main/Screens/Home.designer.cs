@@ -67,7 +67,7 @@ namespace AddProduct.Screens
             this.buybills_Btn.FlatAppearance.BorderSize = 0;
             this.buybills_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buybills_Btn.ForeColor = System.Drawing.Color.White;
-            this.buybills_Btn.Image = global::Plumbing_Tools_Store_Management_System_Main.Properties.Resources.receipt;
+            this.buybills_Btn.Image = global::Plumbing_Tools_Store_Management_System_Main.Properties.Resources.bill;
             this.buybills_Btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buybills_Btn.Location = new System.Drawing.Point(1, 552);
             this.buybills_Btn.Name = "buybills_Btn";

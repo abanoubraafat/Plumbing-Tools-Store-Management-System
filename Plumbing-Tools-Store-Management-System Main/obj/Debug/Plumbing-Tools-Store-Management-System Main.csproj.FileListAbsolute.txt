@@ -113,7 +113,6 @@ D:\.net\14.c# advanced\project\Plumbing-Tools-Store-Management-System\Plumbing-T
 D:\.net\14.c# advanced\project\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\bin\Debug\EntityFramework.xml
 D:\.net\14.c# advanced\project\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\bin\Debug\EntityFramework.SqlServer.xml
 D:\.net\14.c# advanced\project\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing-Tools-Store-Management-System Main.csproj.AssemblyReference.cache
-D:\.net\14.c# advanced\project\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Migrations.testmigrate.resources
 D:\.net\14.c# advanced\project\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Properties.Resources.resources
 D:\.net\14.c# advanced\project\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\AddProduct.Form1.resources
 D:\.net\14.c# advanced\project\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.BuyBillForm.resources
@@ -196,3 +195,5 @@ C:\Users\Abdo Mokhles\Source\Repos\Plumbing-Tools-Store-Management-System\Plumbi
 C:\Users\Abdo Mokhles\Source\Repos\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing-Tools-Store-Management-System Main.pdb
 C:\Users\Abdo Mokhles\Source\Repos\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Migrations.RegisterNewUser.resources
 C:\Users\Abdo Mokhles\Source\Repos\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.Register.resources
+D:\.net\14.c# advanced\project\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Migrations.RegisterNewUser.resources
+D:\.net\14.c# advanced\project\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.Register.resources

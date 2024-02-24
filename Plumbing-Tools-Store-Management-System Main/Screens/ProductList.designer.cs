@@ -200,6 +200,7 @@ namespace project
             this.productsearch_Btn.TabIndex = 146;
             this.productsearch_Btn.Text = "بحث";
             this.productsearch_Btn.UseVisualStyleBackColor = true;
+            this.productsearch_Btn.Click += new System.EventHandler(this.productsearch_Btn_Click);
             // 
             // label1
             // 

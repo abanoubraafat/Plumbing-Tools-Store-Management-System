@@ -42,6 +42,7 @@ namespace AddProduct.Screens
                     products_Btn.ImageAlign = ContentAlignment.MiddleLeft;
                     suppliers_Btn.ImageAlign = ContentAlignment.MiddleLeft;
                     sellbills_Btn.ImageAlign = ContentAlignment.MiddleLeft;
+                    buybills_Btn.ImageAlign = ContentAlignment.MiddleLeft;
                     timerdashboard.Stop();
                     Hidden = false;
                     this.Refresh();
@@ -57,6 +58,7 @@ namespace AddProduct.Screens
                     products_Btn.ImageAlign = ContentAlignment.MiddleRight;
                     suppliers_Btn.ImageAlign = ContentAlignment.MiddleRight;
                     sellbills_Btn.ImageAlign = ContentAlignment.MiddleRight;
+                    buybills_Btn.ImageAlign = ContentAlignment.MiddleRight;
                     timerdashboard.Stop();
                     Hidden = true;
                     this.Refresh();
