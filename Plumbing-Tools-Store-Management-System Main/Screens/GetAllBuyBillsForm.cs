@@ -49,6 +49,7 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
         {
             BuyBillForm buyBill = new BuyBillForm();
             buyBill.ShowDialog();
+            ReloadForm();
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -199,7 +200,9 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
         {
             context = new DataContext();
             this.Controls.Clear();
-            InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
+            this.InitializeComponent();
+            this.WindowState = FormWindowState.Normal;
             SupplierCombo.DisplayMember = "Name";
             SupplierCombo.ValueMember = "ID";
             SupplierCombo.DataSource = context.Suppliers.Select(s => s).ToList();

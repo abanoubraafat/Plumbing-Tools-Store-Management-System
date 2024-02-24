@@ -95,7 +95,7 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
         {
             if (BillId != 0)
             {
-                var res = MessageBox.Show("هل أنت متأكد أنك تريد حذف هذه الفاتورة ؟ هذا الخيار لا رجعة فيه! !!", "خطأ !", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                var res = MessageBox.Show("هل أنت متأكد أنك تريد حذف هذه الفاتورة ؟ هذا الخيار لا رجعة فيه! !! حذف الفاتورة لن ينتج عنه استرجاع المنتجات اذا كنت تريد استرجاع المنتجات اضفط تعديل الفاتورة ثم استرجاع كل المنتجات.", "خطأ !", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 if (res == DialogResult.OK)
                 {
                     dataGridView1.Rows.RemoveAt(selectedRow);
@@ -119,7 +119,9 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
         {
             context = new DataContext();
             this.Controls.Clear();
+            this.WindowState = FormWindowState.Maximized;
             this.InitializeComponent();
+            this.WindowState = FormWindowState.Normal;
             List<SellBill> bills = new List<SellBill>();
             bills = context.SellBills.Include(b => b.SellBillDetails.Select(dt => dt.Product)).ToList();
             dataGridView1.Rows.Clear();

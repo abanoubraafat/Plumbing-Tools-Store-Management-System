@@ -31,6 +31,7 @@ namespace AddProduct.Screens
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.QuantityTxt = new System.Windows.Forms.NumericUpDown();
             this.SaveProductBtn = new System.Windows.Forms.Button();
@@ -49,7 +50,6 @@ namespace AddProduct.Screens
             this.BuyLabel = new System.Windows.Forms.Label();
             this.SellingPriceNum = new System.Windows.Forms.NumericUpDown();
             this.BuyingPriceNum = new System.Windows.Forms.NumericUpDown();
-            this.label10 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QuantityTxt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,6 +67,17 @@ namespace AddProduct.Screens
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1071, 60);
             this.panel2.TabIndex = 34;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(461, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(108, 29);
+            this.label10.TabIndex = 134;
+            this.label10.Text = "تعديل منتج";
             // 
             // button7
             // 
@@ -88,6 +99,11 @@ namespace AddProduct.Screens
             // 
             this.QuantityTxt.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QuantityTxt.Location = new System.Drawing.Point(686, 164);
+            this.QuantityTxt.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
             this.QuantityTxt.Name = "QuantityTxt";
             this.QuantityTxt.Size = new System.Drawing.Size(134, 33);
             this.QuantityTxt.TabIndex = 28;
@@ -276,17 +292,6 @@ namespace AddProduct.Screens
             this.BuyingPriceNum.Size = new System.Drawing.Size(134, 33);
             this.BuyingPriceNum.TabIndex = 38;
             this.BuyingPriceNum.Leave += new System.EventHandler(this.BuyingPriceNum_Leave);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(461, 16);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(159, 29);
-            this.label10.TabIndex = 134;
-            this.label10.Text = "إضافة منتج جديد";
             // 
             // EditProduct
             // 

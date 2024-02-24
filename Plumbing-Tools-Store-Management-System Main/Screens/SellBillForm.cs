@@ -18,19 +18,21 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
         int ProductId = 0;
         int selectedRow;
         List<Product> productsList;
-        public SellBillForm(List<Product> productsList)
+        double Discount;
+        public SellBillForm(List<Product> productsList, double discount)
         {
             InitializeComponent();
-            SearchProductCombo.DisplayMember = "Name";
-            SearchProductCombo.ValueMember = "ID";
-            SearchProductCombo.DataSource = context.Products.Select(p => p).ToList();
+            //SearchProductCombo.DisplayMember = "Name";
+            //SearchProductCombo.ValueMember = "ID";
+            //SearchProductCombo.DataSource = context.Products.Select(p => p).ToList();
             this.productsList = productsList;
-            foreach(Product product in productsList)
+            foreach (Product product in productsList)
             {
-                dataGridView1.Rows.Add(product.BarCode, product.Name, product.SellPrice, product.Quantity, product.Quantity * product.SellPrice);
+                dataGridView1.Rows.Add(product.BarCode, product.Name, product.SellPrice, product.Quantity, product.Quantity * product.SellPrice, product.ID);
             }
             TotalTxt.Text = "0";
-            TotalDiscountTxt.Text = "0";
+            Discount = discount;
+            TotalDiscountTxt.Text = Discount.ToString();
         }
 
         private void DeleteBillBtn_Click(object sender, EventArgs e)
@@ -53,39 +55,39 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
             }
         }
         SellBill addedBill;
-        private void SaveBillBtn_Click(object sender, EventArgs e)
-        {
-            if (dataGridView1.RowCount != 0)
-            {
-                //saving logic without valdiations
-                SellBill sellBill = new SellBill();
-                sellBill.SellDate = BillDate.Value.Date;
-                sellBill.Notes = BillNotesTxt.Text;
-                if (double.TryParse(TotalDiscountTxt.Text, out double discount))
-                    sellBill.Discount = discount;
-                if (double.TryParse(TotalTxt.Text, out double total))
-                    sellBill.Total = total;
-                addedBill = context.SellBills.Add(sellBill);
-                context.SaveChanges();
-                for (int i = 0; i < dataGridView1.Rows.Count; i++)
-                {
-                    string code = dataGridView1.Rows[i].Cells[0].Value.ToString();
-                    Product product = context.Products.First(p => p.BarCode == code);
-                    product.Quantity -= int.Parse(dataGridView1.Rows[i].Cells[3].Value.ToString());
-                    SellBillDetails sellBillDetails = new SellBillDetails() { SellBill = sellBill, Product = product, Qty = int.Parse(dataGridView1.Rows[i].Cells[3].Value.ToString()) };
-                    context.SellBillDetails.Add(sellBillDetails);
-                }
-                context.SaveChanges();
-                MessageBox.Show($" تم إضافة الفاتورة بنجاح رقم الفاتورة : {addedBill.ID} !", "عملية ناجحة", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+        //private void SaveBillBtn_Click(object sender, EventArgs e)
+        //{
+        //    if (dataGridView1.RowCount != 0)
+        //    {
+        //        //saving logic without valdiations
+        //        SellBill sellBill = new SellBill();
+        //        sellBill.SellDate = BillDate.Value.Date;
+        //        sellBill.Notes = BillNotesTxt.Text;
+        //        if (double.TryParse(TotalDiscountTxt.Text, out double discount))
+        //            sellBill.Discount = discount;
+        //        if (double.TryParse(TotalTxt.Text, out double total))
+        //            sellBill.Total = total;
+        //        addedBill = context.SellBills.Add(sellBill);
+        //        context.SaveChanges();
+        //        for (int i = 0; i < dataGridView1.Rows.Count; i++)
+        //        {
+        //            string code = dataGridView1.Rows[i].Cells[0].Value.ToString();
+        //            Product product = context.Products.First(p => p.BarCode == code);
+        //            product.Quantity -= int.Parse(dataGridView1.Rows[i].Cells[3].Value.ToString());
+        //            SellBillDetails sellBillDetails = new SellBillDetails() { SellBill = sellBill, Product = product, Qty = int.Parse(dataGridView1.Rows[i].Cells[3].Value.ToString()) };
+        //            context.SellBillDetails.Add(sellBillDetails);
+        //        }
+        //        context.SaveChanges();
+        //        MessageBox.Show($" تم إضافة الفاتورة بنجاح رقم الفاتورة : {addedBill.ID} !", "عملية ناجحة", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //        this.Close();
 
-            }
-            else
-            {
-                MessageBox.Show("الفاتورة لا تحتوى على أي منتجات", "خطأ !", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("الفاتورة لا تحتوى على أي منتجات", "خطأ !", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        //    }
 
-        }
+        //}
 
         private void button7_Click(object sender, EventArgs e)
         {
@@ -96,9 +98,9 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
             this.Controls.Clear();
             this.InitializeComponent();
 
-            SearchProductCombo.DisplayMember = "Name";
-            SearchProductCombo.ValueMember = "ID";
-            SearchProductCombo.DataSource = context.Products.Select(p => p).ToList();
+            //SearchProductCombo.DisplayMember = "Name";
+            //SearchProductCombo.ValueMember = "ID";
+            //SearchProductCombo.DataSource = context.Products.Select(p => p).ToList();
             TotalTxt.Text = "0";
             TotalDiscountTxt.Text = "0";
         }
@@ -116,9 +118,9 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
             this.Controls.Clear();
             this.InitializeComponent();
 
-            SearchProductCombo.DisplayMember = "Name";
-            SearchProductCombo.ValueMember = "ID";
-            SearchProductCombo.DataSource = context.Products.Select(p => p).ToList();
+            //SearchProductCombo.DisplayMember = "Name";
+            //SearchProductCombo.ValueMember = "ID";
+            //SearchProductCombo.DataSource = context.Products.Select(p => p).ToList();
         }
         private void TotalChanged()
         {
@@ -158,7 +160,7 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
         {
             if (dataGridView1.Rows.Count > 0)
             {
-                ProductId = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                ProductId = int.Parse(dataGridView1.CurrentRow.Cells[5].Value.ToString());
                 selectedRow = dataGridView1.CurrentRow.Index;
             }
         }
@@ -176,20 +178,20 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            if (SearchProductCombo.SelectedValue != null)
-            {
-                int selectedProdID = int.Parse(SearchProductCombo.SelectedValue.ToString());
-                Product product = context.Products.FirstOrDefault(p => p.ID == selectedProdID);
-                if (!AddExistingProduct(product))
-                    dataGridView1.Rows.Add(product.BarCode, product.Name, product.SellPrice, 1, product.SellPrice);
-            }
-            else
-            {
-                MessageBox.Show(text: "لا يوجد منتج بهذا الإسم !", "خطأ !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
+        //private void button5_Click(object sender, EventArgs e)
+        //{
+        //    if (SearchProductCombo.SelectedValue != null)
+        //    {
+        //        int selectedProdID = int.Parse(SearchProductCombo.SelectedValue.ToString());
+        //        Product product = context.Products.FirstOrDefault(p => p.ID == selectedProdID);
+        //        if (!AddExistingProduct(product))
+        //            dataGridView1.Rows.Add(product.BarCode, product.Name, product.SellPrice, 1, product.SellPrice);
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show(text: "لا يوجد منتج بهذا الإسم !", "خطأ !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //    }
+        //}
 
         private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
@@ -218,7 +220,7 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
                 int colIdx = e.ColumnIndex;
                 int rowIdx = e.RowIndex;
                 string ProductCode = dataGridView1.Rows[rowIdx].Cells[0].Value.ToString();
-                var currentQty = dataGridView1.CurrentCell.Value?.ToString();
+                var currentQty = dataGridView1.Rows[rowIdx].Cells[3].Value?.ToString();
                 Product product = context.Products.FirstOrDefault(p => p.BarCode == ProductCode);
                 if (dataGridView1.Columns[colIdx].Name == "Qty")
                 {
@@ -244,6 +246,36 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
 
         private void Print_btn_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.RowCount != 0)
+            {
+                //saving logic without valdiations
+                SellBill sellBill = new SellBill();
+                sellBill.SellDate = BillDate.Value.Date;
+                sellBill.Notes = BillNotesTxt.Text;
+                if (double.TryParse(TotalDiscountTxt.Text, out double discount))
+                    sellBill.Discount = discount;
+                if (double.TryParse(TotalTxt.Text, out double total))
+                    sellBill.Total = total;
+                addedBill = context.SellBills.Add(sellBill);
+                context.SaveChanges();
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                {
+                    string code = dataGridView1.Rows[i].Cells[0].Value.ToString();
+                    Product product = context.Products.First(p => p.BarCode == code);
+                    product.Quantity -= int.Parse(dataGridView1.Rows[i].Cells[3].Value.ToString());
+                    SellBillDetails sellBillDetails = new SellBillDetails() { SellBill = sellBill, Product = product, Qty = int.Parse(dataGridView1.Rows[i].Cells[3].Value.ToString()) };
+                    context.SellBillDetails.Add(sellBillDetails);
+                }
+                context.SaveChanges();
+                BillNoTxt.Text = addedBill.ID.ToString();
+                this.Close();
+
+            }
+            else
+            {
+                MessageBox.Show("الفاتورة لا تحتوى على أي منتجات", "خطأ !", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             (printPreviewDialog1).WindowState = FormWindowState.Maximized;
             if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -256,7 +288,7 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
             float margin = 40;
             Font f = new Font("Arial", 18, FontStyle.Bold);
             string strDate = "التاريخ: " + BillDate.Text;
-            string strName = textBox5.Text + " : اسم العميل";
+            string strName = textBox5.Text + " : اسم العميل";
 
             SizeF fontSizeNO = e.Graphics.MeasureString("#NO " + BillNoTxt.Text, f);
             SizeF fontSizeDate = e.Graphics.MeasureString(strDate, f);
@@ -275,18 +307,18 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
 
             float colHeight = 60;
 
-            float col1Width = 270;
-            float col2Width = 110 + col1Width;
+            float col1Width = 110;
+            float col2Width = 270 + col1Width;
             float col3Width = 110 + col2Width;
             float col4Width = 125 + col3Width;
             float col5Width = 110 + col4Width;
 
             e.Graphics.DrawLine(Pens.Black, margin, preHeights + colHeight, e.PageBounds.Width - margin, preHeights + colHeight);
 
-            e.Graphics.DrawString("اسم الصنف", f, Brushes.Black, e.PageBounds.Width - col1Width, preHeights + height);
+            e.Graphics.DrawString("رقم الصنف", f, Brushes.Black, e.PageBounds.Width - col1Width - margin * 2, preHeights + height);
             e.Graphics.DrawLine(Pens.Black, e.PageBounds.Width - margin * 2 - col1Width, preHeights, e.PageBounds.Width - margin * 2 - col1Width, e.PageBounds.Height - margin);
 
-            e.Graphics.DrawString(" رقم الصنف", f, Brushes.Black, e.PageBounds.Width - margin * 2 - col2Width, preHeights + height);
+            e.Graphics.DrawString(" اسم الصنف", f, Brushes.Black, e.PageBounds.Width - margin - col2Width, preHeights + height);
             e.Graphics.DrawLine(Pens.Black, e.PageBounds.Width - margin * 2 - col2Width, preHeights, e.PageBounds.Width - margin * 2 - col2Width, e.PageBounds.Height - margin);
 
             e.Graphics.DrawString("الكمية", f, Brushes.Black, e.PageBounds.Width - margin - col3Width, preHeights + height);
@@ -308,20 +340,19 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
                 e.Graphics.DrawString(dataGridView1.Rows[x].Cells[1].Value.ToString(), f, Brushes.Black, e.PageBounds.Width - margin * 2 - col2Width, preHeights + rowsHeight + height);
                 e.Graphics.DrawString(dataGridView1.Rows[x].Cells[2].Value.ToString(), f, Brushes.Black, e.PageBounds.Width - margin * 2 - col3Width, preHeights + rowsHeight + height);
                 e.Graphics.DrawString(dataGridView1.Rows[x].Cells[3].Value.ToString(), f, Brushes.Black, e.PageBounds.Width - margin * 2 - col4Width, preHeights + rowsHeight + height);
-                e.Graphics.DrawString(dataGridView1.Rows[x].Cells[5].Value.ToString(), f, Brushes.Black, e.PageBounds.Width - margin * 2 - col5Width, preHeights + rowsHeight + height);
+                e.Graphics.DrawString(dataGridView1.Rows[x].Cells[4].Value.ToString(), f, Brushes.Black, e.PageBounds.Width - margin * 2 - col5Width, preHeights + rowsHeight + height);
                 e.Graphics.DrawLine(Pens.Black, margin, preHeights + rowsHeight + colHeight, e.PageBounds.Width - margin, preHeights + rowsHeight + colHeight);
 
                 rowsHeight += 60;
             }
 
             e.Graphics.DrawString("الخصم", f, Brushes.Red, e.PageBounds.Width - margin - col4Width, preHeights + rowsHeight + height);
-            e.Graphics.DrawString(TotalTxt.Text, f, Brushes.Blue, e.PageBounds.Width - margin * 2 - col5Width, preHeights + rowsHeight + height);
+            e.Graphics.DrawString(TotalDiscountTxt.Text, f, Brushes.Blue, e.PageBounds.Width - margin * 2 - col5Width, preHeights + rowsHeight + height);
             e.Graphics.DrawLine(Pens.Black, margin, preHeights + rowsHeight + colHeight, e.PageBounds.Width - margin, preHeights + rowsHeight + colHeight);
 
-            e.Graphics.DrawString("الاجمالي الكلي", f, Brushes.Red, e.PageBounds.Width - margin * 2 - col4Width, preHeights + rowsHeight * 2 + height);
-            e.Graphics.DrawString(TotalTxt.Text, f, Brushes.Blue, e.PageBounds.Width - margin * 2 - col5Width, preHeights + rowsHeight + height);
+            e.Graphics.DrawString("الاجمالي الكلي", f, Brushes.Red, e.PageBounds.Width - margin * 2 - col4Width, preHeights + rowsHeight + height * 4);
+            e.Graphics.DrawString(TotalTxt.Text, f, Brushes.Blue, e.PageBounds.Width - margin * 2 - col5Width, preHeights + rowsHeight + height * 4);
             e.Graphics.DrawLine(Pens.Black, margin, preHeights + rowsHeight + colHeight, e.PageBounds.Width - margin, preHeights + rowsHeight + colHeight);
-
         }
 
         private void TotalDiscountTxt_TextChanged(object sender, EventArgs e)

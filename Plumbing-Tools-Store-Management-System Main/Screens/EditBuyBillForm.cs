@@ -41,7 +41,7 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
             foreach(BuyBillDetails item in details)
             {
                 //may chane if u used price, total fields in BuyBillDetails
-                dataGridView1.Rows.Add(item.Product.BarCode, item.Product.Name, item.Product.BuyPrice, item.Qty, item.Qty * item.Product.BuyPrice);
+                dataGridView1.Rows.Add(item.Product.BarCode, item.Product.Name, item.Product.BuyPrice, item.Qty, item.Qty * item.Product.BuyPrice, item.ProductID);
                 ProductQtyBeforeEdit[item.ProductID] = item.Qty;
             }
 
@@ -133,15 +133,16 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
                 int colIdx = e.ColumnIndex;
                 int rowIdx = e.RowIndex;
                 string ProductCode = dataGridView1.Rows[rowIdx].Cells[0].Value.ToString();
-                var currentQty = dataGridView1.CurrentCell.Value?.ToString();
+                var currentQty = dataGridView1.Rows[rowIdx].Cells[3].Value?.ToString();
                 Product product = context.Products.FirstOrDefault(p => p.BarCode == ProductCode);
                 if (dataGridView1.Columns[colIdx].Name == "Qty")
                 {
                     bool IsNum = double.TryParse(currentQty, out double QtyVal);
                     if (IsNum && QtyVal > 0)
                     {
-                        dataGridView1.Rows[rowIdx].Cells[colIdx + 1].Value = product.BuyPrice * QtyVal;    
+                        dataGridView1.Rows[rowIdx].Cells[colIdx + 1].Value = product.BuyPrice * QtyVal;
                         //Total Edit
+                        TotalDiscountTxt.Text = "0";
                         TotalChanged();
                     }
                     else
@@ -199,7 +200,7 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
                 int selectedProdID = int.Parse(SearchProductCombo.SelectedValue.ToString());
                 Product product = context.Products.FirstOrDefault(p => p.ID == selectedProdID);
                 if(!AddExistingProduct(product))
-                    dataGridView1.Rows.Add(product.BarCode, product.Name, product.BuyPrice, 1, product.BuyPrice);
+                    dataGridView1.Rows.Add(product.BarCode, product.Name, product.BuyPrice, 1, product.BuyPrice, product.ID);
             }
             else
             {
@@ -316,6 +317,7 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
                 Product product = context.Products.FirstOrDefault(p => p.ID == ProductId);
                 product.Quantity -= ProductQtyBeforeEdit[product.ID];
                 dataGridView1.Rows.RemoveAt(selectedRow);
+                TotalDiscountTxt.Text = "0";
                 TotalChanged();
             }
             else
@@ -328,7 +330,7 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
         {
             if (dataGridView1.Rows.Count > 0)
             {
-                ProductId = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                ProductId = int.Parse(dataGridView1.CurrentRow.Cells[5].Value.ToString());
                 selectedRow = dataGridView1.CurrentRow.Index;
             }
         }

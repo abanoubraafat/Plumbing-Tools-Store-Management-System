@@ -30,12 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellBillForm));
             this.BillNoTxt = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.SearchProductCombo = new System.Windows.Forms.ComboBox();
             this.BillNotesTxt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,13 +45,11 @@
             this.TotalDiscountTxt = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.TotalTxt = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.Print_btn = new System.Windows.Forms.Button();
             this.DeleteProductFromBillBtn = new System.Windows.Forms.Button();
             this.DeleteBillBtn = new System.Windows.Forms.Button();
-            this.SaveBillBtn = new System.Windows.Forms.Button();
             this.NewBillBtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,9 +57,9 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -82,76 +74,6 @@
             this.BillNoTxt.ReadOnly = true;
             this.BillNoTxt.Size = new System.Drawing.Size(175, 27);
             this.BillNoTxt.TabIndex = 115;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.SearchProductCombo);
-            this.groupBox2.Location = new System.Drawing.Point(67, 182);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(752, 89);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "طرق الإدخال :";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label9.Location = new System.Drawing.Point(297, 39);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 19);
-            this.label9.TabIndex = 127;
-            this.label9.Text = "بحث بالإسم :";
-            // 
-            // button5
-            // 
-            this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(48, 36);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(56, 26);
-            this.button5.TabIndex = 126;
-            this.button5.Text = "أضف";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(470, 36);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(175, 27);
-            this.textBox2.TabIndex = 125;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(683, 42);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 19);
-            this.label5.TabIndex = 124;
-            this.label5.Text = "الباركود :";
-            // 
-            // SearchProductCombo
-            // 
-            this.SearchProductCombo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.SearchProductCombo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.SearchProductCombo.FormattingEnabled = true;
-            this.SearchProductCombo.IntegralHeight = false;
-            this.SearchProductCombo.Location = new System.Drawing.Point(116, 36);
-            this.SearchProductCombo.Name = "SearchProductCombo";
-            this.SearchProductCombo.Size = new System.Drawing.Size(175, 27);
-            this.SearchProductCombo.TabIndex = 118;
             // 
             // BillNotesTxt
             // 
@@ -244,7 +166,6 @@
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.groupBox4);
             this.panel1.Controls.Add(this.groupBox3);
-            this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -285,7 +206,6 @@
             this.groupBox4.Controls.Add(this.TotalDiscountTxt);
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Controls.Add(this.TotalTxt);
-            this.groupBox4.Controls.Add(this.textBox3);
             this.groupBox4.Controls.Add(this.label6);
             this.groupBox4.Location = new System.Drawing.Point(68, 561);
             this.groupBox4.Name = "groupBox4";
@@ -321,14 +241,6 @@
             this.TotalTxt.Size = new System.Drawing.Size(175, 27);
             this.TotalTxt.TabIndex = 126;
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(41, 67);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(448, 27);
-            this.textBox3.TabIndex = 125;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -345,12 +257,11 @@
             this.groupBox3.Controls.Add(this.Print_btn);
             this.groupBox3.Controls.Add(this.DeleteProductFromBillBtn);
             this.groupBox3.Controls.Add(this.DeleteBillBtn);
-            this.groupBox3.Controls.Add(this.SaveBillBtn);
             this.groupBox3.Controls.Add(this.NewBillBtn);
             this.groupBox3.Controls.Add(this.dataGridView1);
-            this.groupBox3.Location = new System.Drawing.Point(69, 277);
+            this.groupBox3.Location = new System.Drawing.Point(69, 176);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(752, 278);
+            this.groupBox3.Size = new System.Drawing.Size(752, 379);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "تفاصيل البضاعة :";
@@ -363,7 +274,7 @@
             this.Print_btn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.Print_btn.ForeColor = System.Drawing.Color.Brown;
             this.Print_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Print_btn.Location = new System.Drawing.Point(23, 229);
+            this.Print_btn.Location = new System.Drawing.Point(84, 324);
             this.Print_btn.Name = "Print_btn";
             this.Print_btn.Size = new System.Drawing.Size(123, 34);
             this.Print_btn.TabIndex = 134;
@@ -379,7 +290,7 @@
             this.DeleteProductFromBillBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.DeleteProductFromBillBtn.ForeColor = System.Drawing.Color.Red;
             this.DeleteProductFromBillBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DeleteProductFromBillBtn.Location = new System.Drawing.Point(163, 229);
+            this.DeleteProductFromBillBtn.Location = new System.Drawing.Point(230, 324);
             this.DeleteProductFromBillBtn.Name = "DeleteProductFromBillBtn";
             this.DeleteProductFromBillBtn.Size = new System.Drawing.Size(159, 34);
             this.DeleteProductFromBillBtn.TabIndex = 131;
@@ -395,29 +306,13 @@
             this.DeleteBillBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.DeleteBillBtn.ForeColor = System.Drawing.Color.Red;
             this.DeleteBillBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DeleteBillBtn.Location = new System.Drawing.Point(329, 229);
+            this.DeleteBillBtn.Location = new System.Drawing.Point(414, 324);
             this.DeleteBillBtn.Name = "DeleteBillBtn";
             this.DeleteBillBtn.Size = new System.Drawing.Size(123, 34);
             this.DeleteBillBtn.TabIndex = 130;
             this.DeleteBillBtn.Text = "حذف الفاتورة";
             this.DeleteBillBtn.UseVisualStyleBackColor = true;
             this.DeleteBillBtn.Click += new System.EventHandler(this.DeleteBillBtn_Click);
-            // 
-            // SaveBillBtn
-            // 
-            this.SaveBillBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.SaveBillBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SaveBillBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveBillBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.SaveBillBtn.ForeColor = System.Drawing.Color.SeaGreen;
-            this.SaveBillBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SaveBillBtn.Location = new System.Drawing.Point(470, 229);
-            this.SaveBillBtn.Name = "SaveBillBtn";
-            this.SaveBillBtn.Size = new System.Drawing.Size(123, 34);
-            this.SaveBillBtn.TabIndex = 128;
-            this.SaveBillBtn.Text = "حفظ الفاتورة";
-            this.SaveBillBtn.UseVisualStyleBackColor = true;
-            this.SaveBillBtn.Click += new System.EventHandler(this.SaveBillBtn_Click);
             // 
             // NewBillBtn
             // 
@@ -427,7 +322,7 @@
             this.NewBillBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.NewBillBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.NewBillBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.NewBillBtn.Location = new System.Drawing.Point(612, 229);
+            this.NewBillBtn.Location = new System.Drawing.Point(561, 324);
             this.NewBillBtn.Name = "NewBillBtn";
             this.NewBillBtn.Size = new System.Drawing.Size(123, 34);
             this.NewBillBtn.TabIndex = 127;
@@ -446,10 +341,11 @@
             this.Column2,
             this.Column4,
             this.Column5,
-            this.Column7});
+            this.Column7,
+            this.Id});
             this.dataGridView1.Location = new System.Drawing.Point(23, 26);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(716, 197);
+            this.dataGridView1.Size = new System.Drawing.Size(716, 281);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             this.dataGridView1.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView1_RowsAdded);
@@ -484,6 +380,13 @@
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
             // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            // 
             // printDocument1
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
@@ -514,8 +417,6 @@
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SellBill";
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -531,12 +432,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox BillNoTxt;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox SearchProductCombo;
         private System.Windows.Forms.TextBox BillNotesTxt;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
@@ -549,24 +444,23 @@
         private System.Windows.Forms.TextBox TotalDiscountTxt;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox TotalTxt;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button DeleteBillBtn;
-        private System.Windows.Forms.Button SaveBillBtn;
         private System.Windows.Forms.Button NewBillBtn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button DeleteProductFromBillBtn;
+        private System.Windows.Forms.Button Print_btn;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.Button Print_btn;
-        private System.Drawing.Printing.PrintDocument printDocument1;
-        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
     }
 }

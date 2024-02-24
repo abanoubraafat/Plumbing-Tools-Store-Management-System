@@ -34,11 +34,15 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
 
         private void Save_btn_Click(object sender, EventArgs e)
         {
-
             if (string.IsNullOrWhiteSpace(SupName_txt.Text) || string.IsNullOrWhiteSpace(SupPhone_txt.Text) ||
-       string.IsNullOrWhiteSpace(SupAddress_txt.Text) || string.IsNullOrWhiteSpace(Company_txt.Text))
+            string.IsNullOrWhiteSpace(SupAddress_txt.Text) || string.IsNullOrWhiteSpace(Company_txt.Text))
             {
                 MessageBox.Show("من فضلك يجب ملئ جميع الحقول", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (SupPhone_txt.Text.Length != 11)
+            {
+                MessageBox.Show("يجب ادخال رقم تليفون 11 رقم", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
             else
             {
@@ -66,7 +70,7 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
                 {
                     context.SaveChanges();
                     MessageBox.Show("تم تعديل البيانات بنجاح", "تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close(); 
+                    this.Close();
                 }
                 catch (Exception ex)
                 {
@@ -75,8 +79,6 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
 
 
             }
-
-
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -105,11 +107,11 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
         private void SupPhone_txt_Leave(object sender, EventArgs e)
         {
 
-            if (SupPhone_txt.Text.Length != 11)
-            {
-                MessageBox.Show("يجب ادخال رقم تليفون 11 رقم", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                SupPhone_txt.Focus();
-            }
+            //if (SupPhone_txt.Text.Length != 11)
+            //{
+            //    MessageBox.Show("يجب ادخال رقم تليفون 11 رقم", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    SupPhone_txt.Focus();
+            //}
         }
     }
 }

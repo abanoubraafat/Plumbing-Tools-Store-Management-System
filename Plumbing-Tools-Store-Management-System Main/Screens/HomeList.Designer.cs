@@ -243,6 +243,11 @@ namespace WindowsFormsApp1
             // DiscountNumeric
             // 
             this.DiscountNumeric.Location = new System.Drawing.Point(304, 52);
+            this.DiscountNumeric.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
             this.DiscountNumeric.Name = "DiscountNumeric";
             this.DiscountNumeric.Size = new System.Drawing.Size(181, 31);
             this.DiscountNumeric.TabIndex = 129;

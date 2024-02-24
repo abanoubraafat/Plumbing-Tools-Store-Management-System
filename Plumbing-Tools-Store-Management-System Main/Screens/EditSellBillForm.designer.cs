@@ -49,7 +49,6 @@
             this.TotalDiscountTxt = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.TotalTxt = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.RestoreAllBtn = new System.Windows.Forms.Button();
@@ -59,6 +58,7 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeleteProductFromBillBtn = new System.Windows.Forms.Button();
             this.SaveBillBtn = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
@@ -276,7 +276,6 @@
             this.groupBox4.Controls.Add(this.TotalDiscountTxt);
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Controls.Add(this.TotalTxt);
-            this.groupBox4.Controls.Add(this.textBox3);
             this.groupBox4.Controls.Add(this.label6);
             this.groupBox4.Location = new System.Drawing.Point(68, 561);
             this.groupBox4.Name = "groupBox4";
@@ -312,14 +311,6 @@
             this.TotalTxt.ReadOnly = true;
             this.TotalTxt.Size = new System.Drawing.Size(175, 27);
             this.TotalTxt.TabIndex = 126;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(41, 67);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(448, 27);
-            this.textBox3.TabIndex = 125;
             // 
             // label6
             // 
@@ -372,7 +363,8 @@
             this.Column2,
             this.Column4,
             this.Qty,
-            this.Column7});
+            this.Column7,
+            this.Id});
             this.dataGridView1.Location = new System.Drawing.Point(19, 26);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(716, 197);
@@ -409,6 +401,13 @@
             this.Column7.HeaderText = "الإجمالي";
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
             // 
             // DeleteProductFromBillBtn
             // 
@@ -490,7 +489,6 @@
         private System.Windows.Forms.TextBox TotalDiscountTxt;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox TotalTxt;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label10;
@@ -498,12 +496,13 @@
         private System.Windows.Forms.Button SaveBillBtn;
         private System.Windows.Forms.Button AddByNameBtn;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button AddByCodeBtn;
+        private System.Windows.Forms.Button RestoreAllBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Qty;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.Button AddByCodeBtn;
-        private System.Windows.Forms.Button RestoreAllBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
     }
 }

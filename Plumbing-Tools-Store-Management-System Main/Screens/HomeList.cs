@@ -1,4 +1,5 @@
 ﻿using Plumbing_Tools_Store_Management_System_Main.Model;
+using Plumbing_Tools_Store_Management_System_Main.Screens;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -74,22 +75,35 @@ namespace WindowsFormsApp1
             if (double.TryParse(TotalTxt.Text, out double total))
             {
                 total = 0;
-                //if (dataGridView1.Rows.Count > 0)
-                //{
-                //    for (int i = 0; i < dataGridView1.Rows.Count; i++)
-                //    {
-                //        total += double.Parse(dataGridView1.Rows[i].Cells[5].Value.ToString());
-                //    }
-                //    TotalTxt.Text = (total - int.Parse(DiscountNumeric.Value.ToString())).ToString();
-
-                //}
-
-                foreach (DataGridViewRow row in dataGridView1.Rows)
+                if (dataGridView1.Rows.Count >= 0)
                 {
-                    total += double.Parse(row.Cells[5].Value.ToString());
+                    for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                    {
+                        total += double.Parse(dataGridView1.Rows[i].Cells[5].Value.ToString());
+                    }
                     TotalTxt.Text = (total - double.Parse(DiscountNumeric.Value.ToString())).ToString();
                 }
             }
+            //TotalTxt.Text = "0";
+            //if (double.TryParse(TotalTxt.Text, out double total))
+            //{
+            //    total = 0;
+            //    //if (dataGridView1.Rows.Count > 0)
+            //    //{
+            //    //    for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            //    //    {
+            //    //        total += double.Parse(dataGridView1.Rows[i].Cells[5].Value.ToString());
+            //    //    }
+            //    //    TotalTxt.Text = (total - int.Parse(DiscountNumeric.Value.ToString())).ToString();
+
+            //    //}
+
+            //    foreach (DataGridViewRow row in dataGridView1.Rows)
+            //    {
+            //        total += double.Parse(row.Cells[5].Value.ToString());
+            //        TotalTxt.Text = (total - double.Parse(DiscountNumeric.Value.ToString())).ToString();
+            //    }
+            //}
         }
 
         //private void HomeList_Load(object sender, EventArgs e)
@@ -125,34 +139,76 @@ namespace WindowsFormsApp1
 
         private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.RowCount > 0)
+            if (dataGridView1.Rows.Count != 0)
             {
-                foreach (var item in dataGridView1.Rows)
+
+                int colIdx = e.ColumnIndex;
+                int rowIdx = e.RowIndex;
+                string ProductCode = dataGridView1.Rows[rowIdx].Cells[1].Value.ToString();
+                var currentQty = dataGridView1.Rows[rowIdx].Cells[4].Value?.ToString();
+                Product product = context.Products.FirstOrDefault(p => p.BarCode == ProductCode);
+                if (dataGridView1.Columns[colIdx].Name == "Qty")
                 {
-                    int p_id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-                    int New_Quantity = int.Parse(dataGridView1.CurrentRow.Cells[4].Value.ToString());
-
-                    Product p = context.Products.First(x => x.ID == p_id);
-
-                    if (New_Quantity > p.Quantity)
+                    bool IsNum = double.TryParse(currentQty, out double QtyVal);
+                    if (IsNum && QtyVal > 0)
                     {
-                        MessageBox.Show("الكمية اكبر من المخزون");
-                        dataGridView1.CurrentRow.Cells[4].Value = "1";
+                        if(QtyVal > product.Quantity)
+                        {
+                            MessageBox.Show(text: "الكمية التي ادخلتها أكبر من المخزون", "تحذير !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            dataGridView1.Rows[rowIdx].Cells[colIdx].Value = "1";
+                            return;
+                        }
+                        dataGridView1.Rows[rowIdx].Cells[colIdx + 1].Value = product.SellPrice * QtyVal;
+                        //Total Edit
+                        TotalChanged();
                     }
                     else
                     {
-                        //New_Total *= New_Quantity;
-                        dataGridView1.CurrentRow.Cells[5].Value = (New_Quantity * p.SellPrice).ToString();
+                        dataGridView1.Rows[rowIdx].Cells[colIdx].Value = 1;
+                        MessageBox.Show(text: "قيمة غير صحيحة", "تحذير !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-                    //foreach (DataGridViewRow row in dataGridView1.Rows)
-                    //{
-                    //    Total += double.Parse(row.Cells[5].Value.ToString());
-                    //    TotalTxt.Text = Total.ToString();
-                    //}
-                    TotalChanged();
                 }
             }
-            TotalChanged();
+            else
+            {
+            }
+
+
+
+
+
+
+
+
+
+            //if (dataGridView1.RowCount > 0)
+            //{
+            //    foreach (DataGridViewRow item in dataGridView1.Rows)
+            //    {
+            //        int p_id = int.Parse(dataGridView1.Rows[item.Index].Cells[0].Value.ToString());
+            //        int New_Quantity = int.Parse(dataGridView1.Rows[item.Index].Cells[4].Value.ToString());
+
+            //        Product p = context.Products.First(x => x.ID == p_id);
+
+            //        if (New_Quantity > p.Quantity)
+            //        {
+            //            MessageBox.Show("الكمية اكبر من المخزون");
+            //            dataGridView1.Rows[item.Index].Cells[4].Value = "1";
+            //        }
+            //        else
+            //        {
+            //            //New_Total *= New_Quantity;
+            //            dataGridView1.CurrentRow.Cells[5].Value = (New_Quantity * p.SellPrice).ToString();
+            //        }
+            //        //foreach (DataGridViewRow row in dataGridView1.Rows)
+            //        //{
+            //        //    Total += double.Parse(row.Cells[5].Value.ToString());
+            //        //    TotalTxt.Text = Total.ToString();
+            //        //}
+            //        TotalChanged();
+            //    }
+            //}
+            //TotalChanged();
         }
 
 
@@ -166,6 +222,7 @@ namespace WindowsFormsApp1
                     dataGridView1.Rows.RemoveAt(e.RowIndex);
                 }
             }
+            DiscountNumeric.Text = "0";
             TotalChanged();
         }
 
@@ -178,6 +235,7 @@ namespace WindowsFormsApp1
                 {
                     Product p = new Product()
                     {
+                        ID = int.Parse(row.Cells[0].Value.ToString()),
                         BarCode = row.Cells[1].Value.ToString(),
                         Name = row.Cells[2].Value.ToString(),
                         SellPrice = int.Parse(row.Cells[3].Value.ToString()),
@@ -185,16 +243,36 @@ namespace WindowsFormsApp1
                     };
                     AddedProducts.Add(p);
                 }
+                double discount = double.Parse(DiscountNumeric.Value.ToString());
+                SellBillForm sellBillForm = new SellBillForm(AddedProducts, discount);
+                sellBillForm.ShowDialog();
             }
 
         }
 
         private void DiscountNumeric_ValueChanged(object sender, EventArgs e)
         {
-            if (dataGridView1.RowCount > 0)
-                TotalChanged();
-            else
-                DiscountNumeric.Value = 0;
+            //if (dataGridView1.RowCount > 0)
+            //    TotalChanged();
+            //else if (double.Parse(TotalTxt.Text) < double.Parse(DiscountNumeric.Value.ToString()))
+            //    DiscountNumeric.Value = 0;
+            double totalDiscount = double.Parse(DiscountNumeric.Text);
+            if (double.TryParse(TotalTxt.Text, out double total))
+            {
+                total = 0;
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                {
+                    total += double.Parse(dataGridView1.Rows[i].Cells[5].Value.ToString());
+                }
+                if (totalDiscount > total || totalDiscount < 0)
+                {
+                    MessageBox.Show("قيمة الخصم التي أدخلتها غير صحيحة", "خطأ !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    DiscountNumeric.Text = "0";
+                    return;
+                }
+                total -= totalDiscount;
+                TotalTxt.Text = total.ToString();
+            }
         }
     }
 }

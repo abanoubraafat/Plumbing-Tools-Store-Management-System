@@ -260,3 +260,34 @@ D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-
 D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing-Tools-Store-Management-System Main.csproj.CopyComplete
 D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing-Tools-Store-Management-System Main.exe
 D:\ITI\Nader's\Plumbing-Tools-Store-Management-System-main\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing-Tools-Store-Management-System Main.pdb
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\bin\Debug\Plumbing-Tools-Store-Management-System Main.exe.config
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\bin\Debug\Plumbing-Tools-Store-Management-System Main.exe
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\bin\Debug\Plumbing-Tools-Store-Management-System Main.pdb
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\bin\Debug\EntityFramework.dll
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\bin\Debug\EntityFramework.SqlServer.dll
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\bin\Debug\EntityFramework.xml
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\bin\Debug\EntityFramework.SqlServer.xml
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing-Tools-Store-Management-System Main.csproj.AssemblyReference.cache
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Migrations.RegisterNewUser.resources
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Properties.Resources.resources
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\AddProduct.Form1.resources
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.BuyBillForm.resources
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.EditBuyBillForm.resources
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\AddProduct.Screens.EditProduct.resources
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.EditSellBillForm.resources
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.EditSupplier.resources
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.GetAllBuyBillsForm.resources
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.GetAllSellBillsForm.resources
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\AddProduct.Screens.Home.resources
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\WindowsFormsApp1.HomeList.resources
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\AddProduct.Screens.Login.resources
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\project.ProductList.resources
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.Register.resources
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.SellBillForm.resources
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\project.suppliersList.resources
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.Supplier_Recording.resources
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing-Tools-Store-Management-System Main.csproj.GenerateResource.cache
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing-Tools-Store-Management-System Main.csproj.CoreCompileInputs.cache
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing-Tools-Store-Management-System Main.csproj.CopyComplete
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing-Tools-Store-Management-System Main.exe
+D:\ITI\Windows Project GitHub\New folder\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing-Tools-Store-Management-System Main.pdb
