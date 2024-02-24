@@ -7,18 +7,18 @@ namespace Plumbing_Tools_Store_Management_System_Main.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class testmigrate : IMigrationMetadata
+    public sealed partial class RegisterNewUser : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(testmigrate));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(RegisterNewUser));
         
         string IMigrationMetadata.Id
         {
-            get { return "202402121541401_test-migrate"; }
+            get { return "202402240400192_RegisterNewUser"; }
         }
         
         string IMigrationMetadata.Source
         {
-            get { return Resources.GetString("Source"); }
+            get { return null; }
         }
         
         string IMigrationMetadata.Target

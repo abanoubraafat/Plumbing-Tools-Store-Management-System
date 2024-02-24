@@ -22,7 +22,6 @@ namespace AddProduct
             MessageBox.Show(Environment.CurrentDirectory);
         }
 
-        string ValidTxt;
         private static bool ContainsNumber(string input)
         {
             return Regex.IsMatch(input, @"\d+");
@@ -96,5 +95,14 @@ namespace AddProduct
         {
             this.Close();
         }
+
+        private void QuantityTxt_Leave(object sender, EventArgs e)
+        {
+            if (QuantityTxt.Value != 0)
+            {
+                QtyErrLabel.Visible = false;
+            }
+        }
+
     }
 }

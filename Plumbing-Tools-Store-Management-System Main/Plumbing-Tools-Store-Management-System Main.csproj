@@ -59,9 +59,9 @@
     <Compile Include="Configuration\BuyBillDetailsConfiguration.cs" />
     <Compile Include="Configuration\SellBillDetailsConfiguration.cs" />
     <Compile Include="Configuration\SupplierConfigrations.cs" />
-    <Compile Include="Migrations\202402121541401_test-migrate.cs" />
-    <Compile Include="Migrations\202402121541401_test-migrate.designer.cs">
-      <DependentUpon>202402121541401_test-migrate.cs</DependentUpon>
+    <Compile Include="Migrations\202402240400192_RegisterNewUser.cs" />
+    <Compile Include="Migrations\202402240400192_RegisterNewUser.designer.cs">
+      <DependentUpon>202402240400192_RegisterNewUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\BuyBill.cs" />
@@ -71,6 +71,7 @@
     <Compile Include="Model\SellBill.cs" />
     <Compile Include="Model\SellBillDetails.cs" />
     <Compile Include="Model\Supplier.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="Screens\AddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +144,12 @@
     <Compile Include="Screens\ProductList.designer.cs">
       <DependentUpon>ProductList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\SellBillForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,8 +170,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Migrations\202402121541401_test-migrate.resx">
-      <DependentUpon>202402121541401_test-migrate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202402240400192_RegisterNewUser.resx">
+      <DependentUpon>202402240400192_RegisterNewUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -212,6 +219,9 @@
     <EmbeddedResource Include="Screens\ProductList.resx">
       <DependentUpon>ProductList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\SellBillForm.resx">
       <DependentUpon>SellBillForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -255,6 +265,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\load.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\plus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
