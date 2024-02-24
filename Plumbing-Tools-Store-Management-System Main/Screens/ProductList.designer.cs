@@ -29,7 +29,6 @@ namespace project
         /// </summary>
         private void InitializeComponent()
         {
-            this.search_Lbl = new System.Windows.Forms.Label();
             this.addproduct_Btn = new System.Windows.Forms.Button();
             this.updateproduct_Btn = new System.Windows.Forms.Button();
             this.deleteproduct_Btn = new System.Windows.Forms.Button();
@@ -42,22 +41,12 @@ namespace project
             this.reloadproduct_btn = new System.Windows.Forms.Button();
             this.searchproduct_Rxt = new System.Windows.Forms.TextBox();
             this.productsearch_Btn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.header_panel = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.product_dataGridView)).BeginInit();
             this.header_panel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // search_Lbl
-            // 
-            this.search_Lbl.AutoSize = true;
-            this.search_Lbl.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.search_Lbl.ForeColor = System.Drawing.Color.Black;
-            this.search_Lbl.Location = new System.Drawing.Point(849, 102);
-            this.search_Lbl.Name = "search_Lbl";
-            this.search_Lbl.Size = new System.Drawing.Size(103, 24);
-            this.search_Lbl.TabIndex = 5;
-            this.search_Lbl.Text = ": بحث بالاسم";
             // 
             // addproduct_Btn
             // 
@@ -183,7 +172,7 @@ namespace project
             // 
             this.searchproduct_Rxt.Location = new System.Drawing.Point(580, 99);
             this.searchproduct_Rxt.Name = "searchproduct_Rxt";
-            this.searchproduct_Rxt.Size = new System.Drawing.Size(263, 32);
+            this.searchproduct_Rxt.Size = new System.Drawing.Size(263, 27);
             this.searchproduct_Rxt.TabIndex = 145;
             // 
             // productsearch_Btn
@@ -202,21 +191,10 @@ namespace project
             this.productsearch_Btn.UseVisualStyleBackColor = true;
             this.productsearch_Btn.Click += new System.EventHandler(this.productsearch_Btn_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(469, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 35);
-            this.label1.TabIndex = 121;
-            this.label1.Text = "جميع المنتجات";
-            // 
             // header_panel
             // 
             this.header_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
-            this.header_panel.Controls.Add(this.label1);
+            this.header_panel.Controls.Add(this.label10);
             this.header_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.header_panel.Location = new System.Drawing.Point(0, 0);
             this.header_panel.Margin = new System.Windows.Forms.Padding(4);
@@ -225,11 +203,34 @@ namespace project
             this.header_panel.Size = new System.Drawing.Size(1089, 60);
             this.header_panel.TabIndex = 147;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(476, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(144, 29);
+            this.label10.TabIndex = 153;
+            this.label10.Text = "جميع المنتجات";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label9.Location = new System.Drawing.Point(861, 102);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(87, 19);
+            this.label9.TabIndex = 154;
+            this.label9.Text = "بحث بالإسم :";
+            // 
             // ProductList
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1089, 681);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.header_panel);
             this.Controls.Add(this.productsearch_Btn);
             this.Controls.Add(this.searchproduct_Rxt);
@@ -238,7 +239,6 @@ namespace project
             this.Controls.Add(this.updateproduct_Btn);
             this.Controls.Add(this.addproduct_Btn);
             this.Controls.Add(this.reloadproduct_btn);
-            this.Controls.Add(this.search_Lbl);
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -256,19 +256,19 @@ namespace project
         #endregion
 
         private System.Windows.Forms.Button reloadproduct_btn;
-        private System.Windows.Forms.Label search_Lbl;
         private System.Windows.Forms.Button addproduct_Btn;
         private System.Windows.Forms.Button updateproduct_Btn;
         private System.Windows.Forms.Button deleteproduct_Btn;
         private System.Windows.Forms.DataGridView product_dataGridView;
         private System.Windows.Forms.TextBox searchproduct_Rxt;
         private System.Windows.Forms.Button productsearch_Btn;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Panel header_panel;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
     }
 }

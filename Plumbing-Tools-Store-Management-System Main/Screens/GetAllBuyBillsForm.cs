@@ -28,10 +28,10 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
             //SupplierCombo.Items[0] = "كل الموردين";
 
             List<BuyBill> bills = new List<BuyBill>();
-            bills = context.BuyBills.Include(b => b.BuyBillDetails.Select(dt => dt.Product)).ToList();
+            bills = context.BuyBills.Include(b => b.BuyBillDetails.Select(dt => dt.Product)).Include(b => b.Supplier).ToList();
             foreach (BuyBill bill in bills)
             {
-
+                
                 int RowIdx = dataGridView1.Rows.Add(bill.ID, bill.Supplier.Name, bill.BuyDate, bill.Discount, bill.Total, "", bill.Notes);
                 if (bill.BuyBillDetails != null)/////////////
                 {

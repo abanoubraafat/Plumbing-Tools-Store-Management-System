@@ -61,12 +61,23 @@ namespace project
 
         private void updatesupplier_Btn_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             //var result = MessageBox.Show("هل أنت واثق أنك تريد تعديل هذا المورد ؟", "تحذير !", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             //if (result == DialogResult.OK)
             //{
                EditSupplier editSupplier = new EditSupplier(idofsupplierselected);
                editSupplier.ShowDialog();
             //}
+=======
+            var result = MessageBox.Show("هل أنت واثق أنك تريد تعديل هذا المورد ؟", "تحذير !", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (result == DialogResult.OK)
+            {
+                EditSupplier editSupplier = new EditSupplier(idofsupplierselected);
+                editSupplier.ShowDialog();
+                reloadpage();
+                printdata();
+            }
+>>>>>>> 66d8e18e83391142a8478dcfb4305f824f70337e
         }
 
         private void addsupplier_Btn_Click(object sender, EventArgs e)
@@ -76,7 +87,13 @@ namespace project
             //{
                 Supplier_Recording supplier_Recording = new Supplier_Recording();
                 supplier_Recording.ShowDialog();
+<<<<<<< HEAD
             //}
+=======
+                reloadpage();
+                printdata();
+            }
+>>>>>>> 66d8e18e83391142a8478dcfb4305f824f70337e
         }
 
         private void reloadsupplier_btn_Click(object sender, EventArgs e)

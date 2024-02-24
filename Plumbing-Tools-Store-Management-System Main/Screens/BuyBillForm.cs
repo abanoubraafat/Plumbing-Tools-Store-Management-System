@@ -141,23 +141,8 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
 
         private void AddNewProductBtn_Click(object sender, EventArgs e)
         {
-            BuyBill buyBill = new BuyBill()
-            {
-                BuyDate = DateTime.Now,
-
-            };
-            context.BuyBills.Add(buyBill);
-            context.SaveChanges();
-            var p = context.Products.FirstOrDefault();
-            BuyBillDetails det = new BuyBillDetails()
-            {
-                BuyBill = buyBill,
-                Product = p,
-                Qty = 10
-            };
-            context.BuyBillDetails.Add(det);
-            context.SaveChanges();
-
+            AddProduct.Form1 form = new AddProduct.Form1();
+            form.ShowDialog();
         }
 
         private void AddByCodeBtn_Click(object sender, EventArgs e)
@@ -347,14 +332,10 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
             
         }
 
-        private void EditBillBtn_Click(object sender, EventArgs e)
+        private void AddNewSupplierBtn_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void TotalDiscountTxt_TextChanged(object sender, EventArgs e)
-        {
-
+            Supplier_Recording form = new Supplier_Recording();
+            form.ShowDialog();
         }
 
         private void Print_btn_Click(object sender, EventArgs e)

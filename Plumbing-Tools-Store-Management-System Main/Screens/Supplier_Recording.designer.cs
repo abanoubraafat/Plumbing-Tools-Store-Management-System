@@ -42,8 +42,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -209,6 +209,7 @@
             this.panel3.Size = new System.Drawing.Size(1071, 574);
             this.panel3.TabIndex = 134;
             // 
+<<<<<<< HEAD
             // label8
             // 
             this.label8.AutoSize = true;
@@ -220,17 +221,30 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "تسجيل الموردين";
             // 
+=======
+>>>>>>> 66d8e18e83391142a8478dcfb4305f824f70337e
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
+            this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.label8);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.panel1.Size = new System.Drawing.Size(1071, 60);
             this.panel1.TabIndex = 2;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(461, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(155, 29);
+            this.label10.TabIndex = 152;
+            this.label10.Text = "إضافة مورد جديد";
             // 
             // button7
             // 
@@ -288,8 +302,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label10;
     }
 }

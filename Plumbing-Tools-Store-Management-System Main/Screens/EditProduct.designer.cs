@@ -32,10 +32,8 @@ namespace AddProduct.Screens
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.QuantityTxt = new System.Windows.Forms.NumericUpDown();
             this.SaveProductBtn = new System.Windows.Forms.Button();
-            this.BuyingPriceTxt = new System.Windows.Forms.TextBox();
             this.ProductNameTxt = new System.Windows.Forms.TextBox();
             this.CodeTxt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -45,19 +43,23 @@ namespace AddProduct.Screens
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.SellingPriceTxt = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.QtyErrLabel = new System.Windows.Forms.Label();
+            this.SellLabel = new System.Windows.Forms.Label();
+            this.BuyLabel = new System.Windows.Forms.Label();
+            this.SellingPriceNum = new System.Windows.Forms.NumericUpDown();
+            this.BuyingPriceNum = new System.Windows.Forms.NumericUpDown();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QuantityTxt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SellingPriceNum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuyingPriceNum)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
             this.panel2.Controls.Add(this.button7);
-            this.panel2.Controls.Add(this.label4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -79,19 +81,6 @@ namespace AddProduct.Screens
             this.button7.Text = "X";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(443, 9);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 27);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "تعديل المنتج";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // QuantityTxt
             // 
@@ -117,15 +106,6 @@ namespace AddProduct.Screens
             this.SaveProductBtn.Text = "حفظ";
             this.SaveProductBtn.UseVisualStyleBackColor = true;
             this.SaveProductBtn.Click += new System.EventHandler(this.SaveProductBtn_Click);
-            // 
-            // BuyingPriceTxt
-            // 
-            this.BuyingPriceTxt.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BuyingPriceTxt.Location = new System.Drawing.Point(231, 302);
-            this.BuyingPriceTxt.Name = "BuyingPriceTxt";
-            this.BuyingPriceTxt.Size = new System.Drawing.Size(145, 33);
-            this.BuyingPriceTxt.TabIndex = 27;
-            this.BuyingPriceTxt.Leave += new System.EventHandler(this.BuyingPriceTxt_Leave);
             // 
             // ProductNameTxt
             // 
@@ -201,6 +181,7 @@ namespace AddProduct.Screens
             // 
             // button2
             // 
+            this.button2.BackgroundImage = global::Plumbing_Tools_Store_Management_System_Main.Properties.Resources.plus;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -222,19 +203,11 @@ namespace AddProduct.Screens
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // SellingPriceTxt
-            // 
-            this.SellingPriceTxt.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SellingPriceTxt.Location = new System.Drawing.Point(231, 376);
-            this.SellingPriceTxt.Name = "SellingPriceTxt";
-            this.SellingPriceTxt.Size = new System.Drawing.Size(145, 33);
-            this.SellingPriceTxt.TabIndex = 36;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(95, 375);
+            this.label9.Location = new System.Drawing.Point(95, 370);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(100, 29);
@@ -252,20 +225,72 @@ namespace AddProduct.Screens
             this.QtyErrLabel.TabIndex = 37;
             this.QtyErrLabel.Text = "يجب ان تزيد الكمية عن 0";
             // 
+            // SellLabel
+            // 
+            this.SellLabel.AutoSize = true;
+            this.SellLabel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SellLabel.ForeColor = System.Drawing.Color.Red;
+            this.SellLabel.Location = new System.Drawing.Point(386, 370);
+            this.SellLabel.Name = "SellLabel";
+            this.SellLabel.Size = new System.Drawing.Size(169, 23);
+            this.SellLabel.TabIndex = 41;
+            this.SellLabel.Text = "يجب ان يزيد السعر عن 0";
+            // 
+            // BuyLabel
+            // 
+            this.BuyLabel.AutoSize = true;
+            this.BuyLabel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BuyLabel.ForeColor = System.Drawing.Color.Red;
+            this.BuyLabel.Location = new System.Drawing.Point(386, 306);
+            this.BuyLabel.Name = "BuyLabel";
+            this.BuyLabel.Size = new System.Drawing.Size(169, 23);
+            this.BuyLabel.TabIndex = 40;
+            this.BuyLabel.Text = "يجب ان يزيد السعر عن 0";
+            // 
+            // SellingPriceNum
+            // 
+            this.SellingPriceNum.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SellingPriceNum.Location = new System.Drawing.Point(231, 366);
+            this.SellingPriceNum.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.SellingPriceNum.Name = "SellingPriceNum";
+            this.SellingPriceNum.Size = new System.Drawing.Size(134, 33);
+            this.SellingPriceNum.TabIndex = 39;
+            this.SellingPriceNum.Leave += new System.EventHandler(this.SellingPriceNum_Leave);
+            // 
+            // BuyingPriceNum
+            // 
+            this.BuyingPriceNum.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BuyingPriceNum.Location = new System.Drawing.Point(231, 302);
+            this.BuyingPriceNum.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.BuyingPriceNum.Name = "BuyingPriceNum";
+            this.BuyingPriceNum.Size = new System.Drawing.Size(134, 33);
+            this.BuyingPriceNum.TabIndex = 38;
+            this.BuyingPriceNum.Leave += new System.EventHandler(this.BuyingPriceNum_Leave);
+            // 
             // EditProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1071, 634);
+            this.Controls.Add(this.SellLabel);
+            this.Controls.Add(this.BuyLabel);
+            this.Controls.Add(this.SellingPriceNum);
+            this.Controls.Add(this.BuyingPriceNum);
             this.Controls.Add(this.QtyErrLabel);
-            this.Controls.Add(this.SellingPriceTxt);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.QuantityTxt);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.SaveProductBtn);
-            this.Controls.Add(this.BuyingPriceTxt);
             this.Controls.Add(this.ProductNameTxt);
             this.Controls.Add(this.CodeTxt);
             this.Controls.Add(this.pictureBox1);
@@ -282,9 +307,10 @@ namespace AddProduct.Screens
             this.RightToLeftLayout = true;
             this.Text = "تعديل المنتج";
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QuantityTxt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SellingPriceNum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuyingPriceNum)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,19 +322,20 @@ namespace AddProduct.Screens
         private System.Windows.Forms.NumericUpDown QuantityTxt;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button SaveProductBtn;
-        private System.Windows.Forms.TextBox BuyingPriceTxt;
         private System.Windows.Forms.TextBox ProductNameTxt;
         private System.Windows.Forms.TextBox CodeTxt;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox SellingPriceTxt;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label QtyErrLabel;
+        private System.Windows.Forms.Label SellLabel;
+        private System.Windows.Forms.Label BuyLabel;
+        private System.Windows.Forms.NumericUpDown SellingPriceNum;
+        private System.Windows.Forms.NumericUpDown BuyingPriceNum;
     }
 }

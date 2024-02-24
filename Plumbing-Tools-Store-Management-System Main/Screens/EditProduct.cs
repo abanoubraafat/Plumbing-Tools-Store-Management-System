@@ -25,8 +25,8 @@ namespace AddProduct.Screens
             Product product = DB.Products.First(P => P.ID == _id);
             CodeTxt.Text = product.BarCode;
             ProductNameTxt.Text = product.Name;
-            BuyingPriceTxt.Text = (product.BuyPrice).ToString();
-            SellingPriceTxt.Text = (product.SellPrice).ToString();
+            BuyingPriceNum.Text = (product.BuyPrice).ToString();
+            SellingPriceNum.Text = (product.SellPrice).ToString();
             QuantityTxt.Value = product.Quantity;
             pictureBox1.ImageLocation = product.Image;
         }
@@ -34,7 +34,7 @@ namespace AddProduct.Screens
         string PImage;
         private void SaveProductBtn_Click(object sender, EventArgs e)
         {
-            if ( CodeTxt.Text == "" || ProductNameTxt.Text == "" || BuyingPriceTxt.Text == "" || QuantityTxt.Value == 0)
+            if (CodeTxt.Text == "" || ProductNameTxt.Text == "" || BuyingPriceNum.Value == 0 || SellingPriceNum.Value == 0 || QuantityTxt.Value == 0)
             {
                 MessageBox.Show("يجب ملئ جميع الخانات", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -43,8 +43,8 @@ namespace AddProduct.Screens
                 Product p = DB.Products.First(P => P.ID == getid);
                 p.BarCode = CodeTxt.Text;
                 p.Name = ProductNameTxt.Text;
-                p.BuyPrice = double.Parse(BuyingPriceTxt.Text);
-                p.SellPrice = double.Parse(SellingPriceTxt.Text);
+                p.BuyPrice = double.Parse(BuyingPriceNum.Value.ToString());
+                p.SellPrice = double.Parse(SellingPriceNum.Value.ToString());
                 p.Quantity = int.Parse(QuantityTxt.Value.ToString());
 
                 
@@ -97,16 +97,16 @@ namespace AddProduct.Screens
             }
         }
 
-        private static bool ContainsNumber(string input)
+        private void BuyingPriceNum_Leave(object sender, EventArgs e)
         {
-            return Regex.IsMatch(input, @"\d+");
+            if (BuyingPriceNum.Value != 0)
+                BuyLabel.Visible = false;
         }
-        private void BuyingPriceTxt_Leave(object sender, EventArgs e)
+
+        private void SellingPriceNum_Leave(object sender, EventArgs e)
         {
-            if (ContainsNumber(BuyingPriceTxt.Text))
-            {
-                
-            }
+            if (SellingPriceNum.Value != 0)
+                SellLabel.Visible = false;
         }
     }
 }

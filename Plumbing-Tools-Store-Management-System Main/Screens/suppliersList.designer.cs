@@ -29,26 +29,30 @@ namespace project
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.suppliers_dataGridView = new System.Windows.Forms.DataGridView();
             this.deletesupplier_Btn = new System.Windows.Forms.Button();
             this.updatesupplier_Btn = new System.Windows.Forms.Button();
             this.addsupplier_Btn = new System.Windows.Forms.Button();
             this.reloadsupplier_btn = new System.Windows.Forms.Button();
-            this.search_Lbl = new System.Windows.Forms.Label();
             this.searchsupplier_Rxt = new System.Windows.Forms.TextBox();
             this.suppliersearch_Btn = new System.Windows.Forms.Button();
             this.header_panel = new System.Windows.Forms.Panel();
+<<<<<<< HEAD
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SupplierName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+=======
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+>>>>>>> 66d8e18e83391142a8478dcfb4305f824f70337e
             ((System.ComponentModel.ISupportInitialize)(this.suppliers_dataGridView)).BeginInit();
             this.header_panel.SuspendLayout();
             this.SuspendLayout();
             // 
+<<<<<<< HEAD
             // label1
             // 
             this.label1.AutoSize = true;
@@ -60,6 +64,8 @@ namespace project
             this.label1.TabIndex = 142;
             this.label1.Text = "جميع الموردين";
             // 
+=======
+>>>>>>> 66d8e18e83391142a8478dcfb4305f824f70337e
             // suppliers_dataGridView
             // 
             this.suppliers_dataGridView.AllowUserToAddRows = false;
@@ -145,6 +151,7 @@ namespace project
             this.reloadsupplier_btn.UseVisualStyleBackColor = false;
             this.reloadsupplier_btn.Click += new System.EventHandler(this.reloadsupplier_btn_Click);
             // 
+<<<<<<< HEAD
             // search_Lbl
             // 
             this.search_Lbl.AutoSize = true;
@@ -156,6 +163,8 @@ namespace project
             this.search_Lbl.TabIndex = 135;
             this.search_Lbl.Text = ": بحث بالاسم";
             // 
+=======
+>>>>>>> 66d8e18e83391142a8478dcfb4305f824f70337e
             // searchsupplier_Rxt
             // 
             this.searchsupplier_Rxt.Location = new System.Drawing.Point(590, 104);
@@ -182,7 +191,7 @@ namespace project
             // header_panel
             // 
             this.header_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
-            this.header_panel.Controls.Add(this.label1);
+            this.header_panel.Controls.Add(this.label10);
             this.header_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.header_panel.Location = new System.Drawing.Point(0, 0);
             this.header_panel.Margin = new System.Windows.Forms.Padding(4);
@@ -191,6 +200,7 @@ namespace project
             this.header_panel.Size = new System.Drawing.Size(1089, 60);
             this.header_panel.TabIndex = 148;
             // 
+<<<<<<< HEAD
             // Column1
             // 
             this.Column1.HeaderText = "id";
@@ -233,12 +243,36 @@ namespace project
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
+=======
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(476, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(134, 29);
+            this.label10.TabIndex = 153;
+            this.label10.Text = "جميع الموردين";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label9.Location = new System.Drawing.Point(872, 107);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(87, 19);
+            this.label9.TabIndex = 155;
+            this.label9.Text = "بحث بالإسم :";
+>>>>>>> 66d8e18e83391142a8478dcfb4305f824f70337e
             // 
             // suppliersList
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1089, 681);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.header_panel);
             this.Controls.Add(this.suppliersearch_Btn);
             this.Controls.Add(this.searchsupplier_Rxt);
@@ -247,7 +281,6 @@ namespace project
             this.Controls.Add(this.updatesupplier_Btn);
             this.Controls.Add(this.addsupplier_Btn);
             this.Controls.Add(this.reloadsupplier_btn);
-            this.Controls.Add(this.search_Lbl);
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -263,13 +296,11 @@ namespace project
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView suppliers_dataGridView;
         private System.Windows.Forms.Button deletesupplier_Btn;
         private System.Windows.Forms.Button updatesupplier_Btn;
         private System.Windows.Forms.Button addsupplier_Btn;
         private System.Windows.Forms.Button reloadsupplier_btn;
-        private System.Windows.Forms.Label search_Lbl;
         private System.Windows.Forms.TextBox searchsupplier_Rxt;
         private System.Windows.Forms.Button suppliersearch_Btn;
         private System.Windows.Forms.Panel header_panel;
@@ -279,5 +310,11 @@ namespace project
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+<<<<<<< HEAD
+=======
+        private System.Windows.Forms.Panel header_panel;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+>>>>>>> 66d8e18e83391142a8478dcfb4305f824f70337e
     }
 }
