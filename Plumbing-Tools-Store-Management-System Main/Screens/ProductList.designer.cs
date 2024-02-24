@@ -33,17 +33,18 @@ namespace project
             this.updateproduct_Btn = new System.Windows.Forms.Button();
             this.deleteproduct_Btn = new System.Windows.Forms.Button();
             this.product_dataGridView = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reloadproduct_btn = new System.Windows.Forms.Button();
             this.searchproduct_Rxt = new System.Windows.Forms.TextBox();
             this.productsearch_Btn = new System.Windows.Forms.Button();
             this.header_panel = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.product_dataGridView)).BeginInit();
             this.header_panel.SuspendLayout();
             this.SuspendLayout();
@@ -109,51 +110,17 @@ namespace project
             this.Column2,
             this.Column3,
             this.Column4,
-            this.Column5});
+            this.Column5,
+            this.Column6});
             this.product_dataGridView.Location = new System.Drawing.Point(99, 153);
             this.product_dataGridView.MultiSelect = false;
             this.product_dataGridView.Name = "product_dataGridView";
             this.product_dataGridView.ReadOnly = true;
             this.product_dataGridView.RowHeadersWidth = 51;
+            this.product_dataGridView.RowTemplate.Height = 32;
             this.product_dataGridView.Size = new System.Drawing.Size(876, 441);
             this.product_dataGridView.TabIndex = 120;
             this.product_dataGridView.SelectionChanged += new System.EventHandler(this.product_dataGridView_SelectionChanged);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "id";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "كود المنتج";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "إسم المنتج";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "السعر";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "الكمية";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
             // 
             // reloadproduct_btn
             // 
@@ -172,7 +139,7 @@ namespace project
             // 
             this.searchproduct_Rxt.Location = new System.Drawing.Point(580, 99);
             this.searchproduct_Rxt.Name = "searchproduct_Rxt";
-            this.searchproduct_Rxt.Size = new System.Drawing.Size(263, 27);
+            this.searchproduct_Rxt.Size = new System.Drawing.Size(263, 32);
             this.searchproduct_Rxt.TabIndex = 145;
             // 
             // productsearch_Btn
@@ -210,7 +177,7 @@ namespace project
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(476, 16);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(144, 29);
+            this.label10.Size = new System.Drawing.Size(177, 37);
             this.label10.TabIndex = 153;
             this.label10.Text = "جميع المنتجات";
             // 
@@ -221,9 +188,58 @@ namespace project
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label9.Location = new System.Drawing.Point(861, 102);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 19);
+            this.label9.Size = new System.Drawing.Size(108, 24);
             this.label9.TabIndex = 154;
             this.label9.Text = "بحث بالإسم :";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "id";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 114.3048F;
+            this.Column2.HeaderText = "كود المنتج";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.FillWeight = 114.3048F;
+            this.Column3.HeaderText = "إسم المنتج";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.FillWeight = 114.3048F;
+            this.Column4.HeaderText = "السعر";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.FillWeight = 114.3048F;
+            this.Column5.HeaderText = "الكمية";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.FillWeight = 42.78075F;
+            this.Column6.HeaderText = "صورة";
+            this.Column6.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.Column6.MinimumWidth = 16;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // ProductList
             // 
@@ -262,13 +278,14 @@ namespace project
         private System.Windows.Forms.DataGridView product_dataGridView;
         private System.Windows.Forms.TextBox searchproduct_Rxt;
         private System.Windows.Forms.Button productsearch_Btn;
+        private System.Windows.Forms.Panel header_panel;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.Panel header_panel;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridViewImageColumn Column6;
     }
 }

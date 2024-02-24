@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,10 +24,17 @@ namespace project
         }
         private void printdata()
         {
-            var query1 = dataContext.Products.Select(e => new { e.ID, e.BarCode, e.Name, e.SellPrice, e.Quantity });
+            var query1 = dataContext.Products.Select(e => new { e.ID, e.BarCode, e.Name, e.SellPrice, e.Quantity, e.Image });
             foreach (var item in query1)
             {
-                product_dataGridView.Rows.Add(item.ID, item.BarCode, item.Name, item.SellPrice, item.Quantity);
+                if (item.Image == null)
+                {
+                    product_dataGridView.Rows.Add(item.ID, item.BarCode, item.Name, item.SellPrice, item.Quantity);
+                }
+                else
+                {
+                    product_dataGridView.Rows.Add(item.ID, item.BarCode, item.Name, item.SellPrice, item.Quantity,File.ReadAllBytes( item.Image));
+                }
             }
         }
         private void printdata(string name)
