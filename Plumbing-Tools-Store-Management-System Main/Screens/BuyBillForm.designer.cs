@@ -141,7 +141,7 @@
             this.TotalDiscountTxt.Name = "TotalDiscountTxt";
             this.TotalDiscountTxt.Size = new System.Drawing.Size(175, 27);
             this.TotalDiscountTxt.TabIndex = 128;
-            this.TotalDiscountTxt.Leave += new System.EventHandler(this.TotalDiscountTxt_Leave);
+            this.TotalDiscountTxt.TextChanged += new System.EventHandler(this.TotalDiscountTxt_TextChanged);
             // 
             // label8
             // 
