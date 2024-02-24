@@ -261,6 +261,7 @@
     <None Include="Images\supliers.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Images\Products\" />
     <Folder Include="photo\" />
   </ItemGroup>
   <ItemGroup>
