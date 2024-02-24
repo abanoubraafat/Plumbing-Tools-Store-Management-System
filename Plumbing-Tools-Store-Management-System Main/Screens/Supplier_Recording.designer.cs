@@ -42,8 +42,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -56,7 +56,7 @@
             this.label1.Location = new System.Drawing.Point(875, 102);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(129, 37);
+            this.label1.Size = new System.Drawing.Size(101, 29);
             this.label1.TabIndex = 130;
             this.label1.Text = "كود المورد:";
             // 
@@ -66,7 +66,7 @@
             this.SupID_txt.Location = new System.Drawing.Point(679, 99);
             this.SupID_txt.Name = "SupID_txt";
             this.SupID_txt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.SupID_txt.Size = new System.Drawing.Size(190, 40);
+            this.SupID_txt.Size = new System.Drawing.Size(190, 34);
             this.SupID_txt.TabIndex = 131;
             // 
             // label4
@@ -75,7 +75,7 @@
             this.label4.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(440, 183);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 37);
+            this.label4.Size = new System.Drawing.Size(105, 29);
             this.label4.TabIndex = 134;
             this.label4.Text = "اسم الشركة:";
             // 
@@ -85,7 +85,7 @@
             this.label5.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(440, 99);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(146, 37);
+            this.label5.Size = new System.Drawing.Size(115, 29);
             this.label5.TabIndex = 135;
             this.label5.Text = "رقم التليفون:";
             // 
@@ -96,7 +96,7 @@
             this.label7.Location = new System.Drawing.Point(875, 183);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label7.Size = new System.Drawing.Size(131, 37);
+            this.label7.Size = new System.Drawing.Size(103, 29);
             this.label7.TabIndex = 137;
             this.label7.Text = "اسم المورد:";
             // 
@@ -116,7 +116,7 @@
             this.SupAddress_txt.Location = new System.Drawing.Point(241, 272);
             this.SupAddress_txt.Name = "SupAddress_txt";
             this.SupAddress_txt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.SupAddress_txt.Size = new System.Drawing.Size(190, 40);
+            this.SupAddress_txt.Size = new System.Drawing.Size(190, 34);
             this.SupAddress_txt.TabIndex = 139;
             // 
             // SupPhone_txt
@@ -125,7 +125,7 @@
             this.SupPhone_txt.Location = new System.Drawing.Point(241, 99);
             this.SupPhone_txt.Name = "SupPhone_txt";
             this.SupPhone_txt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.SupPhone_txt.Size = new System.Drawing.Size(190, 40);
+            this.SupPhone_txt.Size = new System.Drawing.Size(190, 34);
             this.SupPhone_txt.TabIndex = 142;
             this.SupPhone_txt.Leave += new System.EventHandler(this.SupPhone_txt_Leave);
             // 
@@ -135,7 +135,7 @@
             this.SupName_txt.Location = new System.Drawing.Point(679, 183);
             this.SupName_txt.Name = "SupName_txt";
             this.SupName_txt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.SupName_txt.Size = new System.Drawing.Size(190, 40);
+            this.SupName_txt.Size = new System.Drawing.Size(190, 34);
             this.SupName_txt.TabIndex = 143;
             // 
             // Save_btn
@@ -160,7 +160,7 @@
             this.Company_txt.Location = new System.Drawing.Point(241, 183);
             this.Company_txt.Name = "Company_txt";
             this.Company_txt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Company_txt.Size = new System.Drawing.Size(190, 40);
+            this.Company_txt.Size = new System.Drawing.Size(190, 34);
             this.Company_txt.TabIndex = 147;
             // 
             // label3
@@ -170,7 +170,7 @@
             this.label3.Location = new System.Drawing.Point(884, 275);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label3.Size = new System.Drawing.Size(135, 37);
+            this.label3.Size = new System.Drawing.Size(107, 29);
             this.label3.TabIndex = 149;
             this.label3.Text = "الملاحظات:";
             // 
@@ -180,7 +180,7 @@
             this.label6.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(440, 275);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(95, 37);
+            this.label6.Size = new System.Drawing.Size(75, 29);
             this.label6.TabIndex = 150;
             this.label6.Text = "العنوان:";
             // 
@@ -206,28 +206,28 @@
             this.panel3.Size = new System.Drawing.Size(1071, 574);
             this.panel3.TabIndex = 134;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(410, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(162, 33);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "تسجيل الموردين";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
+            this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.label8);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.panel1.Size = new System.Drawing.Size(1071, 60);
             this.panel1.TabIndex = 2;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(461, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(155, 29);
+            this.label10.TabIndex = 152;
+            this.label10.Text = "إضافة مورد جديد";
             // 
             // button7
             // 
@@ -247,7 +247,7 @@
             // 
             // Supplier_Recording
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1071, 634);
@@ -285,8 +285,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label10;
     }
 }

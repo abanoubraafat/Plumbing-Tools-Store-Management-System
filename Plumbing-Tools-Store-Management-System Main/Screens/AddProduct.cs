@@ -19,7 +19,7 @@ namespace AddProduct
         public Form1()
         {
             InitializeComponent();
-            MessageBox.Show(Environment.CurrentDirectory);
+            //MessageBox.Show(Environment.CurrentDirectory);
         }
 
         private static bool ContainsNumber(string input)

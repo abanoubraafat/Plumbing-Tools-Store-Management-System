@@ -125,6 +125,7 @@
             this.CancelFilterDateBtn.TabIndex = 150;
             this.CancelFilterDateBtn.Text = "إلغاء";
             this.CancelFilterDateBtn.UseVisualStyleBackColor = true;
+            this.CancelFilterDateBtn.Click += new System.EventHandler(this.CancelFilterDateBtn_Click);
             // 
             // FilterDateBtn
             // 
@@ -139,6 +140,7 @@
             this.FilterDateBtn.TabIndex = 149;
             this.FilterDateBtn.Text = "إختيار";
             this.FilterDateBtn.UseVisualStyleBackColor = true;
+            this.FilterDateBtn.Click += new System.EventHandler(this.FilterDateBtn_Click);
             // 
             // DateFilterLbl
             // 
@@ -268,7 +270,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(477, 4);
+            this.label10.Location = new System.Drawing.Point(477, 12);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(139, 29);
             this.label10.TabIndex = 124;

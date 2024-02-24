@@ -142,7 +142,6 @@ D:\ITI\Windows Project GitHub\Plumbing-Tools-Store-Management-System\Plumbing-To
 D:\ITI\Windows Project GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\bin\Debug\EntityFramework.xml
 D:\ITI\Windows Project GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\bin\Debug\EntityFramework.SqlServer.xml
 D:\ITI\Windows Project GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing-Tools-Store-Management-System Main.csproj.AssemblyReference.cache
-D:\ITI\Windows Project GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Migrations.testmigrate.resources
 D:\ITI\Windows Project GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Properties.Resources.resources
 D:\ITI\Windows Project GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\AddProduct.Form1.resources
 D:\ITI\Windows Project GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.BuyBillForm.resources
@@ -197,3 +196,5 @@ C:\Users\Abdo Mokhles\Source\Repos\Plumbing-Tools-Store-Management-System\Plumbi
 C:\Users\Abdo Mokhles\Source\Repos\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.Register.resources
 D:\.net\14.c# advanced\project\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Migrations.RegisterNewUser.resources
 D:\.net\14.c# advanced\project\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.Register.resources
+D:\ITI\Windows Project GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Migrations.RegisterNewUser.resources
+D:\ITI\Windows Project GitHub\Plumbing-Tools-Store-Management-System\Plumbing-Tools-Store-Management-System Main\obj\Debug\Plumbing_Tools_Store_Management_System_Main.Screens.Register.resources

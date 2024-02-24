@@ -32,7 +32,6 @@ namespace AddProduct.Screens
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.QuantityTxt = new System.Windows.Forms.NumericUpDown();
             this.SaveProductBtn = new System.Windows.Forms.Button();
             this.BuyingPriceTxt = new System.Windows.Forms.TextBox();
@@ -56,8 +55,8 @@ namespace AddProduct.Screens
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
+            //this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.button7);
-            this.panel2.Controls.Add(this.label4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -82,16 +81,16 @@ namespace AddProduct.Screens
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(443, 9);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 27);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "تعديل المنتج";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            //this.label4.AutoSize = true;
+            //this.label4.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            //this.label4.ForeColor = System.Drawing.Color.White;
+            //this.label4.Location = new System.Drawing.Point(443, 9);
+            //this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            //this.label4.Name = "label4";
+            //this.label4.Size = new System.Drawing.Size(109, 27);
+            //this.label4.TabIndex = 21;
+            //this.label4.Text = "تعديل المنتج";
+            //this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // QuantityTxt
             // 
@@ -302,7 +301,6 @@ namespace AddProduct.Screens
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

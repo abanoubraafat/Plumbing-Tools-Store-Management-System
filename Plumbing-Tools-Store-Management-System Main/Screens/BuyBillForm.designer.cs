@@ -58,7 +58,7 @@
             this.SearchProductCombo = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.BillNotesTxt = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.AddNewSupplierBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SupplierCombo = new System.Windows.Forms.ComboBox();
@@ -137,7 +137,6 @@
             this.TotalDiscountTxt.Name = "TotalDiscountTxt";
             this.TotalDiscountTxt.Size = new System.Drawing.Size(175, 27);
             this.TotalDiscountTxt.TabIndex = 128;
-            this.TotalDiscountTxt.TextChanged += new System.EventHandler(this.TotalDiscountTxt_TextChanged);
             this.TotalDiscountTxt.Leave += new System.EventHandler(this.TotalDiscountTxt_Leave);
             // 
             // label8
@@ -412,7 +411,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.BillNotesTxt);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.AddNewSupplierBtn);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.SupplierCombo);
@@ -434,20 +433,21 @@
             this.BillNotesTxt.Size = new System.Drawing.Size(318, 27);
             this.BillNotesTxt.TabIndex = 121;
             // 
-            // button2
+            // AddNewSupplierBtn
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(7, 32);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 32);
-            this.button2.TabIndex = 127;
-            this.button2.Text = "إضافة مورد جديد";
-            this.button2.UseVisualStyleBackColor = true;
+            this.AddNewSupplierBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.AddNewSupplierBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddNewSupplierBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddNewSupplierBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.AddNewSupplierBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.AddNewSupplierBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddNewSupplierBtn.Location = new System.Drawing.Point(7, 32);
+            this.AddNewSupplierBtn.Name = "AddNewSupplierBtn";
+            this.AddNewSupplierBtn.Size = new System.Drawing.Size(127, 32);
+            this.AddNewSupplierBtn.TabIndex = 127;
+            this.AddNewSupplierBtn.Text = "إضافة مورد جديد";
+            this.AddNewSupplierBtn.UseVisualStyleBackColor = true;
+            this.AddNewSupplierBtn.Click += new System.EventHandler(this.AddNewSupplierBtn_Click);
             // 
             // label3
             // 
@@ -579,7 +579,7 @@
         private System.Windows.Forms.ComboBox SearchProductCombo;
         private System.Windows.Forms.Button AddNewProductBtn;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button AddNewSupplierBtn;
         private System.Windows.Forms.TextBox TotalTxt;
         private System.Windows.Forms.Button AddByCodeBtn;
         private System.Windows.Forms.Button AddByNameBtn;
