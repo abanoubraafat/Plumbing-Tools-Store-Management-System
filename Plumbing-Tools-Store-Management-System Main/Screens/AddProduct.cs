@@ -22,30 +22,30 @@ namespace AddProduct
             //MessageBox.Show(Environment.CurrentDirectory);
         }
 
-        private static bool ContainsNumber(string input)
-        {
-            return Regex.IsMatch(input, @"\d+");
-        }
+        //private static bool ContainsNumber(string input)
+        //{
+        //    return Regex.IsMatch(input, @"\d+");
+        //}
 
-        string ValidPrice;
-        private void ProductPriceTxt_TextChanged(object sender, EventArgs e)
-        {
-            if (!ContainsNumber(BuyingPriceTxt.Text))
-            {
-                MessageBox.Show("يجب ادخال السعر بالارقام فقط", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                BuyingPriceTxt.Text = ValidPrice;
-            }
-            else
-            {
-                ValidPrice = BuyingPriceTxt.Text;
-            }
-        }
+        //string ValidPrice;
+        //private void ProductPriceTxt_TextChanged(object sender, EventArgs e)
+        //{
+        //    if (!ContainsNumber(BuyingPriceTxt.Text))
+        //    {
+        //        MessageBox.Show("يجب ادخال السعر بالارقام فقط", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        BuyingPriceTxt.Text = ValidPrice;
+        //    }
+        //    else
+        //    {
+        //        ValidPrice = BuyingPriceTxt.Text;
+        //    }
+        //}
         string PImage;
         private void SaveProductBtn_Click(object sender, EventArgs e)
         {
-            if( CodeTxt.Text =="" || ProductNameTxt.Text=="" || BuyingPriceTxt.Text == "" || QuantityTxt.Value==0)
+            if (CodeTxt.Text == "" || ProductNameTxt.Text == "" || BuyingPriceNum.Value == 0 || SellingPriceNum.Value == 0 || QuantityTxt.Value == 0)
             {
-                MessageBox.Show("يجب ملئ جميع الخانات","خطأ",MessageBoxButtons.OK,MessageBoxIcon.Error); 
+                MessageBox.Show("يجب ملئ جميع الخانات", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -53,21 +53,23 @@ namespace AddProduct
                 {
                     BarCode = CodeTxt.Text,
                     Name = ProductNameTxt.Text,
-                    BuyPrice = double.Parse(BuyingPriceTxt.Text),
-                    SellPrice = double.Parse(SellingPriceTxt.Text),
+                    BuyPrice = double.Parse(BuyingPriceNum.Value.ToString()),
+                    SellPrice = double.Parse(SellingPriceNum.Value.ToString()),
                     Quantity = int.Parse(QuantityTxt.Value.ToString())
                 };
 
                 DB.Products.Add(p);
                 DB.SaveChanges();
+                if (pictureBox1.ImageLocation != null)
+                {
+                    string newpath = $"{Environment.CurrentDirectory}\\Images\\Products\\{p.ID}.jpg";
+                    File.Copy(PImage, newpath);
 
-                string newpath = $"{Environment.CurrentDirectory}\\Images\\Products\\{p.ID}.jpg";
-                File.Copy(PImage, newpath);
+                    p.Image = PImage;
+                    DB.SaveChanges();
+                }
 
-                p.Image = PImage;
-                DB.SaveChanges();
-
-                MessageBox.Show("تم حفظ المنتج بنجاح","",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("تم حفظ المنتج بنجاح", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -102,6 +104,17 @@ namespace AddProduct
             {
                 QtyErrLabel.Visible = false;
             }
+        }
+        private void BuyingPriceNum_Leave(object sender, EventArgs e)
+        {
+            if (BuyingPriceNum.Value != 0)
+                BuyLabel.Visible = false;
+        }
+
+        private void SellingPriceNum_Leave(object sender, EventArgs e)
+        {
+            if (SellingPriceNum.Value != 0)
+                SellLabel.Visible = false;
         }
 
     }
