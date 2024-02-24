@@ -40,26 +40,33 @@ namespace AddProduct.Screens
             }
             else
             {
-                Product p = DB.Products.First(P => P.ID == getid);
-                p.BarCode = CodeTxt.Text;
-                p.Name = ProductNameTxt.Text;
-                p.BuyPrice = double.Parse(BuyingPriceNum.Value.ToString());
-                p.SellPrice = double.Parse(SellingPriceNum.Value.ToString());
-                p.Quantity = int.Parse(QuantityTxt.Value.ToString());
+                if (DB.Products.FirstOrDefault(pc => pc.BarCode == CodeTxt.Text) != null)
+                {
+                    MessageBox.Show("هذا الباركود موجود مسبقا", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    Product p = DB.Products.First(P => P.ID == getid);
+                    p.BarCode = CodeTxt.Text;
+                    p.Name = ProductNameTxt.Text;
+                    p.BuyPrice = double.Parse(BuyingPriceNum.Value.ToString());
+                    p.SellPrice = double.Parse(SellingPriceNum.Value.ToString());
+                    p.Quantity = int.Parse(QuantityTxt.Value.ToString());
 
                 
-                DB.SaveChanges();
-
-                if (imgChange)
-                {
-                    string newpath = $"{Environment.CurrentDirectory}\\Images\\Products\\{p.ID}.jpg";
-                    File.Delete(newpath);
-                    File.Copy(PImage, newpath);
-                    p.Image = PImage;
                     DB.SaveChanges();
-                }
 
-                MessageBox.Show("تم حفظ المنتج بنجاح", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (imgChange)
+                    {
+                        string newpath = $"{Environment.CurrentDirectory}\\Images\\Products\\{p.ID}.jpg";
+                        File.Delete(newpath);
+                        File.Copy(PImage, newpath);
+                        p.Image = PImage;
+                        DB.SaveChanges();
+                    }
+
+                    MessageBox.Show("تم حفظ المنتج بنجاح", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Plumbing_Tools_Store_Management_System_Main.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,24 +14,45 @@ namespace AddProduct.Screens
 {
     public partial class Login : Form
     {
+        DataContext DB = new DataContext();
         public Login()
         {
             InitializeComponent();
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Home home = new Home();
-            //this.Hide();
-            this.Close();
-            home.Show();
+            User user;
+            if (txt_Uname.Text != "" || txt_pass.Text != "")
+            {
+                try
+                {
+                    user = DB.Users.FirstOrDefault(u => u.Name == txt_Uname.Text && u.Password == txt_pass.Text);
+                }
+                catch (Exception)
+                {
 
+                    MessageBox.Show("خطأ في اسم المستخدم او كلمة المرور", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    throw;
+                }
+                if (user != null)
+                {
+                    Home home = new Home();
+                    this.Hide();
+                    //this.Close();
+                    home.Show();
+                }
+                else
+                {
+                    MessageBox.Show("خطأ في اسم المستخدم او كلمة المرور", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
+            }
+            else
+            {
+                MessageBox.Show("يجب ملئ جميع الخانات", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

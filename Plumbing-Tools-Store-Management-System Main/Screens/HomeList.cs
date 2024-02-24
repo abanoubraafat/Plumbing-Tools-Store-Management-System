@@ -106,15 +106,6 @@ namespace WindowsFormsApp1
             //}
         }
 
-        //private void HomeList_Load(object sender, EventArgs e)
-        //{
-        //    // TODO: This line of code loads data into the '_Plumbing_Tools_Store_DBDataSet2.Products' table. You can move, or remove it, as needed.
-        //    this.productsTableAdapter2.Fill(this._Plumbing_Tools_Store_DBDataSet2.Products);
-        //    // TODO: This line of code loads data into the '_Plumbing_Tools_Store_DBDataSet1.Products' table. You can move, or remove it, as needed.
-        //    this.productsTableAdapter1.Fill(this._Plumbing_Tools_Store_DBDataSet1.Products);
-        //    // TODO: This line of code loads data into the '_Plumbing_Tools_Store_DBDataSet.Products' table. You can move, or remove it, as needed.
-        //    this.productsTableAdapter.Fill(this._Plumbing_Tools_Store_DBDataSet.Products);
-        //}
 
 
         private void AddByNameBtn_Click(object sender, EventArgs e)

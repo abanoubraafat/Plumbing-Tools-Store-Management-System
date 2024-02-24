@@ -62,7 +62,7 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(121, 276);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(163, 29);
+            this.label4.Size = new System.Drawing.Size(161, 29);
             this.label4.TabIndex = 26;
             this.label4.Text = "تأكيد كلمة المرور :";
             // 
@@ -71,6 +71,7 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
             this.RePasswordTxt.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RePasswordTxt.Location = new System.Drawing.Point(312, 270);
             this.RePasswordTxt.Name = "RePasswordTxt";
+            this.RePasswordTxt.PasswordChar = '*';
             this.RePasswordTxt.Size = new System.Drawing.Size(236, 40);
             this.RePasswordTxt.TabIndex = 25;
             // 
@@ -81,7 +82,7 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(166, 207);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 29);
+            this.label3.Size = new System.Drawing.Size(116, 29);
             this.label3.TabIndex = 24;
             this.label3.Text = "كلمة المرور :";
             // 
@@ -90,6 +91,7 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
             this.PasswordTxt.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordTxt.Location = new System.Drawing.Point(312, 201);
             this.PasswordTxt.Name = "PasswordTxt";
+            this.PasswordTxt.PasswordChar = '*';
             this.PasswordTxt.Size = new System.Drawing.Size(236, 40);
             this.PasswordTxt.TabIndex = 23;
             // 

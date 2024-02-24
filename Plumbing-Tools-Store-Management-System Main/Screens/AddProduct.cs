@@ -49,27 +49,34 @@ namespace AddProduct
             }
             else
             {
-                Plumbing_Tools_Store_Management_System_Main.Model.Product p = new Product()
+                if (DB.Products.FirstOrDefault(pc => pc.BarCode == CodeTxt.Text) != null)
                 {
-                    BarCode = CodeTxt.Text,
-                    Name = ProductNameTxt.Text,
-                    BuyPrice = double.Parse(BuyingPriceNum.Value.ToString()),
-                    SellPrice = double.Parse(SellingPriceNum.Value.ToString()),
-                    Quantity = int.Parse(QuantityTxt.Value.ToString())
-                };
-
-                DB.Products.Add(p);
-                DB.SaveChanges();
-                if (pictureBox1.ImageLocation != null)
-                {
-                    string newpath = $"{Environment.CurrentDirectory}\\Images\\Products\\{p.ID}.jpg";
-                    File.Copy(PImage, newpath);
-
-                    p.Image = PImage;
-                    DB.SaveChanges();
+                    MessageBox.Show("هذا الباركود موجود مسبقا", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else
+                {
+                    Product p = new Product()
+                    {
+                        BarCode = CodeTxt.Text,
+                        Name = ProductNameTxt.Text,
+                        BuyPrice = double.Parse(BuyingPriceNum.Value.ToString()),
+                        SellPrice = double.Parse(SellingPriceNum.Value.ToString()),
+                        Quantity = int.Parse(QuantityTxt.Value.ToString())
+                    };
 
-                MessageBox.Show("تم حفظ المنتج بنجاح", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DB.Products.Add(p);
+                    DB.SaveChanges();
+                    if (pictureBox1.ImageLocation != null)
+                    {
+                        string newpath = $"{Environment.CurrentDirectory}\\Images\\Products\\{p.ID}.jpg";
+                        File.Copy(PImage, newpath);
+
+                        p.Image = PImage;
+                        DB.SaveChanges();
+                    }
+
+                    MessageBox.Show("تم حفظ المنتج بنجاح", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 
