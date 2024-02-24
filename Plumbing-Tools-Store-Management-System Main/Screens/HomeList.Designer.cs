@@ -30,8 +30,8 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.productsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,14 +75,14 @@ namespace WindowsFormsApp1
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -95,14 +95,14 @@ namespace WindowsFormsApp1
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridView1.RowTemplate.Height = 35;
@@ -159,7 +159,7 @@ namespace WindowsFormsApp1
             this.DiscountTxt.Location = new System.Drawing.Point(196, 48);
             this.DiscountTxt.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.DiscountTxt.Name = "DiscountTxt";
-            this.DiscountTxt.Size = new System.Drawing.Size(289, 36);
+            this.DiscountTxt.Size = new System.Drawing.Size(289, 31);
             this.DiscountTxt.TabIndex = 128;
             this.DiscountTxt.TextChanged += new System.EventHandler(this.DiscountTxt_TextChanged);
             // 
@@ -171,7 +171,7 @@ namespace WindowsFormsApp1
             this.label8.Location = new System.Drawing.Point(519, 54);
             this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 29);
+            this.label8.Size = new System.Drawing.Size(66, 23);
             this.label8.TabIndex = 127;
             this.label8.Text = "الخصم :";
             // 
@@ -182,7 +182,7 @@ namespace WindowsFormsApp1
             this.TotalTxt.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.TotalTxt.Name = "TotalTxt";
             this.TotalTxt.ReadOnly = true;
-            this.TotalTxt.Size = new System.Drawing.Size(289, 36);
+            this.TotalTxt.Size = new System.Drawing.Size(289, 31);
             this.TotalTxt.TabIndex = 126;
             // 
             // productsBindingSource
@@ -197,7 +197,7 @@ namespace WindowsFormsApp1
             this.label6.Location = new System.Drawing.Point(519, 129);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 29);
+            this.label6.Size = new System.Drawing.Size(71, 23);
             this.label6.TabIndex = 124;
             this.label6.Text = "الإجمالي :";
             // 
@@ -226,7 +226,7 @@ namespace WindowsFormsApp1
             this.SearchProductCombo.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.SearchProductCombo.Name = "SearchProductCombo";
             this.SearchProductCombo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.SearchProductCombo.Size = new System.Drawing.Size(219, 37);
+            this.SearchProductCombo.Size = new System.Drawing.Size(219, 31);
             this.SearchProductCombo.TabIndex = 134;
             // 
             // AddByCodeBtn
@@ -279,7 +279,7 @@ namespace WindowsFormsApp1
             this.ProductCodeTxt.Location = new System.Drawing.Point(724, 15);
             this.ProductCodeTxt.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.ProductCodeTxt.Name = "ProductCodeTxt";
-            this.ProductCodeTxt.Size = new System.Drawing.Size(219, 36);
+            this.ProductCodeTxt.Size = new System.Drawing.Size(219, 31);
             this.ProductCodeTxt.TabIndex = 125;
             // 
             // label9
@@ -291,7 +291,7 @@ namespace WindowsFormsApp1
             this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label9.Name = "label9";
             this.label9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label9.Size = new System.Drawing.Size(128, 29);
+            this.label9.Size = new System.Drawing.Size(101, 23);
             this.label9.TabIndex = 127;
             this.label9.Text = "بحث بالإسم :";
             // 
@@ -304,7 +304,7 @@ namespace WindowsFormsApp1
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label5.Size = new System.Drawing.Size(86, 29);
+            this.label5.Size = new System.Drawing.Size(66, 23);
             this.label5.TabIndex = 124;
             this.label5.Text = "الباركود :";
             // 
@@ -330,7 +330,7 @@ namespace WindowsFormsApp1
             // 
             // HomeList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1089, 681);
             this.Controls.Add(this.dataGridView1);

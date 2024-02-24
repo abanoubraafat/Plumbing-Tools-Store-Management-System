@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Plumbing_Tools_Store_Management_System_Main.Model
 {
-    internal class BuyBillDetails
+    public class BuyBillDetails
     {
         public int BuyBillID { get; set; }
         public BuyBill BuyBill { get; set; }

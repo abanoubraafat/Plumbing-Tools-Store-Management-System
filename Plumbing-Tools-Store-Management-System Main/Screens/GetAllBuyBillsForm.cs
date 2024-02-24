@@ -189,10 +189,15 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
                 var result = form.ShowDialog();
                 ReloadForm();
             }
+            else
+            {
+                MessageBox.Show("برجاء تحديد فاتورة !!", "خطأ !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
         }
         public void ReloadForm()
         {
+            context = new DataContext();
             this.Controls.Clear();
             InitializeComponent();
             SupplierCombo.DisplayMember = "Name";
@@ -203,6 +208,11 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
             List<BuyBill> bills = new List<BuyBill>();
             bills = context.BuyBills.Include(b => b.BuyBillDetails.Select(dt => dt.Product)).ToList();
             dataGridView1.Rows.Clear();
+            if(bills.Count == 0)
+            {
+                MessageBox.Show("لا توجد أي فواتير مشتريات بعد !", "معلومة !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             foreach (BuyBill bill in bills)
             {
                 int RowIdx = dataGridView1.Rows.Add(bill.ID, bill.Supplier.Name, bill.BuyDate, bill.Discount, bill.Total, "", bill.Notes);

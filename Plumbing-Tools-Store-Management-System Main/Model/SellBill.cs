@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Plumbing_Tools_Store_Management_System_Main.Model
 {
-    internal class SellBill
+    public class SellBill
     {
         public int ID { get; set; }
         public DateTime SellDate { get; set; }

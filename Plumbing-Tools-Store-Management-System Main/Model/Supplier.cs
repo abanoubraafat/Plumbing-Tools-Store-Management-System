@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Plumbing_Tools_Store_Management_System_Main.Model
 {
-    internal class Supplier
+    public class Supplier
     {
         public int ID { get; set; }
         public string Name { get; set; }
