@@ -38,6 +38,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.RestoreAllBtn = new System.Windows.Forms.Button();
             this.DeleteProductFromBillBtn = new System.Windows.Forms.Button();
             this.SaveBillBtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -64,7 +65,6 @@
             this.BillDate = new System.Windows.Forms.DateTimePicker();
             this.BillNoTxt = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.RestoreAllBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -136,6 +136,7 @@
             this.TotalDiscountTxt.Name = "TotalDiscountTxt";
             this.TotalDiscountTxt.Size = new System.Drawing.Size(175, 27);
             this.TotalDiscountTxt.TabIndex = 128;
+            this.TotalDiscountTxt.TextChanged += new System.EventHandler(this.TotalDiscountTxt_TextChanged);
             this.TotalDiscountTxt.Leave += new System.EventHandler(this.TotalDiscountTxt_Leave);
             // 
             // label8
@@ -188,6 +189,22 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "تفاصيل البضاعة :";
+            // 
+            // RestoreAllBtn
+            // 
+            this.RestoreAllBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RestoreAllBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RestoreAllBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RestoreAllBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.RestoreAllBtn.ForeColor = System.Drawing.Color.Red;
+            this.RestoreAllBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.RestoreAllBtn.Location = new System.Drawing.Point(89, 213);
+            this.RestoreAllBtn.Name = "RestoreAllBtn";
+            this.RestoreAllBtn.Size = new System.Drawing.Size(159, 34);
+            this.RestoreAllBtn.TabIndex = 133;
+            this.RestoreAllBtn.Text = "استرجاع كل المنتجات";
+            this.RestoreAllBtn.UseVisualStyleBackColor = true;
+            this.RestoreAllBtn.Click += new System.EventHandler(this.RestoreAllBtn_Click);
             // 
             // DeleteProductFromBillBtn
             // 
@@ -485,22 +502,6 @@
             this.label7.Size = new System.Drawing.Size(81, 19);
             this.label7.TabIndex = 114;
             this.label7.Text = "رقم الفاتورة :";
-            // 
-            // RestoreAllBtn
-            // 
-            this.RestoreAllBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RestoreAllBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RestoreAllBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RestoreAllBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.RestoreAllBtn.ForeColor = System.Drawing.Color.Red;
-            this.RestoreAllBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.RestoreAllBtn.Location = new System.Drawing.Point(89, 213);
-            this.RestoreAllBtn.Name = "RestoreAllBtn";
-            this.RestoreAllBtn.Size = new System.Drawing.Size(159, 34);
-            this.RestoreAllBtn.TabIndex = 133;
-            this.RestoreAllBtn.Text = "استرجاع كل المنتجات";
-            this.RestoreAllBtn.UseVisualStyleBackColor = true;
-            this.RestoreAllBtn.Click += new System.EventHandler(this.RestoreAllBtn_Click);
             // 
             // EditBuyBillForm
             // 

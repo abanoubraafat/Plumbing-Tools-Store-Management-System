@@ -184,9 +184,18 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
                     bool IsNum = double.TryParse(currentQty, out double QtyVal);
                     if (IsNum && QtyVal > 0)
                     {
-                        dataGridView1.Rows[rowIdx].Cells[colIdx + 1].Value = product.SellPrice * QtyVal;
-                        //Total Edit
-                        TotalChanged();
+                        if(QtyVal > product.Quantity)
+                        {
+                            MessageBox.Show(text: "الكمية التي ادخلتها أكبر من المخزون", "تحذير !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            dataGridView1.Rows[rowIdx].Cells[colIdx].Value = 1;
+                            TotalChanged();
+                        }
+                        else
+                        {
+                            dataGridView1.Rows[rowIdx].Cells[colIdx + 1].Value = product.SellPrice * QtyVal;
+                            //Total Edit
+                            TotalChanged();
+                        }    
                     }
                     else
                     {
@@ -342,6 +351,39 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
                 }
                 MessageBox.Show("تم استرجاع المنتجات بنجاح !", "إنتبه!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
+            }
+        }
+
+        private void TotalDiscountTxt_TextChanged(object sender, EventArgs e)
+        {
+            bool isNum = double.TryParse(TotalDiscountTxt.Text, out double totalDiscount);
+            if (TotalDiscountTxt.Text.Length >= 0)
+            {
+                if (isNum)
+                {
+                    if (double.TryParse(TotalTxt.Text, out double total))
+                    {
+                        total = 0;
+                        for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                        {
+                            total += double.Parse(dataGridView1.Rows[i].Cells[4].Value.ToString());
+                        }
+                        if (totalDiscount > total || totalDiscount < 0)
+                        {
+                            MessageBox.Show("قيمة الخصم التي أدخلتها غير صحيحة", "خطأ !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            TotalDiscountTxt.Text = "0";
+                            return;
+                        }
+                        total -= totalDiscount;
+                        TotalTxt.Text = total.ToString();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("قيمة الخصم التي أدخلتها غير صحيحة", "خطأ !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    TotalDiscountTxt.Text = "0";
+                }
+
             }
         }
     }

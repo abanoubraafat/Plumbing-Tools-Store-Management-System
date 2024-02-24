@@ -29,6 +29,8 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
             SearchProductCombo.DisplayMember = "Name";
             SearchProductCombo.ValueMember = "ID";
             SearchProductCombo.DataSource = context.Products.Select(p => p).ToList();
+            TotalTxt.Text = "0";
+            TotalDiscountTxt.Text = "0";
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -192,53 +194,7 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
                 }
             }
         }
-
-        private void TotalDiscountTxt_Leave(object sender, EventArgs e)
-        {
-            bool isNum = double.TryParse(TotalDiscountTxt.Text, out double totalDiscount);
-            if (TotalDiscountTxt.Text.Length > 0)
-            {
-                if (isNum)
-                {
-                    if (double.TryParse(TotalTxt.Text, out double total))
-                    {
-                        total = 0;
-                        for (int i = 0; i < dataGridView1.Rows.Count; i++)
-                        {
-                            total += double.Parse(dataGridView1.Rows[i].Cells[4].Value.ToString());
-                        }
-                        if (totalDiscount > total || totalDiscount < 0)
-                        {
-                            MessageBox.Show("قيمة الخصم التي أدخلتها غير صحيحة", "خطأ !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            TotalDiscountTxt.Text = "";
-                            return;
-                        }
-                        total -= totalDiscount;
-                        TotalTxt.Text = total.ToString();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("قيمة الخصم التي أدخلتها غير صحيحة", "خطأ !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    TotalDiscountTxt.Text = "";
-                }
-
-            }
-        }
-
-        //private void EditBillBtn_Click(object sender, EventArgs e)
-        //{
-        //    if (dataGridView1.RowCount != 0)
-        //    {
-        //        //dataGridView1.ReadOnly = false;
-        //        dataGridView1.Columns[3].ReadOnly = false;
-        //        MessageBox.Show("يمكنك الآن تعديل الفاتورة", "إنتبه!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //    }
-        //    else
-        //        MessageBox.Show("الفاتورة لا تحتوى على أي منتجات", "خطأ !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-        //}
-        
+       
         private void NewBillBtn_Click(object sender, EventArgs e)
         {
             if(dataGridView1.Rows.Count > 0)
@@ -336,6 +292,39 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
         {
             Supplier_Recording form = new Supplier_Recording();
             form.ShowDialog();
+        }
+
+        private void TotalDiscountTxt_TextChanged(object sender, EventArgs e)
+        {
+            bool isNum = double.TryParse(TotalDiscountTxt.Text, out double totalDiscount);
+            if (TotalDiscountTxt.Text.Length >= 0)
+            {
+                if (isNum)
+                {
+                    if (double.TryParse(TotalTxt.Text, out double total))
+                    {
+                        total = 0;
+                        for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                        {
+                            total += double.Parse(dataGridView1.Rows[i].Cells[4].Value.ToString());
+                        }
+                        if (totalDiscount > total || totalDiscount < 0)
+                        {
+                            MessageBox.Show("قيمة الخصم التي أدخلتها غير صحيحة", "خطأ !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            TotalDiscountTxt.Text = "0";
+                            return;
+                        }
+                        total -= totalDiscount;
+                        TotalTxt.Text = total.ToString();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("قيمة الخصم التي أدخلتها غير صحيحة", "خطأ !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    TotalDiscountTxt.Text = "0";
+                }
+
+            }
         }
     }
 }

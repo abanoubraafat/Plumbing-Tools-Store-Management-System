@@ -29,6 +29,8 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
             {
                 dataGridView1.Rows.Add(product.BarCode, product.Name, product.SellPrice, product.Quantity, product.Quantity * product.SellPrice);
             }
+            TotalDiscountTxt.Text = "0";
+            TotalTxt.Text = "0";
         }
 
         private void DeleteBillBtn_Click(object sender, EventArgs e)
@@ -98,39 +100,6 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
             SearchProductCombo.ValueMember = "ID";
             SearchProductCombo.DataSource = context.Products.Select(p => p).ToList();
 
-        }
-
-        private void TotalDiscountTxt_Leave(object sender, EventArgs e)
-        {
-            bool isNum = double.TryParse(TotalDiscountTxt.Text, out double totalDiscount);
-            if (TotalDiscountTxt.Text.Length > 0)
-            {
-                if (isNum)
-                {
-                    if (double.TryParse(TotalTxt.Text, out double total))
-                    {
-                        total = 0;
-                        for (int i = 0; i < dataGridView1.Rows.Count; i++)
-                        {
-                            total += double.Parse(dataGridView1.Rows[i].Cells[4].Value.ToString());
-                        }
-                        if (totalDiscount > total || totalDiscount < 0)
-                        {
-                            MessageBox.Show("قيمة الخصم التي أدخلتها غير صحيحة", "خطأ !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            TotalDiscountTxt.Text = "";
-                            return;
-                        }
-                        total -= totalDiscount;
-                        TotalTxt.Text = total.ToString();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("قيمة الخصم التي أدخلتها غير صحيحة", "خطأ !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    TotalDiscountTxt.Text = "";
-                }
-
-            }
         }
 
         private void NewBillBtn_Click(object sender, EventArgs e)
@@ -272,5 +241,37 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
 
         }
 
+        private void TotalDiscountTxt_TextChanged(object sender, EventArgs e)
+        {
+            bool isNum = double.TryParse(TotalDiscountTxt.Text, out double totalDiscount);
+            if (TotalDiscountTxt.Text.Length >= 0)
+            {
+                if (isNum)
+                {
+                    if (double.TryParse(TotalTxt.Text, out double total))
+                    {
+                        total = 0;
+                        for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                        {
+                            total += double.Parse(dataGridView1.Rows[i].Cells[4].Value.ToString());
+                        }
+                        if (totalDiscount > total || totalDiscount < 0)
+                        {
+                            MessageBox.Show("قيمة الخصم التي أدخلتها غير صحيحة", "خطأ !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            TotalDiscountTxt.Text = "0";
+                            return;
+                        }
+                        total -= totalDiscount;
+                        TotalTxt.Text = total.ToString();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("قيمة الخصم التي أدخلتها غير صحيحة", "خطأ !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    TotalDiscountTxt.Text = "0";
+                }
+
+            }
+        }
     }
 }

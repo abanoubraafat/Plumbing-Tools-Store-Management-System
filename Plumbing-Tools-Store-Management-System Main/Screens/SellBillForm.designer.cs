@@ -296,7 +296,7 @@
             this.TotalDiscountTxt.Name = "TotalDiscountTxt";
             this.TotalDiscountTxt.Size = new System.Drawing.Size(175, 27);
             this.TotalDiscountTxt.TabIndex = 128;
-            this.TotalDiscountTxt.Leave += new System.EventHandler(this.TotalDiscountTxt_Leave);
+            this.TotalDiscountTxt.TextChanged += new System.EventHandler(this.TotalDiscountTxt_TextChanged);
             // 
             // label8
             // 
@@ -428,6 +428,7 @@
             this.Column7});
             this.dataGridView1.Location = new System.Drawing.Point(23, 26);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(716, 197);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
