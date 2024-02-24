@@ -65,6 +65,8 @@ namespace project
             {
                 AddProduct.Screens.EditProduct formupdate = new AddProduct.Screens.EditProduct(idofproductselected);
                 formupdate.ShowDialog();
+                reloadpage();
+                printdata();
             }
 
         }
@@ -75,6 +77,8 @@ namespace project
             {
                 AddProduct.Form1 formadd = new AddProduct.Form1();
                 formadd.ShowDialog();
+                reloadpage();
+                printdata();
             }
         }
 

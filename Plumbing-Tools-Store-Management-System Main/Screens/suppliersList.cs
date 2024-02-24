@@ -66,6 +66,8 @@ namespace project
             {
                 EditSupplier editSupplier = new EditSupplier(idofsupplierselected);
                 editSupplier.ShowDialog();
+                reloadpage();
+                printdata();
             }
         }
 
@@ -76,6 +78,8 @@ namespace project
             {
                 Supplier_Recording supplier_Recording = new Supplier_Recording();
                 supplier_Recording.ShowDialog();
+                reloadpage();
+                printdata();
             }
         }
 
