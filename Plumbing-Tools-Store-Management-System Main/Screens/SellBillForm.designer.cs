@@ -72,14 +72,14 @@
             this.BillNoTxt.Location = new System.Drawing.Point(471, 34);
             this.BillNoTxt.Name = "BillNoTxt";
             this.BillNoTxt.ReadOnly = true;
-            this.BillNoTxt.Size = new System.Drawing.Size(175, 27);
+            this.BillNoTxt.Size = new System.Drawing.Size(175, 32);
             this.BillNoTxt.TabIndex = 115;
             // 
             // BillNotesTxt
             // 
             this.BillNotesTxt.Location = new System.Drawing.Point(24, 81);
             this.BillNotesTxt.Name = "BillNotesTxt";
-            this.BillNotesTxt.Size = new System.Drawing.Size(331, 27);
+            this.BillNotesTxt.Size = new System.Drawing.Size(331, 32);
             this.BillNotesTxt.TabIndex = 121;
             // 
             // label3
@@ -89,7 +89,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label3.Location = new System.Drawing.Point(376, 87);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 19);
+            this.label3.Size = new System.Drawing.Size(87, 24);
             this.label3.TabIndex = 120;
             this.label3.Text = "ملاحظات :";
             // 
@@ -100,7 +100,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(652, 87);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 19);
+            this.label1.Size = new System.Drawing.Size(115, 24);
             this.label1.TabIndex = 117;
             this.label1.Text = "تاريخ الفاتورة :";
             // 
@@ -110,7 +110,7 @@
             this.BillDate.Location = new System.Drawing.Point(471, 81);
             this.BillDate.Name = "BillDate";
             this.BillDate.RightToLeftLayout = true;
-            this.BillDate.Size = new System.Drawing.Size(175, 27);
+            this.BillDate.Size = new System.Drawing.Size(175, 32);
             this.BillDate.TabIndex = 116;
             // 
             // groupBox1
@@ -134,7 +134,7 @@
             // 
             this.textBox5.Location = new System.Drawing.Point(164, 31);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(191, 27);
+            this.textBox5.Size = new System.Drawing.Size(191, 32);
             this.textBox5.TabIndex = 121;
             // 
             // label2
@@ -144,7 +144,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label2.Location = new System.Drawing.Point(367, 37);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 19);
+            this.label2.Size = new System.Drawing.Size(99, 24);
             this.label2.TabIndex = 120;
             this.label2.Text = "إسم العميل :";
             // 
@@ -155,7 +155,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label7.Location = new System.Drawing.Point(661, 37);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 19);
+            this.label7.Size = new System.Drawing.Size(101, 24);
             this.label7.TabIndex = 114;
             this.label7.Text = "رقم الفاتورة :";
             // 
@@ -181,7 +181,7 @@
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label10.Location = new System.Drawing.Point(386, 10);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(129, 29);
+            this.label10.Size = new System.Drawing.Size(160, 37);
             this.label10.TabIndex = 133;
             this.label10.Text = "فاتورة مبيعات";
             // 
@@ -218,7 +218,7 @@
             // 
             this.TotalDiscountTxt.Location = new System.Drawing.Point(514, 26);
             this.TotalDiscountTxt.Name = "TotalDiscountTxt";
-            this.TotalDiscountTxt.Size = new System.Drawing.Size(175, 27);
+            this.TotalDiscountTxt.Size = new System.Drawing.Size(175, 32);
             this.TotalDiscountTxt.TabIndex = 128;
             this.TotalDiscountTxt.TextChanged += new System.EventHandler(this.TotalDiscountTxt_TextChanged);
             // 
@@ -229,7 +229,7 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label8.Location = new System.Drawing.Point(695, 29);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 19);
+            this.label8.Size = new System.Drawing.Size(70, 24);
             this.label8.TabIndex = 127;
             this.label8.Text = "الخصم :";
             // 
@@ -238,7 +238,7 @@
             this.TotalTxt.Location = new System.Drawing.Point(514, 67);
             this.TotalTxt.Name = "TotalTxt";
             this.TotalTxt.ReadOnly = true;
-            this.TotalTxt.Size = new System.Drawing.Size(175, 27);
+            this.TotalTxt.Size = new System.Drawing.Size(175, 32);
             this.TotalTxt.TabIndex = 126;
             // 
             // label6
@@ -248,7 +248,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label6.Location = new System.Drawing.Point(695, 70);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 19);
+            this.label6.Size = new System.Drawing.Size(76, 24);
             this.label6.TabIndex = 124;
             this.label6.Text = "الإجمالي :";
             // 
@@ -274,7 +274,7 @@
             this.Print_btn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.Print_btn.ForeColor = System.Drawing.Color.Brown;
             this.Print_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Print_btn.Location = new System.Drawing.Point(84, 324);
+            this.Print_btn.Location = new System.Drawing.Point(417, 324);
             this.Print_btn.Name = "Print_btn";
             this.Print_btn.Size = new System.Drawing.Size(123, 34);
             this.Print_btn.TabIndex = 134;
@@ -290,7 +290,7 @@
             this.DeleteProductFromBillBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.DeleteProductFromBillBtn.ForeColor = System.Drawing.Color.Red;
             this.DeleteProductFromBillBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DeleteProductFromBillBtn.Location = new System.Drawing.Point(230, 324);
+            this.DeleteProductFromBillBtn.Location = new System.Drawing.Point(67, 324);
             this.DeleteProductFromBillBtn.Name = "DeleteProductFromBillBtn";
             this.DeleteProductFromBillBtn.Size = new System.Drawing.Size(159, 34);
             this.DeleteProductFromBillBtn.TabIndex = 131;
@@ -306,7 +306,7 @@
             this.DeleteBillBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.DeleteBillBtn.ForeColor = System.Drawing.Color.Red;
             this.DeleteBillBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DeleteBillBtn.Location = new System.Drawing.Point(414, 324);
+            this.DeleteBillBtn.Location = new System.Drawing.Point(259, 324);
             this.DeleteBillBtn.Name = "DeleteBillBtn";
             this.DeleteBillBtn.Size = new System.Drawing.Size(123, 34);
             this.DeleteBillBtn.TabIndex = 130;
@@ -345,6 +345,7 @@
             this.Id});
             this.dataGridView1.Location = new System.Drawing.Point(23, 26);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(716, 281);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
@@ -354,35 +355,41 @@
             // Column1
             // 
             this.Column1.HeaderText = "رقم الصنف";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "إسم الصنف";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "التكلفة";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "الكمية";
+            this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             // 
             // Column7
             // 
             this.Column7.HeaderText = "الإجمالي";
+            this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
             // 
             // Id
             // 
             this.Id.HeaderText = "Id";
+            this.Id.MinimumWidth = 6;
             this.Id.Name = "Id";
             this.Id.ReadOnly = true;
             this.Id.Visible = false;
