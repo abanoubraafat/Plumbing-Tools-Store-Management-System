@@ -20,7 +20,7 @@ namespace Plumbing_Tools_Store_Management_System_Main
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new Home());
         }
     }
 }

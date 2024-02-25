@@ -43,6 +43,12 @@
             this.DeleteBillBtn = new System.Windows.Forms.Button();
             this.NewBillBtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.AddByNameBtn = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -63,12 +69,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SaveBillBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -173,6 +174,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.SaveBillBtn);
             this.groupBox3.Controls.Add(this.Print_btn);
             this.groupBox3.Controls.Add(this.DeleteProductFromBillBtn);
             this.groupBox3.Controls.Add(this.DeleteBillBtn);
@@ -193,7 +195,7 @@
             this.Print_btn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.Print_btn.ForeColor = System.Drawing.Color.Brown;
             this.Print_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Print_btn.Location = new System.Drawing.Point(62, 220);
+            this.Print_btn.Location = new System.Drawing.Point(322, 220);
             this.Print_btn.Name = "Print_btn";
             this.Print_btn.Size = new System.Drawing.Size(140, 34);
             this.Print_btn.TabIndex = 134;
@@ -209,7 +211,7 @@
             this.DeleteProductFromBillBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.DeleteProductFromBillBtn.ForeColor = System.Drawing.Color.Red;
             this.DeleteProductFromBillBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DeleteProductFromBillBtn.Location = new System.Drawing.Point(226, 220);
+            this.DeleteProductFromBillBtn.Location = new System.Drawing.Point(23, 220);
             this.DeleteProductFromBillBtn.Name = "DeleteProductFromBillBtn";
             this.DeleteProductFromBillBtn.Size = new System.Drawing.Size(159, 34);
             this.DeleteProductFromBillBtn.TabIndex = 132;
@@ -225,7 +227,7 @@
             this.DeleteBillBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.DeleteBillBtn.ForeColor = System.Drawing.Color.Red;
             this.DeleteBillBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DeleteBillBtn.Location = new System.Drawing.Point(415, 220);
+            this.DeleteBillBtn.Location = new System.Drawing.Point(188, 220);
             this.DeleteBillBtn.Name = "DeleteBillBtn";
             this.DeleteBillBtn.Size = new System.Drawing.Size(128, 34);
             this.DeleteBillBtn.TabIndex = 130;
@@ -241,7 +243,7 @@
             this.NewBillBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.NewBillBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.NewBillBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.NewBillBtn.Location = new System.Drawing.Point(571, 220);
+            this.NewBillBtn.Location = new System.Drawing.Point(600, 220);
             this.NewBillBtn.Name = "NewBillBtn";
             this.NewBillBtn.Size = new System.Drawing.Size(123, 34);
             this.NewBillBtn.TabIndex = 127;
@@ -269,6 +271,42 @@
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             this.dataGridView1.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView1_RowsAdded);
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "رقم الصنف";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "إسم الصنف";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "التكلفة";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Qty
+            // 
+            this.Qty.HeaderText = "الكمية";
+            this.Qty.Name = "Qty";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "الإجمالي";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
             // 
             // groupBox2
             // 
@@ -502,41 +540,20 @@
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
-            // Column1
+            // SaveBillBtn
             // 
-            this.Column1.HeaderText = "رقم الصنف";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "إسم الصنف";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "التكلفة";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Qty
-            // 
-            this.Qty.HeaderText = "الكمية";
-            this.Qty.Name = "Qty";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "الإجمالي";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
+            this.SaveBillBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SaveBillBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SaveBillBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveBillBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.SaveBillBtn.ForeColor = System.Drawing.Color.SeaGreen;
+            this.SaveBillBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SaveBillBtn.Location = new System.Drawing.Point(471, 220);
+            this.SaveBillBtn.Name = "SaveBillBtn";
+            this.SaveBillBtn.Size = new System.Drawing.Size(123, 34);
+            this.SaveBillBtn.TabIndex = 135;
+            this.SaveBillBtn.Text = "حفظ الفاتورة";
+            this.SaveBillBtn.UseVisualStyleBackColor = true;
             // 
             // BuyBillForm
             // 
@@ -608,5 +625,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Qty;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.Button SaveBillBtn;
     }
 }

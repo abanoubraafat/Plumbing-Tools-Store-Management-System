@@ -158,13 +158,14 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
                 var res = MessageBox.Show("هل أنت متأكد أنك تريد حذف هذه الفاتورة ؟ هذا الخيار لا رجعة فيه! !! حذف الفاتورة لن ينتج عنه استرجاع المنتجات اذا كنت تريد استرجاع المنتجات اضفط تعديل الفاتورة ثم استرجاع كل المنتجات.", "خطأ !", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 if (res == DialogResult.OK)
                 {
-                    dataGridView1.Rows.RemoveAt(selectedRow);
                     var deletedDetails = context.BuyBillDetails.Where(b => b.BuyBillID == BillId).ToList();
                     context.BuyBillDetails.RemoveRange(deletedDetails);
                     context.SaveChanges();
                     var bill = context.BuyBills.FirstOrDefault(b => b.ID == BillId);
                     context.BuyBills.Remove(bill);
                     context.SaveChanges();
+                    dataGridView1.Rows.RemoveAt(selectedRow);
+
                 }
             }
             else
