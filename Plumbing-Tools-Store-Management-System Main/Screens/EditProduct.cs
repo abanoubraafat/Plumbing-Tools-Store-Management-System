@@ -38,6 +38,10 @@ namespace AddProduct.Screens
             {
                 MessageBox.Show("يجب ملئ جميع الخانات", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else if (BuyingPriceNum.Value > SellingPriceNum.Value)
+            {
+                MessageBox.Show("يجب ان يزيد سعر البيع عن سعر الشراء", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else
             {
                     Product p = DB.Products.First(P => P.ID == getid);

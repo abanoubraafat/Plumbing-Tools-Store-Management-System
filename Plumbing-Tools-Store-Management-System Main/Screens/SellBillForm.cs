@@ -287,7 +287,7 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
             float margin = 40;
             Font f = new Font("Arial", 18, FontStyle.Bold);
             string strDate = "التاريخ: " + BillDate.Text;
-            string strName = textBox5.Text + " : اسم العميل";
+            string strName = " : اسم العميل" + textBox5.Text ;
 
             SizeF fontSizeNO = e.Graphics.MeasureString("#NO " + BillNoTxt.Text, f);
             SizeF fontSizeDate = e.Graphics.MeasureString(strDate, f);
