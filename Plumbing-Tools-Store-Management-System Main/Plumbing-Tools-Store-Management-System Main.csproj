@@ -269,6 +269,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\bill.png" />
+    <None Include="Images\person_add.png" />
     <Content Include="Images\plus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

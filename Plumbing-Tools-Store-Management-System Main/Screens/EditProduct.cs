@@ -40,12 +40,6 @@ namespace AddProduct.Screens
             }
             else
             {
-                if (DB.Products.FirstOrDefault(pc => pc.BarCode == CodeTxt.Text) != null)
-                {
-                    MessageBox.Show("هذا الباركود موجود مسبقا", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
                     Product p = DB.Products.First(P => P.ID == getid);
                     p.BarCode = CodeTxt.Text;
                     p.Name = ProductNameTxt.Text;
@@ -68,7 +62,6 @@ namespace AddProduct.Screens
                     MessageBox.Show("تم حفظ المنتج بنجاح", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {

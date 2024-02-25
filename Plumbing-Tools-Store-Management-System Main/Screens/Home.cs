@@ -43,6 +43,7 @@ namespace AddProduct.Screens
                     suppliers_Btn.ImageAlign = ContentAlignment.MiddleLeft;
                     sellbills_Btn.ImageAlign = ContentAlignment.MiddleLeft;
                     buybills_Btn.ImageAlign = ContentAlignment.MiddleLeft;
+                    addperson_Btn.ImageAlign = ContentAlignment.MiddleLeft;
                     timerdashboard.Stop();
                     Hidden = false;
                     this.Refresh();
@@ -59,6 +60,7 @@ namespace AddProduct.Screens
                     suppliers_Btn.ImageAlign = ContentAlignment.MiddleRight;
                     sellbills_Btn.ImageAlign = ContentAlignment.MiddleRight;
                     buybills_Btn.ImageAlign = ContentAlignment.MiddleRight;
+                    addperson_Btn.ImageAlign = ContentAlignment.MiddleRight;
                     timerdashboard.Stop();
                     Hidden = true;
                     this.Refresh();
@@ -113,6 +115,13 @@ namespace AddProduct.Screens
         private void home_Btn_Click(object sender, EventArgs e)
         {
             ShowForm(new HomeList());
+        }
+
+        private void addperson_Btn_Click(object sender, EventArgs e)
+        {
+            Register register = new Register();
+            register.ShowDialog();
+
         }
     }
 }

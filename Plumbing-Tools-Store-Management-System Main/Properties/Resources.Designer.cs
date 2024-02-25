@@ -103,6 +103,16 @@ namespace Plumbing_Tools_Store_Management_System_Main.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap person_add {
+            get {
+                object obj = ResourceManager.GetObject("person_add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap plumbing_services_logo {
             get {
                 object obj = ResourceManager.GetObject("plumbing-services-logo", resourceCulture);

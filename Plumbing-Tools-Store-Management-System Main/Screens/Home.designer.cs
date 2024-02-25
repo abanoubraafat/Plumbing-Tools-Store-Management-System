@@ -32,6 +32,9 @@ namespace AddProduct.Screens
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.dashboard_panel = new System.Windows.Forms.Panel();
+            this.timerdashboard = new System.Windows.Forms.Timer(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.addperson_Btn = new System.Windows.Forms.Button();
             this.buybills_Btn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -39,8 +42,6 @@ namespace AddProduct.Screens
             this.home_Btn = new System.Windows.Forms.Button();
             this.products_Btn = new System.Windows.Forms.Button();
             this.suppliers_Btn = new System.Windows.Forms.Button();
-            this.timerdashboard = new System.Windows.Forms.Timer(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
             this.dashboard_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -48,6 +49,7 @@ namespace AddProduct.Screens
             // dashboard_panel
             // 
             this.dashboard_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
+            this.dashboard_panel.Controls.Add(this.addperson_Btn);
             this.dashboard_panel.Controls.Add(this.buybills_Btn);
             this.dashboard_panel.Controls.Add(this.pictureBox1);
             this.dashboard_panel.Controls.Add(this.button2);
@@ -61,6 +63,35 @@ namespace AddProduct.Screens
             this.dashboard_panel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dashboard_panel.Size = new System.Drawing.Size(252, 749);
             this.dashboard_panel.TabIndex = 40;
+            // 
+            // timerdashboard
+            // 
+            this.timerdashboard.Tick += new System.EventHandler(this.timerdashboard_Tick);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(252, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1089, 68);
+            this.panel1.TabIndex = 41;
+            // 
+            // addperson_Btn
+            // 
+            this.addperson_Btn.FlatAppearance.BorderSize = 0;
+            this.addperson_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addperson_Btn.ForeColor = System.Drawing.Color.White;
+            this.addperson_Btn.Image = global::Plumbing_Tools_Store_Management_System_Main.Properties.Resources.person_add;
+            this.addperson_Btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.addperson_Btn.Location = new System.Drawing.Point(3, 628);
+            this.addperson_Btn.Name = "addperson_Btn";
+            this.addperson_Btn.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
+            this.addperson_Btn.Size = new System.Drawing.Size(251, 70);
+            this.addperson_Btn.TabIndex = 136;
+            this.addperson_Btn.Text = "مستخدم جديد";
+            this.addperson_Btn.UseVisualStyleBackColor = true;
+            this.addperson_Btn.Click += new System.EventHandler(this.addperson_Btn_Click);
             // 
             // buybills_Btn
             // 
@@ -166,19 +197,6 @@ namespace AddProduct.Screens
             this.suppliers_Btn.UseVisualStyleBackColor = true;
             this.suppliers_Btn.Click += new System.EventHandler(this.suppliers_Btn_Click);
             // 
-            // timerdashboard
-            // 
-            this.timerdashboard.Tick += new System.EventHandler(this.timerdashboard_Tick);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(252, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1089, 68);
-            this.panel1.TabIndex = 41;
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
@@ -211,5 +229,6 @@ namespace AddProduct.Screens
         private System.Windows.Forms.Timer timerdashboard;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buybills_Btn;
+        private System.Windows.Forms.Button addperson_Btn;
     }
 }
