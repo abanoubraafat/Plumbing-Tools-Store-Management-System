@@ -370,7 +370,6 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
                 }
                 context.SaveChanges();
                 BillNoTxt.Text = addedBill.ID.ToString();
-                this.Close();
             }
             else
             {
@@ -383,6 +382,7 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
             {
                 printDocument1.Print();
             }
+            this.Close();
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
