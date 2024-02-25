@@ -24,22 +24,29 @@ namespace Plumbing_Tools_Store_Management_System_Main.Screens
         {
             if (UserNameTxt.Text != "" && PasswordTxt.Text != "" && RePasswordTxt.Text != "")
             {
-                if (PasswordTxt.Text != RePasswordTxt.Text)
+                if (DB.Users.FirstOrDefault(pc => pc.Name == UserNameTxt.Text) != null)
                 {
-                    MessageBox.Show("كلمة السر يجب ان تكون متشابهة", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("مستخدم موجود", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    User user = new User()
+                    if (PasswordTxt.Text != RePasswordTxt.Text)
                     {
-                        Name = UserNameTxt.Text,
-                        Password = PasswordTxt.Text
-                    };
-                    DB.Users.Add(user);
-                    DB.SaveChanges();
-                    MessageBox.Show("تم تسجيل مستخدم جديد بنجاح", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                        MessageBox.Show("كلمة السر يجب ان تكون متشابهة", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
 
+                        User user = new User()
+                        {
+                            Name = UserNameTxt.Text,
+                            Password = PasswordTxt.Text
+                        };
+                        DB.Users.Add(user);
+                        DB.SaveChanges();
+                        MessageBox.Show("تم تسجيل مستخدم جديد بنجاح", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
             }
             else
             {

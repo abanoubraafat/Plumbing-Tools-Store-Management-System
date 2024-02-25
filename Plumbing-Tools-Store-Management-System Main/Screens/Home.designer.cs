@@ -34,6 +34,7 @@ namespace AddProduct.Screens
             this.dashboard_panel = new System.Windows.Forms.Panel();
             this.timerdashboard = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.logout_Btn = new System.Windows.Forms.Button();
             this.addperson_Btn = new System.Windows.Forms.Button();
             this.buybills_Btn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -49,6 +50,7 @@ namespace AddProduct.Screens
             // dashboard_panel
             // 
             this.dashboard_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
+            this.dashboard_panel.Controls.Add(this.logout_Btn);
             this.dashboard_panel.Controls.Add(this.addperson_Btn);
             this.dashboard_panel.Controls.Add(this.buybills_Btn);
             this.dashboard_panel.Controls.Add(this.pictureBox1);
@@ -77,6 +79,22 @@ namespace AddProduct.Screens
             this.panel1.Size = new System.Drawing.Size(1089, 68);
             this.panel1.TabIndex = 41;
             // 
+            // logout_Btn
+            // 
+            this.logout_Btn.FlatAppearance.BorderSize = 0;
+            this.logout_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logout_Btn.ForeColor = System.Drawing.Color.White;
+            this.logout_Btn.Image = global::Plumbing_Tools_Store_Management_System_Main.Properties.Resources.logout;
+            this.logout_Btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logout_Btn.Location = new System.Drawing.Point(3, 689);
+            this.logout_Btn.Name = "logout_Btn";
+            this.logout_Btn.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
+            this.logout_Btn.Size = new System.Drawing.Size(251, 70);
+            this.logout_Btn.TabIndex = 137;
+            this.logout_Btn.Text = "خروج";
+            this.logout_Btn.UseVisualStyleBackColor = true;
+            this.logout_Btn.Click += new System.EventHandler(this.logout_Btn_Click);
+            // 
             // addperson_Btn
             // 
             this.addperson_Btn.FlatAppearance.BorderSize = 0;
@@ -84,7 +102,7 @@ namespace AddProduct.Screens
             this.addperson_Btn.ForeColor = System.Drawing.Color.White;
             this.addperson_Btn.Image = global::Plumbing_Tools_Store_Management_System_Main.Properties.Resources.person_add;
             this.addperson_Btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.addperson_Btn.Location = new System.Drawing.Point(3, 628);
+            this.addperson_Btn.Location = new System.Drawing.Point(3, 613);
             this.addperson_Btn.Name = "addperson_Btn";
             this.addperson_Btn.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
             this.addperson_Btn.Size = new System.Drawing.Size(251, 70);
@@ -100,7 +118,7 @@ namespace AddProduct.Screens
             this.buybills_Btn.ForeColor = System.Drawing.Color.White;
             this.buybills_Btn.Image = global::Plumbing_Tools_Store_Management_System_Main.Properties.Resources.bill;
             this.buybills_Btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buybills_Btn.Location = new System.Drawing.Point(1, 552);
+            this.buybills_Btn.Location = new System.Drawing.Point(1, 537);
             this.buybills_Btn.Name = "buybills_Btn";
             this.buybills_Btn.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
             this.buybills_Btn.Size = new System.Drawing.Size(251, 70);
@@ -140,7 +158,7 @@ namespace AddProduct.Screens
             this.sellbills_Btn.ForeColor = System.Drawing.Color.White;
             this.sellbills_Btn.Image = global::Plumbing_Tools_Store_Management_System_Main.Properties.Resources.receipt;
             this.sellbills_Btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sellbills_Btn.Location = new System.Drawing.Point(-2, 476);
+            this.sellbills_Btn.Location = new System.Drawing.Point(-2, 461);
             this.sellbills_Btn.Name = "sellbills_Btn";
             this.sellbills_Btn.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
             this.sellbills_Btn.Size = new System.Drawing.Size(251, 70);
@@ -156,7 +174,7 @@ namespace AddProduct.Screens
             this.home_Btn.ForeColor = System.Drawing.Color.White;
             this.home_Btn.Image = global::Plumbing_Tools_Store_Management_System_Main.Properties.Resources.home;
             this.home_Btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.home_Btn.Location = new System.Drawing.Point(1, 248);
+            this.home_Btn.Location = new System.Drawing.Point(1, 233);
             this.home_Btn.Name = "home_Btn";
             this.home_Btn.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
             this.home_Btn.Size = new System.Drawing.Size(251, 70);
@@ -172,7 +190,7 @@ namespace AddProduct.Screens
             this.products_Btn.ForeColor = System.Drawing.Color.White;
             this.products_Btn.Image = global::Plumbing_Tools_Store_Management_System_Main.Properties.Resources.cart;
             this.products_Btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.products_Btn.Location = new System.Drawing.Point(1, 324);
+            this.products_Btn.Location = new System.Drawing.Point(1, 309);
             this.products_Btn.Name = "products_Btn";
             this.products_Btn.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
             this.products_Btn.Size = new System.Drawing.Size(251, 70);
@@ -188,7 +206,7 @@ namespace AddProduct.Screens
             this.suppliers_Btn.ForeColor = System.Drawing.Color.White;
             this.suppliers_Btn.Image = global::Plumbing_Tools_Store_Management_System_Main.Properties.Resources.supliers;
             this.suppliers_Btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.suppliers_Btn.Location = new System.Drawing.Point(1, 400);
+            this.suppliers_Btn.Location = new System.Drawing.Point(1, 385);
             this.suppliers_Btn.Name = "suppliers_Btn";
             this.suppliers_Btn.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
             this.suppliers_Btn.Size = new System.Drawing.Size(248, 70);
@@ -230,5 +248,6 @@ namespace AddProduct.Screens
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buybills_Btn;
         private System.Windows.Forms.Button addperson_Btn;
+        private System.Windows.Forms.Button logout_Btn;
     }
 }

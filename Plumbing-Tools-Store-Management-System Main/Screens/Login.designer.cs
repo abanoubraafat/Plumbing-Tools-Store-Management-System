@@ -41,21 +41,21 @@ namespace AddProduct.Screens
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label2.Location = new System.Drawing.Point(181, 47);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(207, 42);
+            this.label2.Size = new System.Drawing.Size(260, 54);
             this.label2.TabIndex = 19;
             this.label2.Text = "تسجيل الدخول";
             // 
             // button1
             // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
             this.button1.FlatAppearance.BorderSize = 2;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
             this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.button1.Location = new System.Drawing.Point(188, 342);
             this.button1.Name = "button1";
@@ -88,11 +88,11 @@ namespace AddProduct.Screens
             // 
             this.L_pass.AutoSize = true;
             this.L_pass.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
-            this.L_pass.ForeColor = System.Drawing.Color.White;
+            this.L_pass.ForeColor = System.Drawing.Color.Black;
             this.L_pass.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.L_pass.Location = new System.Drawing.Point(36, 237);
             this.L_pass.Name = "L_pass";
-            this.L_pass.Size = new System.Drawing.Size(106, 29);
+            this.L_pass.Size = new System.Drawing.Size(137, 37);
             this.L_pass.TabIndex = 15;
             this.L_pass.Text = "كلمة المرور";
             // 
@@ -100,19 +100,19 @@ namespace AddProduct.Screens
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label1.Location = new System.Drawing.Point(36, 166);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 29);
+            this.label1.Size = new System.Drawing.Size(172, 37);
             this.label1.TabIndex = 14;
             this.label1.Text = "اسم المستخدم";
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(558, 474);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
@@ -121,6 +121,7 @@ namespace AddProduct.Screens
             this.Controls.Add(this.L_pass);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.Black;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;

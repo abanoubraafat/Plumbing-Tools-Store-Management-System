@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1;
@@ -44,6 +45,7 @@ namespace AddProduct.Screens
                     sellbills_Btn.ImageAlign = ContentAlignment.MiddleLeft;
                     buybills_Btn.ImageAlign = ContentAlignment.MiddleLeft;
                     addperson_Btn.ImageAlign = ContentAlignment.MiddleLeft;
+                    logout_Btn.ImageAlign = ContentAlignment.MiddleLeft;
                     timerdashboard.Stop();
                     Hidden = false;
                     this.Refresh();
@@ -61,6 +63,7 @@ namespace AddProduct.Screens
                     sellbills_Btn.ImageAlign = ContentAlignment.MiddleRight;
                     buybills_Btn.ImageAlign = ContentAlignment.MiddleRight;
                     addperson_Btn.ImageAlign = ContentAlignment.MiddleRight;
+                    logout_Btn.ImageAlign = ContentAlignment.MiddleRight;
                     timerdashboard.Stop();
                     Hidden = true;
                     this.Refresh();
@@ -122,6 +125,14 @@ namespace AddProduct.Screens
             Register register = new Register();
             register.ShowDialog();
 
+        }
+
+        private void logout_Btn_Click(object sender, EventArgs e)
+        {
+            Close();
+            Thread thread = new Thread(() => Application.Run(new Login()));
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
         }
     }
 }
