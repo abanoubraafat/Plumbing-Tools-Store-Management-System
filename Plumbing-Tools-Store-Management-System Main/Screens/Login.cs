@@ -38,10 +38,11 @@ namespace AddProduct.Screens
                 }
                 if (user != null)
                 {
-                    Home home = new Home();
-                    this.Hide();
-                    //this.Close();
-                    home.Show();
+                    Close();
+                    Thread thread = new Thread(()=>Application.Run(new Home()));
+                    thread.SetApartmentState(ApartmentState.STA);
+                    thread.Start();
+
                 }
                 else
                 {
