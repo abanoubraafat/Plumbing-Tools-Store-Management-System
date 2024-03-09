@@ -39,10 +39,17 @@ namespace project
         }
         private void printdata(string name)
         {
-            var query1 = dataContext.Products.Where(d => d.Name.Contains(name)).Select(e => new { e.ID, e.BarCode, e.Name, e.SellPrice, e.Quantity });
+            var query1 = dataContext.Products.Where(d => d.Name.Contains(name)).Select(e => new { e.ID, e.BarCode, e.Name, e.SellPrice, e.Quantity, e.Image });
             foreach (var item in query1)
             {
-                product_dataGridView.Rows.Add(item.ID, item.BarCode, item.Name, item.SellPrice, item.Quantity);
+                if (item.Image == null)
+                {
+                    product_dataGridView.Rows.Add(item.ID, item.BarCode, item.Name, item.SellPrice, item.Quantity);
+                }
+                else
+                {
+                    product_dataGridView.Rows.Add(item.ID, item.BarCode, item.Name, item.SellPrice, item.Quantity, File.ReadAllBytes(item.Image));
+                }
             }
         }
 
